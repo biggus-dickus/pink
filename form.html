@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Конкурс на самое безбашенное путешествие с Пинк</title>
+    <!-- <link rel="stylesheet" href="css/style.css">-->
+</head>
+<body>
+    
+    <header class="top-menu">
+        <div class="logo">Pink</div>
+        <button class="toggle-menu">
+            <!-- "Гамбургер" и крестик будут созданы через псевдоэлементы у спана, для крестика будет использоваться class="close" -->
+            <span class="open">Меню</span>
+        </button>
+        <nav class="menu hidden">
+            <ul>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Конкурс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cover">
+            <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </section>
+        <!-- Форма -->
+        <form class="mobile-form" action="" method="post" enctype="multipart/form-data">
+            <fieldset class="white">
+                <p>Поделитесь своей историей и получите шанс выиграть ценный приз&nbsp;&mdash;1000 миль на вашу бонусную карту!</p>
+                <label for="participant-firstname">Имя: *</label>
+                <input id="participant-firstname" type="text" name="participant-firstname" required placeholder="Введите ваше имя">
+                <label for="participant-surname">Фамилия: *</label>
+                <input id="participant-surname" type="text" name="participant-surname" required placeholder="Укажите фамилию">
+                <label for="participant-patronymic">Отчество:</label>
+                <input id="participant-patronymic" type="text" name="participant-patronymic" required placeholder="Ну, и отчество тоже">
+            </fieldset>
+
+            <fieldset class="gray">
+                <legend>С каким приложением путешествовали? *</legend>
+                <label><input required name="used-app" type="radio" value="pink-for-iOS" checked>Пинк для iOS</label>
+                <label><input required name="used-app" type="radio" value="pink-for-Android">Пинк на Android</label>
+                <label><input required name="used-app" type="radio" value="pink-for-Windows-phone">Windows Phone</label>
+            </fieldset>
+
+            <fieldset class="white">
+                <!-- В этом месте дизайнер как-то намудрил, и восприятие формы усложняется: во-первых заголовок секции и подписи для полей одинаково стилизованы, во-вторых
+                подписи расположены под полями, а в голом хтмл без стилизации это выглядит еще хуже:) -->
+                <legend>Когда вы путешествовали? *</legend>
+                <input required id="departure-date" type="text" name="departure-date" value="1 апреля 2015">
+                <label for="departure-date">Дата выезда</label>
+
+                <span class="minus">-</span>
+                <input required id="duration" name="duration" type="text" value="10 дней">
+                <span class="plus">+</span>
+                <label for="duration">Продолжительность</label>
+
+                <input required id="return-date" type="text" name="return-date" value="1 апреля 2015" disabled>
+                <label for="return-date">Дата выезда</label>
+            </fieldset>
+
+            <fieldset class="gray">
+                <legend>Количество попутчиков *</legend>
+                <span class="minus">-</span>
+                <input required name="travellers-number" type="text" value="2 чел.">
+                <span class="plus">+</span>
+                <!-- Линия-разделитель -->
+                <span class="hr"></span>
+                <!-- Пока что для удобства восприятия делаю эти элементы таблицей -->
+                <table>
+                    <tr>
+                        <td>№</td>
+                        <td><label for="traveller1-name">Имя: *</label></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input id="traveller1-name" type="text" name="traveller1-name" required placeholder="Введите ваше имя"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label for="traveller1-nickname">Прозвище</label><br>
+                            <input id="traveller1-nickname" type="text" name="traveller1-nickname" placeholder="Ну, как же без этого!">
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td>№</td>
+                        <td><label for="traveller2-name">Имя: *</label></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input id="traveller2-name" type="text" name="traveller2-name" required placeholder="Введите ваше имя"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label for="traveller2-nickname">Прозвище</label><br>
+                            <input id="traveller2-nickname" type="text" name="traveller2-nickname" placeholder="Ну, как же без этого!">
+                        </td>
+                    </tr>
+                </table>
+
+            </fieldset>
+
+            <fieldset class="white">
+                <legend>Ваши безбашенные достижения в путешествии</legend>
+                <label><input name="crazy-achievement" type="checkbox" checked>Сделал селфи с акулой</label>
+                <label><input name="crazy-achievement" type="checkbox" checked>Обгорел на пляже</label>
+                <label><input name="crazy-achievement" type="checkbox">Видел Чака Норриса</label>
+                <label><input name="crazy-achievement" type="checkbox">Накупил сувениров</label>
+                <label><input name="crazy-achievement" type="checkbox" checked>Удержал башню</label>
+                <label><input name="crazy-achievement" type="checkbox">Разгромил отель</label>
+            </fieldset>
+
+            <fieldset class="gray">
+                <legend>Ваши фотографии из поездки *</legend>
+                <!-- Кнопка "загрузить" будет скрыта, стили применены к метке -->
+                <label for="upload-photos">Загрузить фото</label>
+                <input id="upload-photos" type="file" name="upload-photos" value="Загрузить фото" required>
+                <!-- Линия-разделитель -->
+                <span class="hr"></span>
+                <div class="thumb-container">
+                    <!-- Если что - не было времени вырезать все картинки:) -->
+                    <img class="thumb" src="img/thumbs/img1.jpg">
+                    <img class="thumb" src="img/thumbs/img1.jpg">
+                    <img class="thumb" src="img/thumbs/img1.jpg">
+                    <img class="thumb" src="img/thumbs/img1.jpg">
+                    <img class="thumb" src="img/thumbs/img1.jpg">
+                    <img class="thumb" src="img/thumbs/img1.jpg">
+                    <img class="thumb" src="img/thumbs/img1.jpg">
+                    <img class="thumb" src="img/thumbs/img1.jpg">
+                </div>
+            </fieldset>
+
+            <fieldset class="white">
+                <input type="submit" value="Отправить форму">
+                <p><span>*</span>&nbsp;&mdash; ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="info white">
+        <div class="pink-footer">Pink</div>
+        <div class="sn-container">
+            <a class="twitter" href="#"></a>
+            <a class="facebook" href="#"></a>
+            <a class="youtube" href="#"></a>
+        </div>
+        <div class="powered-by-HTML-academy">Разработано</div>
+    </footer>
+
+    <!-- Модальные окна - успех/неудача -->
+    <div class="info white" id="success">
+        <h3>Ваша заявка отправлена</h3>
+        <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <div class="gray">
+            <button class="close-modal">Закрыть окно</button>
+        </div>
+    </div>
+
+    <div class="info white" id="failure">
+        <h3>Что-то пошло не так!</h3>
+        <p>Проверьте поля, выделенные красным. Скорее всего, вы забыли их заполнить.</p>
+        <button class="close-modal">OK</button>
+    </div>
+    
+    <!-- <script src="js/script.js"></script> -->
+</body>
+</html>
