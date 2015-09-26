@@ -5,64 +5,66 @@
   <title>Конкурс на самое безбашенное путешествие с Пинк</title>
   <!-- <link rel="stylesheet" href="css/style.css">--></head>
 <body>
-
-  <header class="top-menu">
-    <div class="logo">
-      <a class="logo__link" href="/">Pink</a>
+  <header class="top-header">
+    <div class="float-container">
+        <a class="float-container__logo-link" href="/">Pink</a>
+        <button class="float-container__menu  toggle-menu">
+          <span class="toggle-menu__toggler">Меню</span>
+        </button>
     </div>
-    <button class="toggle-menu">
-      <!-- "Гамбургер" и крестик будут созданы через псевдоэлементы у спана, для крестика будет использоваться class="close" -->
-      <span class="open">Меню</span>
-    </button>
-    <nav class="menu hidden">
+
+    <nav class="main-menu  hidden">
       <ul>
         <li>
-          <a href="#">Информация</a>
+          <a class="main-menu__link" href="#">Информация</a>
         </li>
         <li>
-          <a href="#">Блог</a>
+          <a class="main-menu__link" href="#">Блог</a>
         </li>
         <li>
-          <a href="#">Отзывы</a>
+          <a class="main-menu__link" href="#">Отзывы</a>
         </li>
         <li>
-          <a href="#">Конкурс</a>
+          <a class="main-menu__link" href="#">Конкурс</a>
         </li>
       </ul>
     </nav>
+
+    <section class="top-header__cover">
+      <h1 class="top-header__caption">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
+    </section>
   </header>
 
-  <main>
-    <section class="cover">
-      <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
-    </section>
+
     <!-- Форма -->
-    <form class="mobile-form" action="" method="post" enctype="multipart/form-data">
-      <fieldset class="white">
+  <section class="pink-form">
+    <form action="" method="post" enctype="multipart/form-data">
+      <fieldset class="fieldset--white">
         <p>
-          Поделитесь своей историей и получите шанс выиграть ценный приз&nbsp;&mdash;1000 миль на вашу бонусную карту!
+          Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash;1000&nbsp;миль на&nbsp;вашу бонусную карту!
         </p>
         <label for="participant-firstname">Имя: *</label>
         <input id="participant-firstname" type="text" name="participant-firstname" required placeholder="Введите ваше имя">
         <label for="participant-surname">Фамилия: *</label>
         <input id="participant-surname" type="text" name="participant-surname" required placeholder="Укажите фамилию">
         <label for="participant-patronymic">Отчество:</label>
-        <input id="participant-patronymic" type="text" name="participant-patronymic" required placeholder="Ну, и отчество тоже"></fieldset>
-
-      <fieldset class="gray">
-        <legend>С каким приложением путешествовали? *</legend>
-        <label>
-          <input required name="used-app" type="radio" value="pink-for-iOS" checked>Пинк для iOS</label>
-        <label>
-          <input required name="used-app" type="radio" value="pink-for-Android">Пинк на Android</label>
-        <label>
-          <input required name="used-app" type="radio" value="pink-for-Windows-phone">Windows Phone</label>
+        <input id="participant-patronymic" type="text" name="participant-patronymic" required placeholder="Ну, и отчество тоже">
       </fieldset>
 
-      <fieldset class="white">
+      <fieldset class="fieldset--gray">
+        <legend>С&nbsp;каким приложением путешествовали? *</legend>
+          <input id="pink-for-iOS" required name="used-app" type="radio" value="pink-for-iOS" checked>
+          <label for="pink-for-iOS">Пинк для iOS</label>
+          <input id="pink-for-Android" required name="used-app" type="radio" value="pink-for-Android">
+          <label for="pink-for-Android">Пинк на&nbsp;Android</label>
+          <input id="pink-for-Windows-phone" required name="used-app" type="radio" value="pink-for-Windows-phone">
+          <label for="pink-for-Windows-phone">Windows Phone</label>
+      </fieldset>
+
+      <fieldset class="fieldset--white">
         <!-- В этом месте дизайнер как-то намудрил, и восприятие формы усложняется: во-первых заголовок секции и подписи для полей одинаково стилизованы, во-вторых
                 подписи расположены под полями, а в голом хтмл без стилизации это выглядит еще хуже:) -->
-        <legend>Когда вы путешествовали? *</legend>
+        <legend>Когда вы&nbsp;путешествовали? *</legend>
         <input required id="departure-date" type="text" name="departure-date" value="1 апреля 2015">
         <label for="departure-date">Дата выезда</label>
 
@@ -75,13 +77,13 @@
         <label for="return-date">Дата выезда</label>
       </fieldset>
 
-      <fieldset class="gray">
+      <fieldset class="fieldset--gray">
         <legend>Количество попутчиков *</legend>
         <span class="minus">-</span>
         <input required name="travellers-number" type="text" value="2 чел.">
         <span class="plus">+</span>
         <!-- Линия-разделитель -->
-        <span class="hr"></span>
+        <hr>
         <!-- Пока что для удобства восприятия делаю эти элементы таблицей -->
         <table>
           <tr>
@@ -127,92 +129,114 @@
 
       </fieldset>
 
-      <fieldset class="white">
-        <legend>Ваши безбашенные достижения в путешествии</legend>
-        <label>
-          <input name="crazy-achievement" type="checkbox" checked>Сделал селфи с акулой</label>
-        <label>
-          <input name="crazy-achievement" type="checkbox" checked>Обгорел на пляже</label>
-        <label>
-          <input name="crazy-achievement" type="checkbox">Видел Чака Норриса</label>
-        <label>
-          <input name="crazy-achievement" type="checkbox">Накупил сувениров</label>
-        <label>
-          <input name="crazy-achievement" type="checkbox" checked>Удержал башню</label>
-        <label>
-          <input name="crazy-achievement" type="checkbox">Разгромил отель</label>
+      <fieldset class="fieldset--white">
+        <legend>Ваши безбашенные достижения в&nbsp;путешествии</legend>
+        <input id="selfie-with-shark" name="crazy-achievement" type="checkbox" checked>
+        <label for="selfie-with-shark">Сделал селфи с акулой</label>
+        <input id="sunburnt" name="crazy-achievement" type="checkbox" checked>
+        <label for="sunburnt">Обгорел на пляже</label>
+        <input id="saw-Chuck-Norris" name="crazy-achievement" type="checkbox">
+        <label for="saw-Chuck-Norris">Видел Чака Норриса</label>
+        <input id="bought-souvenirs" name="crazy-achievement" type="checkbox">
+        <label for="bought-souvenirs">Накупил сувениров</label>
+        <input id="held-tower" name="crazy-achievement" type="checkbox" checked>
+        <label for="held-tower">Удержал башню</label>
+        <input id="wrecked-hotel" name="crazy-achievement" type="checkbox">
+        <label for="wrecked-hotel">Разгромил отель</label>
       </fieldset>
 
-      <fieldset class="gray">
-        <legend>Ваши фотографии из поездки *</legend>
+      <fieldset class="fieldset--gray">
+        <legend>Ваши фотографии из&nbsp;поездки *</legend>
         <!-- Кнопка "загрузить" будет скрыта, стили применены к метке -->
         <label for="upload-photos">Загрузить фото</label>
         <input id="upload-photos" type="file" name="upload-photos" value="Загрузить фото" required>
         <!-- Линия-разделитель -->
-        <span class="hr"></span>
+        <hr>
         <div class="thumb-container">
-          <img class="thumb-container__thumb" src="img/thumbs/thumb1.jpg" alt="thumb1">
-          <span class="thumb-container__thumb-title">IMG-1.JPG</span>
-          <img class="thumb-container__thumb" src="img/thumbs/thumb2.jpg" alt="thumb2">
-          <span class="thumb-container__thumb-title">IMG-2.JPG</span>
-          <img class="thumb-container__thumb" src="img/thumbs/thumb3.jpg" alt="thumb3">
-          <span class="thumb-container__thumb-title">IMG-3.JPG</span>
-          <img class="thumb-container__thumb" src="img/thumbs/thumb4.jpg" alt="thumb4">
-          <span class="thumb-container__thumb-title">IMG-4.JPG</span>
-          <img class="thumb-container__thumb" src="img/thumbs/thumb5.jpg" alt="thumb5">
-          <span class="thumb-container__thumb-title">IMG-5.JPG</span>
-          <img class="thumb-container__thumb" src="img/thumbs/thumb6.jpg" alt="thumb6">
-          <span class="thumb-container__thumb-title">IMG-6.JPG</span>
-          <img class="thumb-container__thumb" src="img/thumbs/thumb7.jpg" alt="thumb7">
-          <span class="thumb-container__thumb-title">IMG-7.JPG</span>
-          <img class="thumb-container__thumb" src="img/thumbs/thumb8.jpg" alt="thumb8">
-          <span class="thumb-container__thumb-title">IMG-8.JPG</span>
+          <figure class="thumb-container__thumb">
+            <img src="img/thumbs/thumb1.jpg" alt="thumb1">
+            <span class="thumb-container__thumb-remove">&times;</span>
+            <figcaption class="thumb-container__thumb-name">IMG-1.JPG</figcaption>
+          </figure>
+          <figure class="thumb-container__thumb">
+            <img src="img/thumbs/thumb2.jpg" alt="thumb2">
+            <span class="thumb-container__thumb-remove">&times;</span>
+            <figcaption class="thumb-container__thumb-name">IMG-2.JPG</figcaption>
+          </figure>
+          <figure class="thumb-container__thumb">
+            <img src="img/thumbs/thumb3.jpg" alt="thumb3">
+            <span class="thumb-container__thumb-remove">&times;</span>
+            <figcaption class="thumb-container__thumb-name">IMG-3.JPG</figcaption>
+          </figure>
+          <figure class="thumb-container__thumb">
+            <img src="img/thumbs/thumb4.jpg" alt="thumb4">
+            <span class="thumb-container__thumb-remove">&times;</span>
+            <figcaption class="thumb-container__thumb-name">IMG-4.JPG</figcaption>
+          </figure>
+          <figure class="thumb-container__thumb">
+            <img src="img/thumbs/thumb5.jpg" alt="thumb5">
+            <span class="thumb-container__thumb-remove">&times;</span>
+            <figcaption class="thumb-container__thumb-name">IMG-5.JPG</figcaption>
+          </figure>
+          <figure class="thumb-container__thumb">
+            <img src="img/thumbs/thumb6.jpg" alt="thumb6">
+            <span class="thumb-container__thumb-remove">&times;</span>
+            <figcaption class="thumb-container__thumb-name">IMG-6.JPG</figcaption>
+          </figure>
+          <figure class="thumb-container__thumb">
+            <img src="img/thumbs/thumb7.jpg" alt="thumb7">
+            <span class="thumb-container__thumb-remove">&times;</span>
+            <figcaption class="thumb-container__thumb-name">IMG-7.JPG</figcaption>
+          </figure>
+          <figure class="thumb-container__thumb">
+            <img src="img/thumbs/thumb8.jpg" alt="thumb8">
+            <span class="thumb-container__thumb-remove">&times;</span>
+            <figcaption class="thumb-container__thumb-name">IMG-8.JPG</figcaption>
+          </figure>
         </div>
       </fieldset>
 
-      <fieldset class="white">
+      <fieldset class="fieldset--white">
         <input type="submit" value="Отправить форму">
-        <p>
-          <span>*</span>
-          &nbsp;&mdash; ОБЯЗАТЕЛЬНЫЕ ПОЛЯ
-        </p>
+        <p><span class="pink-form__asterisk">*</span>&nbsp;&mdash; ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
       </fieldset>
     </form>
-  </main>
+  </section>
 
-  <footer class="info white">
+
+  <footer class="info-container  info-container--white">
     <div class="pink-footer">Pink</div>
     <div class="sn-container">
-      <a class="twitter" href="#">Мы в Твиттере</a>
-      <a class="facebook" href="#">Мы на Фейсбуке</a>
-      <a class="youtube" href="#">Мы на Ютубе</a>
+      <a class="sn-container__twitter" href="#">Мы в Твиттере</a>
+      <a class="sn-container__facebook" href="#">Мы на Фейсбуке</a>
+      <a class="sn-container__youtube" href="#">Мы на Ютубе</a>
     </div>
-    <div class="powered-by-HTML-academy">Разработано</div>
-      <a href="//htmlacademy.ru" target="_blank">
+    <figure class="powered-by">Разработано
+      <a class="powered-by__HTML-academy" href="//htmlacademy.ru" target="_blank">
         <img src="img/htmlacademy.svg" alt="htmlacademy logo" width="27" height="34">
       </a>
+    </figure>
   </footer>
 
   <!-- Модальные окна - успех/неудача -->
-  <div class="info white" id="success">
-    <h3>Ваша заявка отправлена</h3>
-    <p>
-      Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+  <div class="info-container  info-container--white" id="submit-success">
+    <h3 class="info-container__h3">Ваша заявка отправлена</h3>
+    <p class="info-container__caption">
+      Спасибо за&nbsp;участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.
     </p>
     <div class="gray">
       <button class="close-modal">Закрыть окно</button>
     </div>
   </div>
 
-  <div class="info white" id="failure">
-    <h3>Что-то пошло не так!</h3>
-    <p>
-      Проверьте поля, выделенные красным. Скорее всего, вы забыли их заполнить.
+  <div class="info-container  info-container--white" id="submit-failure">
+    <h3 class="info-container__h3">Что-то пошло не&nbsp;так!</h3>
+    <p class="info-container__caption">
+      Проверьте поля, выделенные красным. Скорее всего, вы&nbsp;забыли их&nbsp;заполнить.
     </p>
     <button class="close-modal">OK</button>
   </div>
 
-  <!-- <script src="js/script.js"></script>
--->
+  <!-- <script src="js/script.js"></script> -->
 </body>
 </html>
