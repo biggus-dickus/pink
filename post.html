@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <!-- Я немного своевольничаю и беру title с h1 заголовка в article, т.к. если открыты обе вкладки блога и поста блога, пользователю будет трудно отличить одно от другого. При подключении шаблона к CMS это создаст некоторые неудобства (возможно, придется вручную менять скрипт). -->
+  <title>Антон и Надя в Таиланде</title>
+  <!-- <link rel="stylesheet" href="css/style.css">--></head>
+<body>
+  <header class="top-header">
+    <div class="float-container">
+        <a class="float-container__logo-link" href="/">Pink</a>
+        <button class="float-container__menu  toggle-menu">
+          <span class="toggle-menu__toggler">Меню</span>
+        </button>
+    </div>
+
+    <nav class="main-menu  hidden">
+      <ul>
+        <li>
+          <a class="main-menu__link" href="#">Информация</a>
+        </li>
+        <li>
+          <a class="main-menu__link" href="#">Блог</a>
+        </li>
+        <li>
+          <a class="main-menu__link" href="#">Отзывы</a>
+        </li>
+        <li>
+          <a class="main-menu__link" href="#">Конкурс</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="top-header__cover">
+      <h1 class="top-header__caption">Блог путешественников, пользователей Пинк</h1>
+    </section>
+  </header>
+
+  <article class="info-container  info-container--white  blog-article">
+    <header class="blog-article__header">
+      <h1>Антон и&nbsp;Надя в&nbsp;Таиланде</h1>
+      <h2>Опубликовано: 6&nbsp;месяцев назад</h2>
+    </header>
+    <section class="blog-article__lead">Читайте рассказ о&nbsp;том, как семейная пара посещала Таиланд, стараясь максимально избегать избитых туристических мест и&nbsp;районов.</section>
+    <section class="blog-article__content">
+      <h3>Предыстория</h3>
+      <p>В&nbsp;Азию нам хотелось попасть уже давно, но&nbsp;всё время что-то останавливало. Также не&nbsp;давал покоя вопрос гигиены и&nbsp;чистоты вокруг. Были сомнения и&nbsp;насчет местной еды. Однако, увидев выгодные билеты на&nbsp;<a href="http://skyscanner.ru" target="_blank">skyscanner.ru</a>, мы&nbsp;всё-таки решились!</p>
+      <h3>Выбор отеля</h3>
+      <p>В&nbsp;Таиланде огромный разброс по&nbsp;стоимости отелей, и&nbsp;так&nbsp;же сильно отличаются они сами. Так как достопримечательности щедро разбросаны по&nbsp;всей стране, то&nbsp;чтобы посетить их&nbsp;все, нужно пожить в&nbsp;нескольких разных городах. В&nbsp;итоге мы&nbsp;остановились на&nbsp;следующих:
+      </p>
+      <ul>
+        <li>Point Yamu by&nbsp;Como (Пхукет);</li>
+        <li>Amari Vogue Hotel (Краби);</li>
+        <li>Photo Hotel (Пхукет).</li>
+      </ul>
+      <p>В&nbsp;выборе отелей мы&nbsp;учитывали как расположение, так и&nbsp;отзывы на&nbsp;Tripadvisor. Например, вот что пишут люди про Point Yamu:</p>
+      <blockquote>
+        Замечательное место, в&nbsp;которое хочется вернуться обязательно! Персонал отзывчивый и&nbsp;внимательный, еда&nbsp;&mdash; потрясающая. Отель расположен в&nbsp;тихом и&nbsp;уединенном месте&nbsp;&mdash; в&nbsp;чем и&nbsp;вся прелесть. Спа отличный. Потрясающие виды.
+        <p><cite>Олег, г. Москва</cite></p>
+      </blockquote>
+      <h3>Местная еда</h3>
+      <p>Существует мнение, что вся еда в&nbsp;Таиланде экстремально острая. Это мнение сложилось не&nbsp;напрасно! Но&nbsp;не&nbsp;стоит делать из&nbsp;этого проблему&nbsp;&mdash; просто попросите сделать ваше блюдо &laquo;not spicy&raquo;. Желающие могут попробовать жареных тараканчиков. Мы&nbsp;не&nbsp;рискнули.</p>
+    </section>
+  </article>
+
+  <div class="float-container">
+    <a class="nav-button nav-button--half-width" href="#prev">Пред.</a>
+    <a class="nav-button nav-button--half-width" href="#next">След.</a>
+  </div>
+    <a class="nav-button" href="blog.html">Назад к&nbsp;списку</a>
+
+  <footer class="info-container  info-container--white">
+    <div class="pink-footer">Pink</div>
+    <div class="sn-container">
+      <a class="sn-container__twitter" href="#">Мы в Твиттере</a>
+      <a class="sn-container__facebook" href="#">Мы на Фейсбуке</a>
+      <a class="sn-container__youtube" href="#">Мы на Ютубе</a>
+    </div>
+    <figure class="powered-by">Разработано
+      <a class="powered-by__HTML-academy" href="//htmlacademy.ru" target="_blank">
+        <img src="img/htmlacademy.svg" alt="htmlacademy logo" width="27" height="34">
+      </a>
+    </figure>
+  </footer>
+
+  <!-- <script src="js/script.js"></script> -->
+</body>
+</html>
