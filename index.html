@@ -3,35 +3,36 @@
 <head>
   <meta charset="utf-8">
   <title>PINK: взгляните на жизнь иначе!</title>
-  <!-- <link rel="stylesheet" href="css/style.css">-->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- Основное фоновое изображение задается для хедера -->
   <header class="top-header">
     <div class="float-container">
         <a class="float-container__logo-link" href="/">Pink</a>
-        <button class="float-container__menu  toggle-menu">
+        <button class="float-container__menu  toggle-menu" id="toggler">
         <!-- "Гамбургер" и крестик будут созданы через псевдоэлементы у спана, для крестика будет использоваться class="toggle-menu__toggler--close" -->
           <span class="toggle-menu__toggler">Меню</span>
         </button>
     </div>
 
 
-    <nav class="main-menu  hidden">
-      <ul>
+    <nav class="hidden">
+      <ul class="main-menu">
         <li>
-          <a class="main-menu__link" href="#">Информация</a>
+          <a class="main-menu__link" href="/">Информация</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Блог</a>
+          <a class="main-menu__link" href="blog.html">Блог</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Отзывы</a>
+          <a class="main-menu__link" href="post.html">Отзывы</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Конкурс</a>
+          <a class="main-menu__link" href="form.html">Конкурс</a>
         </li>
       </ul>
     </nav>
@@ -39,112 +40,113 @@
 
     <!-- Базовая высота у фона будет задаваться по высоте/внутренним отступам <h1>, дополнительно элемент вытягивает вложенный див со своим фоном -->
     <section class="top-header__cover">
-      <h1 class="top-header__caption">Взгляните на жизнь иначе!</h1>
+      <h1 class="top-header__caption">Взгляните на&nbsp;жизнь иначе!</h1>
       <div class="top-header__aux-bg"></div>
     </section>
   </header>
 
 
-    <section class="download-pink">
-      <a class="dnl-btn" href="#">Скачать приложение</a>
+  <section class="download-pink">
+    <a class="download-btn" href="#">Скачать приложение</a>
       <ul class="mobile-icons">
-        <li class="mobile-icons__apple">Pink for Apple</li>
-        <li class="mobile-icons__android">Pink for Android</li>
-        <li class="mobile-icons__windows">Pink for Windows Phone</li>
+        <li><a class="mobile-icons__apple" href="#" title="Скачать в App Store">Pink for Apple</a></li>
+        <li><a class="mobile-icons__android" href="#" title="Скачать в Google Play">Pink for Android</a></li>
+        <li><a class="mobile-icons__windows" href="#" title="Скачать в Microsoft Store">Pink for Windows Phone</a></li>
       </ul>
-      <div class="download-pink__info">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </div>
-    </section>
+    <div class="download-pink__info">
+      Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+    </div>
+  </section>
 
-    <section class="info-container  info-container--white">
-      <h2 class="info-container__h2">Устали от серости мегаполиса?</h2>
-      <h2 class="info-container__h2">Нам есть что вам предложить!</h2>
-    </section>
-
-
-    <!-- По идее, скошенная маска будет делаться тут через ::before... -->
-    <section class="info-container  info-container--gray">
-      <h3 class="info-container__h3">Поднимает настроение</h3>
-      <p class="info-container__caption">
-        Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-      </p>
-      <h3 class="info-container__h3">Меняет мир вокруг</h3>
-      <p class="info-container__caption">
-        Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-      </p>
-      <h3 class="info-container__h3">Заводит новых друзей</h3>
-      <p class="info-container__caption">
-        Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-      </p>
-    </section>
+  <section class="info-container  info-container--white">
+    <h2 class="info-container__h2">Устали от&nbsp;серости мегаполиса?</h2>
+    <h2 class="info-container__h2">Нам есть что вам предложить!</h2>
+  </section>
 
 
-    <section class="info-container  info-container--white testimonials">
-      <h3 class="info-container__h3">Николай Петров</h3>
-      <p class="info-container__caption">
-        &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
-      </p>
-      <div class="radio-slider">
-        <input name="testimonial-ID" id="testimonial1" type="radio" value="1" checked>
-        <label for="testimonial1">1</label>
-        <input name="testimonial-ID" id="testimonial2" type="radio" value="2">
-        <label for="testimonial2">2</label>
-        <input name="testimonial-ID" id="testimonial3" type="radio" value="3">
-        <label for="testimonial3">3</label>
-      </div>
-    </section>
+  <section class="info-container  info-container--gray">
+    <h3 class="info-container__h3">Поднимает настроение</h3>
+    <p class="info-container__caption">
+        Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!
+    </p>
+    <h3 class="info-container__h3">Меняет мир вокруг</h3>
+    <p class="info-container__caption">
+        Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+    </p>
+    <h3 class="info-container__h3">Заводит новых друзей</h3>
+    <p class="info-container__caption">
+      Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых
+    </p>
+    <div class="info-container__aux-bg"></div>
+  </section>
 
 
-    <section class="pricing">
-      <table class="pricing__table">
-        <thead>
+  <section class="info-container  info-container--white testimonials">
+    <h3 class="info-container__h3">Николай Петров</h3>
+    <p class="info-container__caption  info-container__caption--lh-30">
+      &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
+    </p>
+    <div class="radio-slider">
+      <input name="testimonial-ID" id="testimonial1" type="radio" value="1" checked>
+      <label for="testimonial1">1</label>
+      <input name="testimonial-ID" id="testimonial2" type="radio" value="2">
+      <label for="testimonial2">2</label>
+      <input name="testimonial-ID" id="testimonial3" type="radio" value="3">
+      <label for="testimonial3">3</label>
+    </div>
+  </section>
+
+
+  <section class="pricing">
+    <table class="pricing__table">
+      <thead>
+        <tr>
+          <th colspan="2" class="pricing__hit">
+            <h3>Стандарт</h3>
+            <p>3,99 USD</p>
+            <span>Хит</span>
+          </th>
+        </tr>
+      </thead>
+        <tbody>
           <tr>
-            <th class="pricing__hit">
-                <h3>Стандарт</h3>
-                <p>3,99 USD</p>
-            </th>
+            <td>Розовый фильтр</td>
+            <td class="pricing__hint--yes">Да</td>
           </tr>
-        </thead>
-              <tbody>
-                <tr>
-                  <td>Розовый фильтр</td>
-                  <td class="pricing__hint--yes">Да</td>
-                </tr>
-                <tr>
-                  <td>Смайлики</td>
-                  <td class="pricing__hint--yes">Да</td>
-                </tr>
-                <tr>
-                  <td>Комментарии</td>
-                  <td class="pricing__hint--no">Нет</td>
-                </tr>
-              </tbody>
-      </table>
-      <div class="radio-slider">
-        <input name="pricing-ID" id="packege1" type="radio" value="1">
-        <label for="packege1">1</label>
-        <input name="pricing-ID" id="package2" type="radio" value="2" checked>
-        <label for="package2">2</label>
-        <input name="pricing-ID" id="package3" type="radio" value="3">
-        <label for="package3">3</label>
-      </div>
-    </section>
+          <tr>
+            <td>Смайлики</td>
+            <td class="pricing__hint--yes">Да</td>
+          </tr>
+          <tr>
+            <td>Комментарии</td>
+            <td class="pricing__hint--no">Нет</td>
+          </tr>
+        </tbody>
+    </table>
+    <div class="radio-slider">
+      <input name="pricing-ID" id="packege1" type="radio" value="1">
+      <label for="packege1">1</label>
+      <input name="pricing-ID" id="package2" type="radio" value="2" checked>
+      <label for="package2">2</label>
+      <input name="pricing-ID" id="package3" type="radio" value="3">
+      <label for="package3">3</label>
+    </div>
+  </section>
 
 
   <footer class="info-container info-container--white">
     <h2 class="info-container__h2">
       Остались вопросы?<br>
-      Свяжитесь с нами!
+      Свяжитесь с&nbsp;нами!
     </h2>
     <h3 class="info-container__h3">Звоните:</h3>
-    <p class="footer__pink-text">+7&nbsp;(812)&nbsp;555-66-66</p>
+    <p class="info-container__pink-text">+7&nbsp;(812)&nbsp;555-66-66</p>
     <h3 class="info-container__h3">Пишите:</h3>
-    <p class="footer__pink-text">
-      <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+    <p class="info-container__pink-text">
+      <a class="info-container__pink-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
     </p>
     <h3 class="info-container__h3">Приезжайте в&nbsp;гости:</h3>
-    <p class="footer__pink-text">
+    <p class="info-container__pink-text  info-container__pink-text--mask">
       ул.&nbsp;Большая<br>
       Конюшенная, 19/8
     </p>
@@ -152,6 +154,6 @@
   </footer>
 
 
-  <!-- <script src="js/script.js"></script> -->
+<!--  <script src="js/script.js"></script> -->
 </body>
 </html>

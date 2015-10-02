@@ -3,31 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>Конкурс на самое безбашенное путешествие с Пинк</title>
-  <!-- <link rel="stylesheet" href="css/style.css">-->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="top-header">
     <div class="float-container">
         <a class="float-container__logo-link" href="/">Pink</a>
-        <button class="float-container__menu  toggle-menu">
+        <button class="float-container__menu  toggle-menu" id="toggler">
           <span class="toggle-menu__toggler">Меню</span>
         </button>
     </div>
 
-    <nav class="main-menu  hidden">
-      <ul>
+    <nav class="hidden">
+      <ul class="main-menu">
         <li>
-          <a class="main-menu__link" href="#">Информация</a>
+          <a class="main-menu__link" href="/">Информация</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Блог</a>
+          <a class="main-menu__link" href="blog.html">Блог</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Отзывы</a>
+          <a class="main-menu__link" href="post.html">Отзывы</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Конкурс</a>
+          <a class="main-menu__link" href="form.html">Конкурс</a>
         </li>
       </ul>
     </nav>
@@ -41,7 +43,7 @@
     <!-- Форма -->
   <section class="pink-form">
     <form action="" method="post" enctype="multipart/form-data">
-      <fieldset class="fieldset--white">
+      <fieldset class="fieldset  fieldset--white">
         <p>
           Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash;1000&nbsp;миль на&nbsp;вашу бонусную карту!
         </p>
@@ -50,10 +52,10 @@
         <label for="participant-surname">Фамилия: *</label>
         <input id="participant-surname" type="text" name="participant-surname" required placeholder="Укажите фамилию">
         <label for="participant-patronymic">Отчество:</label>
-        <input id="participant-patronymic" type="text" name="participant-patronymic" required placeholder="Ну, и отчество тоже">
+        <input id="participant-patronymic" type="text" name="participant-patronymic" placeholder="Ну, и отчество тоже">
       </fieldset>
 
-      <fieldset class="fieldset--gray">
+      <fieldset class="fieldset  fieldset--gray">
         <legend>С&nbsp;каким приложением путешествовали? *</legend>
           <input id="pink-for-iOS" required name="used-app" type="radio" value="pink-for-iOS" checked>
           <label for="pink-for-iOS">Пинк для iOS</label>
@@ -63,7 +65,7 @@
           <label for="pink-for-Windows-phone">Windows Phone</label>
       </fieldset>
 
-      <fieldset class="fieldset--white">
+      <fieldset class="fieldset  fieldset--white">
         <!-- В этом месте дизайнер как-то намудрил, и восприятие формы усложняется: во-первых заголовок секции и подписи для полей одинаково стилизованы, во-вторых
                 подписи расположены под полями, а в голом хтмл без стилизации это выглядит еще хуже:) -->
         <legend>Когда вы&nbsp;путешествовали? *</legend>
@@ -79,7 +81,7 @@
         <label for="return-date">Дата выезда</label>
       </fieldset>
 
-      <fieldset class="fieldset--gray">
+      <fieldset class="fieldset  fieldset--gray">
         <legend>Количество попутчиков *</legend>
         <span class="minus">-</span>
         <input required name="travellers-number" type="text" value="2 чел.">
@@ -131,7 +133,7 @@
 
       </fieldset>
 
-      <fieldset class="fieldset--white">
+      <fieldset class="fieldset  fieldset--white">
         <legend>Ваши безбашенные достижения в&nbsp;путешествии</legend>
         <input id="selfie-with-shark" name="crazy-achievement" type="checkbox" checked>
         <label for="selfie-with-shark">Сделал селфи с акулой</label>
@@ -147,7 +149,7 @@
         <label for="wrecked-hotel">Разгромил отель</label>
       </fieldset>
 
-      <fieldset class="fieldset--gray">
+      <fieldset class="fieldset  fieldset--gray">
         <legend>Ваши фотографии из&nbsp;поездки *</legend>
         <!-- Кнопка "загрузить" будет скрыта, стили применены к метке -->
         <label for="upload-photos">Загрузить фото</label>
@@ -198,7 +200,7 @@
         </div>
       </fieldset>
 
-      <fieldset class="fieldset--white">
+      <fieldset class="fieldset  fieldset--white">
         <input type="submit" value="Отправить форму">
         <p><span class="pink-form__asterisk">*</span>&nbsp;&mdash; ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
       </fieldset>

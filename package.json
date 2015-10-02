@@ -1,37 +1,35 @@
 {
   "name": "107049-pink",
   "version": "0.1.0",
-  "private": true,
   "description": "Обучающий проект «pink» от HTML Academy",
-  "author": "Макс Масленко",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/up-htmlacademy/107049-pink.git"
   },
+  "keywords": [
+    "учебный",
+    "проект"
+  ],
+  "author": "Макс Масленко",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/up-htmlacademy/107049-pink/issues"
   },
   "homepage": "https://github.com/up-htmlacademy/107049-pink",
-  "dependencies": {
-    "autoprefixer": "6.0.x",
-    "grunt": "0.4.x",
-    "grunt-contrib-clean": "0.6.x",
-    "grunt-contrib-copy": "0.8.x",
-    "grunt-contrib-less": "1.0.x",
-    "grunt-contrib-watch": "0.6.x",
-    "grunt-lintspaces": "0.7.x",
-    "grunt-postcss": "0.6.x",
-    "husky": "0.10.x",
-    "load-grunt-tasks": "3.2.x"
-  },
-  "main": "Gruntfile.js",
-  "scripts": {
-    "lint": "grunt lintspaces:codestyle",
-    "test": "npm run lint",
-    "pregosha": "npm install",
-    "gosha": "grunt gosha"
-  },
-  "engines": {
-    "node": "^0.12.7"
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "connect": "^3.4.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-less": "^3.0.3",
+    "gulp-livereload": "^3.8.1",
+    "gulp-uncss": "^1.0.4",
+    "gulp.spritesmith": "^4.1.1",
+    "serve-static": "^1.10.0"
   }
 }
