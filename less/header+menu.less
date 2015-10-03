@@ -1,0 +1,110 @@
+.top-header {
+	position: relative;
+	min-height: 235px;
+	background: url('../img/bg/bg_main--photo.jpg') no-repeat 0 0;
+
+	&__caption {
+		text-align: center;
+		padding: 0 10px;
+		font-size: @h2;
+		line-height: 30px;
+		font-weight: 300;
+		color: @white;
+	}
+
+	&__aux-bg {
+		height: 310px;
+		background: url('../img/bg/bg_main--hand.jpg') no-repeat 0 0;
+	}
+}
+
+.float-container {
+	box-sizing: border-box;
+	width: @screen--sm;
+	padding: 30px 20px;
+	background-color: rgba(29,38,49, .7);
+
+	&__logo-link {
+		float: left;
+		font-size: 24px;
+		line-height: 0;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: @white;
+	}
+
+	&__menu {
+		float: right;
+	}
+}
+
+.toggle-menu {
+  	position: relative;
+  	bottom: 14px;
+  	display: block;
+  	width: 50px;
+  	height: 26px;
+  	font-size: 0;
+  	text-indent: -9000px;
+  	overflow: hidden;
+  	background-color: transparent;
+  	box-shadow: none;
+  	border-radius: 0;
+  	border: none;
+  	cursor: pointer;
+
+  	&:focus {
+  		outline: none;
+  	}
+
+  	&__toggler {
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: 12px;
+		height: 4px;
+		background: white;
+	}
+
+	&__toggler::before,
+	&__toggler::after {
+  		position: absolute;
+  		left: 0;
+  		display: block;
+  		width: 100%;
+  		height: 4px;
+  		background-color: @white;
+  		content: "";
+	}
+
+	&__toggler::before {
+		top: -10px;
+	}
+
+	&__toggler::after {
+		bottom: -10px;
+	}
+}
+
+.main-menu {
+	position: absolute;
+	left: -40px;
+    top: 45px;
+	list-style: none;
+	width: @screen--sm;
+
+	&__link {
+		display: block;
+		padding: 30px 0;
+		border-top: 1px solid #485461;
+		border-bottom: 1px solid #000101;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 0;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		background-color: @blue--lighter;
+		color: @white;
+	}
+}

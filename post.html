@@ -4,29 +4,33 @@
   <meta charset="utf-8">
   <!-- Я немного своевольничаю и беру title с h1 заголовка в article, т.к. если открыты обе вкладки блога и поста блога, пользователю будет трудно отличить одно от другого. При подключении шаблона к CMS это создаст некоторые неудобства (возможно, придется вручную менять скрипт). -->
   <title>Антон и Надя в Таиланде</title>
-  <!-- <link rel="stylesheet" href="css/style.css">--></head>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
   <header class="top-header">
     <div class="float-container">
         <a class="float-container__logo-link" href="/">Pink</a>
-        <button class="float-container__menu  toggle-menu">
+        <button class="float-container__menu  toggle-menu" id="toggler">
           <span class="toggle-menu__toggler">Меню</span>
         </button>
     </div>
 
-    <nav class="main-menu  hidden">
-      <ul>
+    <nav class="hidden">
+      <ul class="main-menu">
         <li>
-          <a class="main-menu__link" href="#">Информация</a>
+          <a class="main-menu__link" href="/">Информация</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Блог</a>
+          <a class="main-menu__link" href="blog.html">Блог</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Отзывы</a>
+          <a class="main-menu__link" href="post.html">Отзывы</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Конкурс</a>
+          <a class="main-menu__link" href="form.html">Конкурс</a>
         </li>
       </ul>
     </nav>
@@ -36,7 +40,7 @@
     </section>
   </header>
 
-  <article class="info-container  info-container--white  blog-article">
+  <article class="blog-article">
     <header class="blog-article__header">
       <h1>Антон и&nbsp;Надя в&nbsp;Таиланде</h1>
       <h2>Опубликовано: 6&nbsp;месяцев назад</h2>
