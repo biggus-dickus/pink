@@ -367,6 +367,29 @@ body {
 .radio-slider {
 	margin: 35px 0 15px;
 	text-align: center;
+
+	& input[type="radio"] {
+		display: none;
+	}
+
+	& label {
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: middle;
+		width: 5px;
+		height: 5px;
+		background-color: #b5b9be;
+		border-radius: 50%;
+		text-indent: -9000px;
+	}
+
+	& label:last-child {
+		margin-right: 0;
+	}
+
+	& input[type="radio"]:checked + label {
+		box-shadow: 0 0 0 3px @blue--lighter;
+	}
 }
 
 .footer-map {
