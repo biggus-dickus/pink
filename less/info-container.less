@@ -1,0 +1,79 @@
+.info-container {
+	position: relative;
+	padding: 20px 20px 0;
+	text-align: center;
+
+	&&--white {
+		padding-bottom: 40px;
+		background-color: @white;
+	}
+
+	&&--gray {
+		background-color: @gray;
+	}
+
+	&&--gray::before {
+	 	content: "";
+	 	position: absolute;
+	 	left: 0;
+	    top: -32px;
+	 	width: @screen--sm;
+	 	height: 32px;
+	 	background: url(../img/bg/bg-mask--gray.png) no-repeat 0 0;
+	}
+
+	&__h2{
+		font-size: @h2;
+		font-weight: 300;
+		line-height: 28px;
+		color: @blue--lighter;
+	}
+
+	&__h2:first-child {
+		margin-bottom: 40px;
+	}
+
+	&__h3{
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-size: @h3;
+		color: @blue--lighter;
+	}
+
+	&__caption {
+		font-size: @base-fs;
+		line-height: 24px;
+		color: @blue--lighter;
+	}
+
+	&__caption&__caption--lh-30 {
+		line-height: 30px;
+	}
+
+	&__aux-bg {
+		height: 320px;
+		background: url('../img/bg/info-container__aux-bg.png') no-repeat 50% 38px;
+	}
+
+	&__pink-text {
+		margin-top: -15px;
+		margin-bottom: -5px;
+		font-size: @h2;
+		font-weight: 300;
+		text-decoration: none;
+		color: @pink;
+	}
+
+	&__pink-text:last-of-type {
+		padding-bottom: 40px;
+	}
+	&&--mask::after {
+		position: absolute;
+		bottom: 77px;
+		right: 0;
+		content: "";
+		width: 320px;
+		height: 123px;
+		background: url("../img/etc/triangle--map.png") no-repeat 0 0;
+	}
+}

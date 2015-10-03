@@ -3,32 +3,38 @@
 <head>
   <meta charset="utf-8">
   <title>Блог путешественников, пользователей Пинк</title>
-  <!-- <link rel="stylesheet" href="css/style.css">--></head>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
   <header class="top-header">
     <div class="float-container">
         <a class="float-container__logo-link" href="/">Pink</a>
-        <button class="float-container__menu  toggle-menu">
+        <button class="float-container__menu  toggle-menu" id="toggler">
           <span class="toggle-menu__toggler">Меню</span>
         </button>
     </div>
 
-    <nav class="main-menu  hidden">
-      <ul>
+
+    <nav class="hidden">
+      <ul class="main-menu">
         <li>
-          <a class="main-menu__link" href="#">Информация</a>
+          <a class="main-menu__link" href="/">Информация</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Блог</a>
+          <a class="main-menu__link" href="blog.html">Блог</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Отзывы</a>
+          <a class="main-menu__link" href="post.html">Отзывы</a>
         </li>
         <li>
-          <a class="main-menu__link" href="#">Конкурс</a>
+          <a class="main-menu__link" href="form.html">Конкурс</a>
         </li>
       </ul>
     </nav>
+
 
     <section class="top-header__cover">
       <h1 class="top-header__caption">Блог путешественников, пользователей Пинк</h1>
@@ -51,7 +57,7 @@
         <h2>Опубликовано: 5&nbsp;лет назад</h2>
       </header>
       <section class="blog-entry__lead">
-        Возрождение культурных традиций уже не&nbsp;за&nbsp;гормаи. Фолк-метал-рэп-группа из&nbsp;столицы Кубани провела весь год в&nbsp;гастролях по&nbsp;России и&nbsp;ближнему (а&nbsp;также среднему) зарубежью.
+        Возрождение культурных традиций уже не&nbsp;за&nbsp;горами. Фолк-метал-рэп-группа из&nbsp;столицы Кубани провела весь год в&nbsp;гастролях по&nbsp;России и&nbsp;ближнему (а&nbsp;также среднему) зарубежью.
       </section>
     </article>
     <article class="blog-entry">
@@ -75,7 +81,7 @@
   </section>
 
   <section class="pagination">
-    <a class="pagination__number  pagination__number--current" href="#1">1</a>
+    <span class="pagination__number  pagination__number--current" href="#1">1</span>
     <a class="pagination__number" href="#2">2</a>
     <a class="pagination__number" href="#3">3</a>
     <a class="pagination__number" href="#4">4</a>
