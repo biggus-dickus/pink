@@ -88,6 +88,7 @@
 
 .main-menu {
 	position: absolute;
+	z-index: 1;
 	left: -40px;
     top: 45px;
 	list-style: none;
@@ -106,5 +107,14 @@
 		text-decoration: none;
 		background-color: @blue--lighter;
 		color: @white;
+		transition: all linear .2s;
+	}
+
+	&__link:hover {
+		color: @pink;
+	}
+
+	&__link:active {
+		color: fade(@pink, 30%);
 	}
 }

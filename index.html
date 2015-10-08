@@ -5,6 +5,7 @@
   <title>PINK: взгляните на жизнь иначе!</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -77,12 +78,18 @@
     <p class="info-container__caption">
       Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых
     </p>
+     <h3 class="info-container__h3">Эффект на&nbsp;24&nbsp;часа!</h3>
+    <p class="info-container__caption">
+      Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!
+    </p>
+    <p><a href="#">Узнать больше об&nbsp;исследовании</a></p>
     <div class="info-container__aux-bg"></div>
   </section>
 
 
   <section class="info-container  info-container--white testimonials">
     <h3 class="info-container__h3">Николай Петров</h3>
+    <p class="info-container__caption  info-container__caption--subtitle">25 лет, водитель трамвая</p>
     <p class="info-container__caption  info-container__caption--lh-30">
       &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
     </p>
@@ -101,10 +108,20 @@
     <table class="pricing__table">
       <thead>
         <tr>
-          <th colspan="2" class="pricing__hit">
+          <th>
+          </th>
+          <th>
+            <h3>База</h3>
+            <p>1,99 USD</p>
+          </th>
+          <th class="pricing__hit">
             <h3>Стандарт</h3>
             <p>3,99 USD</p>
             <span>Хит</span>
+          </th>
+          <th>
+            <h3>Анлим</h3>
+            <p>9,99 USD</p>
           </th>
         </tr>
       </thead>
@@ -112,17 +129,24 @@
           <tr>
             <td>Розовый фильтр</td>
             <td class="pricing__hint--yes">Да</td>
+            <td class="pricing__hint--yes">Да</td>
+            <td class="pricing__hint--yes">Да</td>
           </tr>
           <tr>
             <td>Смайлики</td>
+            <td class="pricing__hint--no">Нет</td>
+            <td class="pricing__hint--yes">Да</td>
             <td class="pricing__hint--yes">Да</td>
           </tr>
           <tr>
             <td>Комментарии</td>
             <td class="pricing__hint--no">Нет</td>
+            <td class="pricing__hint--no">Нет</td>
+            <td class="pricing__hint--yes">Да</td>
           </tr>
         </tbody>
     </table>
+
     <div class="radio-slider">
       <input name="pricing-ID" id="package1" type="radio" value="1">
       <label for="package1">1</label>
@@ -131,6 +155,7 @@
       <input name="pricing-ID" id="package3" type="radio" value="3">
       <label for="package3">3</label>
     </div>
+
   </section>
 
 
@@ -151,6 +176,19 @@
       Конюшенная, 19/8
     </p>
     <div class="footer-map"></div>
+
+    <div class="pink-footer">Pink</div>
+    <div class="sn-container">
+      <a class="sn-container__twitter" href="#">Мы в Твиттере</a>
+      <a class="sn-container__facebook" href="#">Мы на Фейсбуке</a>
+      <a class="sn-container__youtube" href="#">Мы на Ютубе</a>
+    </div>
+    <figure class="powered-by">Разработано
+      <a class="powered-by__HTML-academy" href="//htmlacademy.ru" target="_blank">
+        <img src="img/htmlacademy.svg" alt="htmlacademy logo" width="27" height="34">
+      </a>
+    </figure>
+
   </footer>
 
 
