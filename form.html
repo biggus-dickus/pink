@@ -2,247 +2,252 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Конкурс на самое безбашенное путешествие с Пинк</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="float-container">
-        <a class="float-container__logo-link" href="/">Pink</a>
-        <button class="float-container__menu  toggle-menu" id="toggler">
-          <span class="toggle-menu__toggler">Меню</span>
-        </button>
-    </div>
+  <div class="viewport-wrapper">
+    <header class="top-header">
+      <div class="top-bar">
+          <a class="top-bar__logo-link" href="/">Pink</a>
+          <button class="top-bar__menu  toggle-menu" id="toggler">Меню</button>
+      </div>
 
-    <nav class="hidden">
-      <ul class="main-menu">
-        <li>
-          <a class="main-menu__link" href="/">Информация</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="blog.html">Блог</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="post.html">Отзывы</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="form.html">Конкурс</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="hidden">
+        <ul class="main-menu">
+          <li>
+            <a class="main-menu__link" href="/">Информация</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="blog.html">Блог</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="post.html">Отзывы</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="form.html">Конкурс</a>
+          </li>
+        </ul>
+      </nav>
 
-    <section class="top-header__cover">
-      <h1 class="top-header__caption">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
-    </section>
-  </header>
+      <section class="top-header__cover">
+        <h1 class="top-header__caption  top-header__caption--rest">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
+      </section>
+    </header>
 
 
-    <!-- Форма -->
-  <section class="pink-form">
-    <form action="" method="post" enctype="multipart/form-data">
-      <fieldset class="fieldset  fieldset--white">
-        <p>
-          Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash;1000&nbsp;миль на&nbsp;вашу бонусную карту!
-        </p>
-        <label for="participant-firstname">Имя: *</label>
-        <input id="participant-firstname" type="text" name="participant-firstname" required placeholder="Введите ваше имя">
-        <label for="participant-surname">Фамилия: *</label>
-        <input id="participant-surname" type="text" name="participant-surname" required placeholder="Укажите фамилию">
-        <label for="participant-patronymic">Отчество:</label>
-        <input id="participant-patronymic" type="text" name="participant-patronymic" placeholder="Ну, и отчество тоже">
-      </fieldset>
+      <!-- Форма -->
+    <section class="pink-form">
+      <form action="" method="post" enctype="multipart/form-data">
+        <fieldset class="fieldset  fieldset--white  fieldset--no-border  fieldset--no-padding">
+          <p>
+            Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту!
+            <span class="mob-hidden  tablet-block">Пожалуйста, заполните форму ниже:</span>
+          </p>
+          <label class="pink-form__pink-label" for="participant-firstname">Имя: *</label>
+          <input class="pink-form__input  pink-form__input--default" id="participant-firstname" type="text" name="participant-firstname" required placeholder="Введите ваше имя">
+          <label class="pink-form__pink-label" for="participant-surname">Фамилия: *</label>
+          <input class="pink-form__input  pink-form__input--default" id="participant-surname" type="text" name="participant-surname" required placeholder="Укажите фамилию">
+          <label class="pink-form__pink-label" for="participant-patronymic">Отчество:</label>
+          <input class="pink-form__input  pink-form__input--default" id="participant-patronymic" type="text" name="participant-patronymic" placeholder="Ну, и отчество тоже">
+        </fieldset>
 
-      <fieldset class="fieldset  fieldset--gray">
-        <legend>С&nbsp;каким приложением путешествовали? *</legend>
-          <input id="pink-for-iOS" required name="used-app" type="radio" value="pink-for-iOS" checked>
-          <label for="pink-for-iOS">Пинк для iOS</label>
-          <input id="pink-for-Android" required name="used-app" type="radio" value="pink-for-Android">
-          <label for="pink-for-Android">Пинк на&nbsp;Android</label>
-          <input id="pink-for-Windows-phone" required name="used-app" type="radio" value="pink-for-Windows-phone">
-          <label for="pink-for-Windows-phone">Windows Phone</label>
-      </fieldset>
+        <fieldset class="fieldset  fieldset--gray">
+          <legend>С&nbsp;каким приложением путешествовали? *</legend>
+            <input id="pink-for-iOS" required name="used-app" type="radio" value="pink-for-iOS" checked>
+            <label class="hover-label" for="pink-for-iOS">Pink для iOS</label>
+            <input id="pink-for-Android" required name="used-app" type="radio" value="pink-for-Android">
+            <label class="hover-label" for="pink-for-Android">Pink на&nbsp;Android</label>
+            <input id="pink-for-Windows-phone" required name="used-app" type="radio" value="pink-for-Windows-phone">
+            <label class="hover-label" for="pink-for-Windows-phone">Windows Phone</label>
+        </fieldset>
 
-      <fieldset class="fieldset  fieldset--white">
-        <!-- В этом месте дизайнер как-то намудрил, и восприятие формы усложняется: во-первых заголовок секции и подписи для полей одинаково стилизованы, во-вторых
-                подписи расположены под полями, а в голом хтмл без стилизации это выглядит еще хуже:) -->
-        <legend>Когда вы&nbsp;путешествовали? *</legend>
-        <input required id="departure-date" type="text" name="departure-date" value="1 апреля 2015">
-        <label for="departure-date">Дата выезда</label>
+        <fieldset class="fieldset  fieldset--white">
+          <legend>Когда вы&nbsp;путешествовали? *</legend>
+          <div class="fieldset__wrapper">
+            <div class="fieldset__wrapper-item">
+              <input class="pink-form__input--travel" required id="departure-date" type="text" name="departure-date" placeholder="1 апреля 2015">
+              <label class="fieldset__sub-label" for="departure-date">Дата выезда</label>
+            </div>
+            <div class="fieldset__wrapper-item">
+              <span class="minus" title="Меньше">-</span>
+              <input class="controlled-value" required id="duration" name="duration" type="text" placeholder="10 дней" readonly>
+              <span class="plus" title="Больше">+</span>
+              <label class="fieldset__sub-label" for="duration">Продолжительность</label>
+            </div>
+            <div class="fieldset__wrapper-item">
+              <input class="pink-form__input--default" required id="return-date" type="text" name="return-date" value="11 апреля 2015" disabled>
+              <label class="fieldset__sub-label" for="return-date">Дата возвращения</label>
+            </div>
+          </div>
+        </fieldset>
 
-        <span class="minus">-</span>
-        <input required id="duration" name="duration" type="text" value="10 дней">
-        <span class="plus">+</span>
-        <label for="duration">Продолжительность</label>
+        <fieldset class="fieldset  fieldset--gray">
+          <legend>Количество попутчиков *</legend>
+          <div class="fieldset__wrapper">
+            <span class="minus" title="Меньше">-</span>
+            <input class="controlled-value  controlled-value--no-border" required name="travellers-number" type="text" placeholder="2 чел." readonly>
+            <span class="plus" title="Больше">+</span>
+            <hr>
+            <table class="travellers">
+              <tr>
+                <td class="travellers__number">№</td>
+                <td class="travellers__name-container">
+                  <label class="pink-form__pink-label  pink-form__pink-label--traveller-name" for="traveller1-name">Имя: *</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <span class="travellers__ordinal-number">1</span>
+                  <input class="travellers__input-field" id="traveller1-name" type="text" name="traveller1-name" required placeholder="Введите ваше имя">
+                </td>
+                <td class="travellers__delete  mob-hidden">Удалить</td>
+              </tr>
+              <tr>
+                <td class="travellers__empty-cell"></td>
+                <td class="travellers__nickname-container">
+                  <label class="pink-form__pink-label" for="traveller1-nickname">Прозвище</label>
+                  <input class="travellers__input-field" id="traveller1-nickname" type="text" name="traveller1-nickname" placeholder="Ну, как же без этого!">
+                </td>
+              </tr>
+            </table>
 
-        <input required id="return-date" type="text" name="return-date" value="1 апреля 2015" disabled>
-        <label for="return-date">Дата выезда</label>
-      </fieldset>
+            <table class="travellers">
+              <tr>
+                <td class="travellers__number">№</td>
+                <td class="travellers__name-container">
+                  <label class="pink-form__pink-label  pink-form__pink-label--traveller-name" for="traveller2-name">Имя: *</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <span class="travellers__ordinal-number">2</span>
+                  <input class="travellers__input-field" id="traveller2-name" type="text" name="traveller2-name" required placeholder="Введите ваше имя">
+                </td>
+                <td class="travellers__delete  mob-hidden">Удалить</td>
+              </tr>
+              <tr>
+                <td class="travellers__empty-cell"></td>
+                <td class="travellers__nickname-container">
+                  <label class="pink-form__pink-label" for="traveller2-nickname">Прозвище</label>
+                  <input class="travellers__input-field" id="traveller2-nickname" type="text" name="traveller2-nickname" placeholder="Ну, как же без этого!">
+                </td>
+              </tr>
+            </table>
+          </div>
 
-      <fieldset class="fieldset  fieldset--gray">
-        <legend>Количество попутчиков *</legend>
-        <span class="minus">-</span>
-        <input required name="travellers-number" type="text" value="2 чел.">
-        <span class="plus">+</span>
-        <!-- Линия-разделитель -->
-        <hr>
-        <!-- Пока что для удобства восприятия делаю эти элементы таблицей -->
-        <table>
-          <tr>
-            <td>№</td>
-            <td>
-              <label for="traveller1-name">Имя: *</label>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>
-              <input id="traveller1-name" type="text" name="traveller1-name" required placeholder="Введите ваше имя"></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <label for="traveller1-nickname">Прозвище</label>
-              <br>
-              <input id="traveller1-nickname" type="text" name="traveller1-nickname" placeholder="Ну, как же без этого!"></td>
-          </tr>
-        </table>
+        </fieldset>
 
-        <table>
-          <tr>
-            <td>№</td>
-            <td>
-              <label for="traveller2-name">Имя: *</label>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>
-              <input id="traveller2-name" type="text" name="traveller2-name" required placeholder="Введите ваше имя"></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <label for="traveller2-nickname">Прозвище</label>
-              <br>
-              <input id="traveller2-nickname" type="text" name="traveller2-nickname" placeholder="Ну, как же без этого!"></td>
-          </tr>
-        </table>
+        <fieldset class="fieldset  fieldset--white">
+          <legend>Ваши безбашенные достижения в&nbsp;путешествии</legend>
+          <input id="selfie-with-shark" name="crazy-achievement" type="checkbox" checked>
+          <label class="hover-label" for="selfie-with-shark">Сделал селфи с акулой</label>
+          <input id="sunburnt" name="crazy-achievement" type="checkbox" checked>
+          <label class="hover-label" for="sunburnt">Обгорел на пляже</label>
+          <input id="saw-Chuck-Norris" name="crazy-achievement" type="checkbox">
+          <label class="hover-label" for="saw-Chuck-Norris">Видел Чака Норриса</label>
+          <input id="bought-souvenirs" name="crazy-achievement" type="checkbox">
+          <label class="hover-label" for="bought-souvenirs">Накупил сувениров</label>
+          <input id="held-tower" name="crazy-achievement" type="checkbox" checked>
+          <label class="hover-label" for="held-tower">Удержал башню</label>
+          <input id="wrecked-hotel" name="crazy-achievement" type="checkbox">
+          <label class="hover-label" for="wrecked-hotel">Разгромил отель</label>
+        </fieldset>
 
-      </fieldset>
+        <fieldset class="fieldset  fieldset--gray">
+          <legend>Ваши фотографии из&nbsp;поездки *</legend>
+          <input id="upload-photos" type="file" name="upload-photos" value="Загрузить фото" required>
+          <label class="button  button--ghost" for="upload-photos">Загрузить фото</label>
+          <hr class="upload-hr">
+          <div class="thumb-container">
+            <figure class="thumb-container__thumb">
+              <img class="thumb-container__img" src="img/thumbs/thumb1.jpg" alt="thumb1">
+              <a class="thumb-container__thumb-remove" title="Удалить это фото">&times;</a>
+              <figcaption class="thumb-container__thumb-name">IMG-1.JPG</figcaption>
+            </figure>
+            <figure class="thumb-container__thumb">
+              <img class="thumb-container__img" src="img/thumbs/thumb2.jpg" alt="thumb2">
+              <a class="thumb-container__thumb-remove" title="Удалить это фото">&times;</a>
+              <figcaption class="thumb-container__thumb-name">IMG-2.JPG</figcaption>
+            </figure>
+            <figure class="thumb-container__thumb">
+              <img class="thumb-container__img" src="img/thumbs/thumb3.jpg" alt="thumb3">
+              <a class="thumb-container__thumb-remove" title="Удалить это фото">&times;</a>
+              <figcaption class="thumb-container__thumb-name">IMG-3.JPG</figcaption>
+            </figure>
+            <figure class="thumb-container__thumb">
+              <img class="thumb-container__img" src="img/thumbs/thumb4.jpg" alt="thumb4">
+              <a class="thumb-container__thumb-remove" title="Удалить это фото">&times;</a>
+              <figcaption class="thumb-container__thumb-name">IMG-4.JPG</figcaption>
+            </figure>
+            <figure class="thumb-container__thumb">
+              <img class="thumb-container__img" src="img/thumbs/thumb5.jpg" alt="thumb5">
+              <a class="thumb-container__thumb-remove" title="Удалить это фото">&times;</a>
+              <figcaption class="thumb-container__thumb-name">IMG-5.JPG</figcaption>
+            </figure>
+            <figure class="thumb-container__thumb">
+              <img class="thumb-container__img" src="img/thumbs/thumb6.jpg" alt="thumb6">
+              <a class="thumb-container__thumb-remove" title="Удалить это фото">&times;</a>
+              <figcaption class="thumb-container__thumb-name">IMG-6.JPG</figcaption>
+            </figure>
+            <figure class="thumb-container__thumb">
+              <img class="thumb-container__img" src="img/thumbs/thumb7.jpg" alt="thumb7">
+              <a class="thumb-container__thumb-remove" title="Удалить это фото">&times;</a>
+              <figcaption class="thumb-container__thumb-name">IMG-7.JPG</figcaption>
+            </figure>
+            <figure class="thumb-container__thumb">
+              <img class="thumb-container__img" src="img/thumbs/thumb8.jpg" alt="thumb8">
+              <a class="thumb-container__thumb-remove" title="Удалить это фото">&times;</a>
+              <figcaption class="thumb-container__thumb-name">IMG-8.JPG</figcaption>
+            </figure>
+          </div>
+        </fieldset>
 
-      <fieldset class="fieldset  fieldset--white">
-        <legend>Ваши безбашенные достижения в&nbsp;путешествии</legend>
-        <input id="selfie-with-shark" name="crazy-achievement" type="checkbox" checked>
-        <label for="selfie-with-shark">Сделал селфи с акулой</label>
-        <input id="sunburnt" name="crazy-achievement" type="checkbox" checked>
-        <label for="sunburnt">Обгорел на пляже</label>
-        <input id="saw-Chuck-Norris" name="crazy-achievement" type="checkbox">
-        <label for="saw-Chuck-Norris">Видел Чака Норриса</label>
-        <input id="bought-souvenirs" name="crazy-achievement" type="checkbox">
-        <label for="bought-souvenirs">Накупил сувениров</label>
-        <input id="held-tower" name="crazy-achievement" type="checkbox" checked>
-        <label for="held-tower">Удержал башню</label>
-        <input id="wrecked-hotel" name="crazy-achievement" type="checkbox">
-        <label for="wrecked-hotel">Разгромил отель</label>
-      </fieldset>
-
-      <fieldset class="fieldset  fieldset--gray">
-        <legend>Ваши фотографии из&nbsp;поездки *</legend>
-        <!-- Кнопка "загрузить" будет скрыта, стили применены к метке -->
-        <label for="upload-photos">Загрузить фото</label>
-        <input id="upload-photos" type="file" name="upload-photos" value="Загрузить фото" required>
-        <!-- Линия-разделитель -->
-        <hr>
-        <div class="thumb-container">
-          <figure class="thumb-container__thumb">
-            <img src="img/thumbs/thumb1.jpg" alt="thumb1">
-            <span class="thumb-container__thumb-remove">&times;</span>
-            <figcaption class="thumb-container__thumb-name">IMG-1.JPG</figcaption>
-          </figure>
-          <figure class="thumb-container__thumb">
-            <img src="img/thumbs/thumb2.jpg" alt="thumb2">
-            <span class="thumb-container__thumb-remove">&times;</span>
-            <figcaption class="thumb-container__thumb-name">IMG-2.JPG</figcaption>
-          </figure>
-          <figure class="thumb-container__thumb">
-            <img src="img/thumbs/thumb3.jpg" alt="thumb3">
-            <span class="thumb-container__thumb-remove">&times;</span>
-            <figcaption class="thumb-container__thumb-name">IMG-3.JPG</figcaption>
-          </figure>
-          <figure class="thumb-container__thumb">
-            <img src="img/thumbs/thumb4.jpg" alt="thumb4">
-            <span class="thumb-container__thumb-remove">&times;</span>
-            <figcaption class="thumb-container__thumb-name">IMG-4.JPG</figcaption>
-          </figure>
-          <figure class="thumb-container__thumb">
-            <img src="img/thumbs/thumb5.jpg" alt="thumb5">
-            <span class="thumb-container__thumb-remove">&times;</span>
-            <figcaption class="thumb-container__thumb-name">IMG-5.JPG</figcaption>
-          </figure>
-          <figure class="thumb-container__thumb">
-            <img src="img/thumbs/thumb6.jpg" alt="thumb6">
-            <span class="thumb-container__thumb-remove">&times;</span>
-            <figcaption class="thumb-container__thumb-name">IMG-6.JPG</figcaption>
-          </figure>
-          <figure class="thumb-container__thumb">
-            <img src="img/thumbs/thumb7.jpg" alt="thumb7">
-            <span class="thumb-container__thumb-remove">&times;</span>
-            <figcaption class="thumb-container__thumb-name">IMG-7.JPG</figcaption>
-          </figure>
-          <figure class="thumb-container__thumb">
-            <img src="img/thumbs/thumb8.jpg" alt="thumb8">
-            <span class="thumb-container__thumb-remove">&times;</span>
-            <figcaption class="thumb-container__thumb-name">IMG-8.JPG</figcaption>
-          </figure>
+        <div class="submit-section">
+          <input class="button  button--default  submit-section__input" type="submit" value="Отправить форму">
+          <p class="submit-section__note"><span class="pink-form__asterisk">*</span>&nbsp;&mdash; ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
         </div>
-      </fieldset>
-
-      <fieldset class="fieldset  fieldset--white">
-        <input type="submit" value="Отправить форму">
-        <p><span class="pink-form__asterisk">*</span>&nbsp;&mdash; ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
-      </fieldset>
-    </form>
-  </section>
+      </form>
+    </section>
 
 
-  <footer class="info-container  info-container--white">
-    <div class="pink-footer">Pink</div>
-    <div class="sn-container">
-      <a class="sn-container__twitter" href="#">Мы в Твиттере</a>
-      <a class="sn-container__facebook" href="#">Мы на Фейсбуке</a>
-      <a class="sn-container__youtube" href="#">Мы на Ютубе</a>
+    <footer class="info-container  info-container--white">
+      <section class="footer-bar-wrapper">
+          <div class="footer-bar-wrapper__item  pink-footer"><a href="/" title="На главную">Pink</a></div>
+          <div class="footer-bar-wrapper__item  footer-bar-wrapper__item--central  sn-container">
+            <a class="sn-container__twitter" href="#" title="Мы в Twitter">Мы в Твиттере</a>
+            <a class="sn-container__facebook" href="#" title="Мы на Facebook">Мы на Фейсбуке</a>
+            <a class="sn-container__youtube" href="#" title="Мы на Youtube">Мы на Ютубе</a>
+          </div>
+          <figure class="footer-bar-wrapper__item  powered-by"><span>Разработано</span>
+            <a class="powered-by__HTML-academy" href="//htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
+          </figure>
+      </section>
+    </footer>
+
+    <!-- Модальные окна - успех/неудача -->
+    <div class="modal-wrapper" id="submit-success">
+      <h3 class="modal-wrapper__header">Ваша заявка отправлена</h3>
+      <p class="modal-wrapper__caption">
+        Спасибо за&nbsp;участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.
+      </p>
+      <div class="gray">
+        <button class="button  button--default">Закрыть окно</button>
+      </div>
     </div>
-    <figure class="powered-by">
-      <figcaption class="powered-by__HTML-academy">Разработано</figcaption>
-      <a href="//htmlacademy.ru" target="_blank">
-        <img src="img/htmlacademy.svg" alt="htmlacademy logo" width="27" height="34">
-      </a>
-    </figure>
-  </footer>
 
-  <!-- Модальные окна - успех/неудача -->
-  <div class="info-container  info-container--white" id="submit-success">
-    <h3 class="info-container__h3">Ваша заявка отправлена</h3>
-    <p class="info-container__caption">
-      Спасибо за&nbsp;участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.
-    </p>
-    <div class="gray">
-      <button class="close-modal">Закрыть окно</button>
+    <div class="modal-wrapper modal-wrapper--failure" id="submit-failure">
+      <h3 class="modal-wrapper__header">Что-то пошло не&nbsp;так!</h3>
+      <p class="modal-wrapper__caption">
+        Проверьте поля, выделенные красным. Скорее всего, вы&nbsp;забыли их&nbsp;заполнить.
+      </p>
+      <button class="button  button--default">OK</button>
     </div>
   </div>
-
-  <div class="info-container  info-container--white" id="submit-failure">
-    <h3 class="info-container__h3">Что-то пошло не&nbsp;так!</h3>
-    <p class="info-container__caption">
-      Проверьте поля, выделенные красным. Скорее всего, вы&nbsp;забыли их&nbsp;заполнить.
-    </p>
-    <button class="close-modal">OK</button>
-  </div>
-
   <!-- <script src="js/script.js"></script> -->
 </body>
 </html>

@@ -1,0 +1,36 @@
+.testimonials {
+	display: flex;
+	flex-direction: column;
+
+	&__h3 {
+		@media @mobile {
+			margin-bottom: 5px;
+			font-size: @h3;
+		}
+		@media @tablet {
+			order: 1;
+			margin-bottom: 0;
+			font-size: @h3-tabl;
+		}
+	}
+
+	&__caption {
+		@media @mobile {
+			font-size: @base-fs;
+		}
+		@media @tablet {
+			font-size: @base-tabl;
+		}
+		line-height: 30px;
+		color: @blue--lighter;
+	}
+
+	&__caption--author {
+		@media @mobile {
+			display: none;
+		}
+		order: 2;
+		margin-top: 0;
+		font-size: @base-fs;
+	}
+}

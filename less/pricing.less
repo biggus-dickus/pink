@@ -1,32 +1,84 @@
 .pricing {
 	position: relative;
 	background-color: @gray;
-	padding: 40px 0 30px;
-	overflow: hidden;
+	@media @mobile {
+		padding: 40px 0 30px;
+	}
+	@media @tablet {
+		padding: 40px 40px 60px;
+	}
 
 	&::before {
 		content: "";
 	 	position: absolute;
 	 	left: 0;
-	    top: -32px;
-	 	width: @screen--sm;
-	 	height: 32px;
-	 	background: url(../img/bg/bg-mask--gray.png) no-repeat 0 0;
+	 	background: url(../img/etc/triangle-gray.svg) no-repeat 0 0;
+	 	@media @mobile {
+	 		width: @screen--sm;
+	 		top: -32px;
+	 		height: 32px;
+	 		background-size: 320px 32px;
+	 	}
+	 	@media @tablet {
+	 		width: @screen--md;
+	 		top: -55px;
+	 		height: 55px;
+	 		background-size: 700px 55px;
+	 	}
 	}
 
 	&__table {
-		width: 275px;
+		@media @mobile {
+			width: 275px;
+		}
 		margin: 0 auto;
 		border-collapse: collapse;
-		border: 2px solid #e5e5e5;
+
+		.col-1 {
+			@media @mobile {
+				border-right: none;
+			}
+		}
+
+		.col-2 {
+			@media @mobile {
+				display: none;
+			}
+		}
+
+		.col-3 {
+			@media @mobile {
+				border-left: none;
+			}
+		}
+
+		.col-4 {
+			@media @mobile {
+				display: none;
+			}
+		}
 
 		& thead {
 			color: @white;
-			background-color: @blue--lighter;
 
 			& th {
 				position: relative;
-				padding: 20px;
+				@media @mobile {
+					padding: 20px;
+				}
+				@media @tablet {
+					width: 130px;
+					padding: 15px;
+				}
+				background-color: @blue--lighter;
+				border: 2px solid @gray--darker;
+			}
+
+			& th:first-child {
+				@media @tablet {
+					background-color: transparent;
+					border: none;
+				}
 			}
 
 			& h3, p, span {
@@ -35,36 +87,56 @@
 
 			& h3 {
 				padding-bottom: 10px;
-				font-size: @h3;
 				font-weight: bold;
 				text-transform: uppercase;
+				@media @mobile {
+					font-size: @h3;
+				}
+				@media @tablet {
+					font-size: @larger;
+				}
 			}
 
 			& p {
-				font-size: @h2;
 				font-weight: 300;
 				text-transform: uppercase;
+				@media @mobile {
+					font-size: @h2;
+				}
+				@media @tablet {
+					font-size: @base-tabl;
+				}
 			}
 
 			& span {
 				position: absolute;
-				text-indent: -9000px;
+				text-indent: @over9000;
 				top: 0;
-    			left: -2px;
 				width: 74px;
 				height: 80px;
-				background: url("../img/etc/hit.png") no-repeat;
+				@media @mobile {
+					left: -2px;
+					background: url("../img/etc/hit--mobile.png") no-repeat;
+				}
+				@media @tablet {
+					left: 0;
+					background: url("../img/etc/hit--tablet.png") no-repeat;
+				}
 			}
 		}
 
-		& tr {
-			border: 2px solid #e5e5e5;
-		}
-
 		& td {
-			padding: 20px;
-			border: 2px solid #e5e5e5;
-			text-transform: uppercase;
+			@media @mobile {
+				padding: 20px;
+				font-size: @base-fs;
+				text-transform: uppercase;
+			}
+			@media @tablet {
+				padding: 15px;
+				font-size: @base-fs;
+				text-transform: none;
+			}
+			border: 2px solid @gray--darker;
 			color: @blue--lighter;
 			background-color: @white;
 		}
@@ -72,16 +144,27 @@
 
 	&__hint--yes,
 	&__hint--no {
-		text-indent: -9000px;
+		text-indent: @over9000;
 		width: 29px;
 		height: 26px;
 	}
 
 	&__hint--yes {
-		background: url("../img/etc/tick--yes.png") no-repeat 50% 50%;
+		background: url("../img/etc/yes.svg") no-repeat 50% 50%;
+		background-size: 29px 26px;
 	}
 
 	&__hint--no {
-		background: url("../img/etc/tick--no.png") no-repeat 50% 50%;
+		background: url("../img/etc/no.svg") no-repeat 50% 50%;
+		background-size: 29px 26px;
+	}
+
+	.radio-slider {
+		@media @tablet {
+			display: none;
+		}
+		@media @desktop {
+			display: none;
+		}
 	}
 }

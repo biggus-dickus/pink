@@ -1,8 +1,195 @@
 .footer-map {
 	position: relative; /* Это чтобы  фон влез полностью на 320 пикселей :) */
 	left: -20px;
-	width: 320px;
-	height: 200px;
-	margin-bottom: -40px; 	/* Это чтобы скомпенсировать padding-bottom в .info-container--white */
-	background: url('../img/bg/footer-map.jpg') no-repeat 0 -445px;
+	@media @mobile {
+		width: 320px;
+		height: 200px;
+		margin-bottom: -40px; 	/* Это чтобы скомпенсировать padding-bottom в .info-container--white */
+		background: url("../img/bg/footer-map.jpg") no-repeat 0 -445px;
+	}
+	@media @tablet {
+		width: 700px;
+		height: 375px;
+		background: url("../img/bg/footer-map--tablet.jpg") no-repeat 0 -345px;
+	}
+}
+
+.footer-map::after {
+	content: "";
+	position: absolute;
+	bottom: 77px;
+	right: 0;
+	@media @mobile {
+		width: 320px;
+		height: 123px;
+		background: url("../img/etc/map-marker.svg") no-repeat 50% 88px,
+					url("../img/etc/triangle-white-footer.svg") no-repeat 0 0;
+		background-size: 35px 35px, 320px 35px;
+	}
+	@media @tablet {
+		width: 700px;
+		height: 298px;
+		background: url("../img/etc/map-marker.svg") no-repeat 50% 195px,
+					url("../img/etc/triangle-white-footer.svg") no-repeat 0 0;
+					background-size: 35px 35px, 700px 70px;
+	}
+}
+
+.contacts-wrapper {
+	text-align: center;
+
+	&__block {
+		@media @tablet {
+			.inline-block();
+			margin: 40px 40px 0;
+		}
+	}
+
+	&__block:last-child {
+		@media @mobile {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__block:first-child &__header {
+		@media @mobile {
+			padding-top: 0;
+		}
+	}
+
+	&__block:last-child &__header {
+		@media @tablet {
+			margin-top: 0;
+		}
+	}
+
+	&__header {
+		@media @mobile {
+			padding-top: 20px;
+		}
+		font-size: @h3;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		margin-top: 0;
+		font-size: @h1;
+		font-weight: 300;
+		line-height: 28px;
+		color: @pink;
+	}
+
+	a&__text:hover {
+		color: @blue--lighter;
+		text-decoration: underline;
+	}
+
+	a&__text:active {
+		color: fade(@blue--lighter, 30%);
+		text-decoration: none;
+	}
+}
+
+.footer-bar-wrapper {
+	text-align: center;
+	@media @tablet {
+		padding: 35px 30px 0;
+	}
+
+	&__item {
+		@media @tablet {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 64px;
+		}
+	}
+
+	&__item:last-child {
+		@media @tablet {
+			.inline-block();
+			margin-right: 0;
+		}
+	}
+
+	&--pos-rel-compensator {
+		margin-bottom: -430px; /* исп. для компенсации отступа в .relative-wrapper, только в index.html */
+	}
+}
+
+.pink-footer a {
+	@media @mobile {
+		margin: 0 auto 35px;
+	}
+	display:block;
+	width: 145px;
+	height: 45px;
+	text-indent: @over9000;
+	background: url("../img/logo/tablet/logotype-pink-tablet.svg") no-repeat 0 0;
+	background-size: 145px 45px;
+}
+
+.sn-container {
+	text-align: center;
+	margin-bottom: 30px;
+
+	a {
+		.inline-block();
+		margin-right: 10px;
+		width: 45px;
+		height: 45px;
+		border: 2px solid #e9ebec;
+		border-radius: 50%;
+		text-indent: @over9000;
+		white-space: nowrap;
+		.trans-default();
+	}
+
+	a:last-child {
+		margin-right: 0;
+	}
+
+	a:hover {
+		border-color: @blue--lighter;
+	}
+
+	a:active {
+		border-color: #e9ebec;
+	}
+
+	&__twitter {background: url("../img/icons/twitter.svg") no-repeat 50% 50%;}
+	&__facebook {background: url("../img/icons/facebook.svg") no-repeat 50% 50%;}
+	&__youtube {background: url("../img/icons/youtube.svg") no-repeat 50% 50%;}
+
+}
+
+.powered-by {
+	margin: 0;
+	text-align: center;
+
+	span {
+		.inline-block();
+		margin-right: 10px;
+		font-size: @base-fs;
+		color: @blue--lighter;
+	}
+
+	&__HTML-academy {
+		.inline-block();
+		width: 27px;
+		height: 35px;
+		background: url(../img/logo/htmlacademy.svg) no-repeat 0 0;
+		background-size: 27px 35px;
+		text-indent: @over9000;
+		.trans-default();
+	}
+
+	&__HTML-academy:hover {
+		background: url(../img/logo/htmlacademy--blue.svg) no-repeat 0 0;
+		background-size: 27px 35px;
+	}
+
+	&__HTML-academy:active {
+		background: url(../img/logo/htmlacademy--active.svg) no-repeat 0 0;
+		background-size: 27px 35px;
+	}
 }

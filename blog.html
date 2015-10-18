@@ -2,106 +2,105 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Блог путешественников, пользователей Пинк</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="float-container">
-        <a class="float-container__logo-link" href="/">Pink</a>
-        <button class="float-container__menu  toggle-menu" id="toggler">
-          <span class="toggle-menu__toggler">Меню</span>
-        </button>
-    </div>
+  <div class="viewport-wrapper">
+    <header class="top-header">
+      <div class="top-bar">
+          <a class="top-bar__logo-link" href="/">Pink</a>
+          <button class="top-bar__menu  toggle-menu" id="toggler">Меню</button>
+      </div>
 
 
-    <nav class="hidden">
-      <ul class="main-menu">
-        <li>
-          <a class="main-menu__link" href="/">Информация</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="blog.html">Блог</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="post.html">Отзывы</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="form.html">Конкурс</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="hidden">
+        <ul class="main-menu">
+          <li>
+            <a class="main-menu__link" href="/">Информация</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="blog.html">Блог</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="post.html">Отзывы</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="form.html">Конкурс</a>
+          </li>
+        </ul>
+      </nav>
 
 
-    <section class="top-header__cover">
-      <h1 class="top-header__caption">Блог путешественников, пользователей Пинк</h1>
+      <section class="top-header__cover">
+        <h1 class="top-header__caption  top-header__caption--rest">Блог путешественников, пользователей Пинк</h1>
+      </section>
+    </header>
+
+    <section class="info-container  info-container--white">
+      <article class="blog-entry">
+        <header class="blog-entry__header">
+          <h1>Антон и&nbsp;Надя в&nbsp;Таиланде</h1>
+          <h2>Опубликовано: 6&nbsp;месяцев назад</h2>
+        </header>
+        <section class="blog-entry__lead">
+          Читайте рассказ о&nbsp;том, как семейная пара посещала Таиланд, стараясь максимально избегать избитых туристических мест и&nbsp;районов.
+        </section>
+      </article>
+      <article class="blog-entry">
+        <header class="blog-entry__header">
+          <h1>Гастрольный тур &laquo;Кубанских борщеваров&raquo;</h1>
+          <h2>Опубликовано: 5&nbsp;лет назад</h2>
+        </header>
+        <section class="blog-entry__lead">
+          Возрождение культурных традиций уже не&nbsp;за&nbsp;горами. Фолк-метал-рэп-группа из&nbsp;столицы Кубани провела весь год в&nbsp;гастролях по&nbsp;России и&nbsp;ближнему (а&nbsp;также среднему) зарубежью.
+        </section>
+      </article>
+      <article class="blog-entry">
+        <header class="blog-entry__header">
+          <h1>Чета Болонских в&nbsp;Париже</h1>
+          <h2>Опубликовано: 100&nbsp;лет назад</h2>
+        </header>
+        <section class="blog-entry__lead">
+          Невероятные приключения русских во&nbsp;Франции. Интриги, предательства, погони&nbsp;и, разумеется, убийства. Читайте криминально-исторический трактат в&nbsp;двух томах.
+        </section>
+      </article>
+      <article class="blog-entry">
+        <header class="blog-entry__header">
+          <h1>Путешествие на&nbsp;яхте сеньора Христофора</h1>
+          <h2>Опубликовано: 523&nbsp;года назад</h2>
+        </header>
+        <section class="blog-entry__lead">
+          Группа испанцев отдыхала на&nbsp;яхте, но&nbsp;они даже не&nbsp;представляли, какие открытия ждут их&nbsp;впереди, и&nbsp;чем это обернется для всего человечества!
+        </section>
+      </article>
     </section>
-  </header>
 
-  <section class="info-container  info-container--white">
-    <article class="blog-entry">
-      <header class="blog-entry__header">
-        <h1>Антон и&nbsp;Надя в&nbsp;Таиланде</h1>
-        <h2>Опубликовано: 6&nbsp;месяцев назад</h2>
-      </header>
-      <section class="blog-entry__lead">
-        Читайте рассказ о&nbsp;том, как семейная пара посещала Таиланд, стараясь максимально избегать избитых туристических мест и&nbsp;районов.
-      </section>
-    </article>
-    <article class="blog-entry">
-      <header class="blog-entry__header">
-        <h1>Гастрольный тур &laquo;Кубанских борщеваров&raquo;</h1>
-        <h2>Опубликовано: 5&nbsp;лет назад</h2>
-      </header>
-      <section class="blog-entry__lead">
-        Возрождение культурных традиций уже не&nbsp;за&nbsp;горами. Фолк-метал-рэп-группа из&nbsp;столицы Кубани провела весь год в&nbsp;гастролях по&nbsp;России и&nbsp;ближнему (а&nbsp;также среднему) зарубежью.
-      </section>
-    </article>
-    <article class="blog-entry">
-      <header class="blog-entry__header">
-        <h1>Чета Болонских в&nbsp;Париже</h1>
-        <h2>Опубликовано: 100&nbsp;лет назад</h2>
-      </header>
-      <section class="blog-entry__lead">
-        Невероятные приключения русских во&nbsp;Франции. Интриги, предательства, погони&nbsp;и, разумеется, убийства. Читайте криминально-исторический трактат в&nbsp;двух томах.
-      </section>
-    </article>
-    <article class="blog-entry">
-      <header class="blog-entry__header">
-        <h1>Путешествие на&nbsp;яхте сеньора Христофора</h1>
-        <h2>Опубликовано: 523&nbsp;года назад</h2>
-      </header>
-      <section class="blog-entry__lead">
-        Группа испанцев отдыхала на&nbsp;яхте, но&nbsp;они даже не&nbsp;представляли, какие открытия ждут их&nbsp;впереди, и&nbsp;чем это обернется для всего человечества!
-      </section>
-    </article>
-  </section>
+    <section class="pagination">
+      <span class="pagination__number  pagination__number--current" href="#1">1</span>
+      <a class="pagination__number" href="#2">2</a>
+      <a class="pagination__number" href="#3">3</a>
+      <a class="pagination__number" href="#4">4</a>
+    </section>
 
-  <section class="pagination">
-    <span class="pagination__number  pagination__number--current" href="#1">1</span>
-    <a class="pagination__number" href="#2">2</a>
-    <a class="pagination__number" href="#3">3</a>
-    <a class="pagination__number" href="#4">4</a>
-  </section>
-
-  <footer class="info-container  info-container--white">
-    <div class="pink-footer">Pink</div>
-    <div class="sn-container">
-      <a class="sn-container__twitter" href="#">Мы в Твиттере</a>
-      <a class="sn-container__facebook" href="#">Мы на Фейсбуке</a>
-      <a class="sn-container__youtube" href="#">Мы на Ютубе</a>
-    </div>
-    <figure class="powered-by">Разработано
-      <a class="powered-by__HTML-academy" href="//htmlacademy.ru" target="_blank">
-        <img src="img/htmlacademy.svg" alt="htmlacademy logo" width="27" height="34">
-      </a>
-    </figure>
-  </footer>
-
+    <footer class="info-container  info-container--white">
+      <section class="footer-bar-wrapper  footer-bar-wrapper--pos-rel-compensator  mob-hidden">
+        <div class="footer-bar-wrapper__item  pink-footer"><a href="/" title="На главную">Pink</a></div>
+          <div class="footer-bar-wrapper__item  footer-bar-wrapper__item--central  sn-container">
+            <a class="sn-container__twitter" href="#" title="Мы в Twitter">Мы в Твиттере</a>
+            <a class="sn-container__facebook" href="#" title="Мы на Facebook">Мы на Фейсбуке</a>
+            <a class="sn-container__youtube" href="#" title="Мы на Youtube">Мы на Ютубе</a>
+          </div>
+          <figure class="footer-bar-wrapper__item  powered-by"><span>Разработано</span>
+            <a class="powered-by__HTML-academy" href="//htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
+          </figure>
+      </section>
+    </footer>
+  </div>
   <!-- <script src="js/script.js"></script> -->
 </body>
 </html>
