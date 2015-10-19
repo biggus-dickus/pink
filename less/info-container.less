@@ -4,40 +4,97 @@
 	text-align: center;
 
 	&&--white {
-		padding-bottom: 40px;
+		@media @mobile {
+			padding-bottom: 40px;
+		}
+		@media @tablet {
+			padding-bottom: 80px;
+		}
 		background-color: @white;
 	}
 
 	&&--gray {
-		background-color: @gray;
+		@media @mobile {
+			background-color: @gray;
+		}
 	}
 
 	&&--gray::before {
 	 	content: "";
 	 	position: absolute;
 	 	left: 0;
-	    top: -32px;
-	 	width: @screen--sm;
-	 	height: 32px;
-	 	background: url(../img/bg/bg-mask--gray.png) no-repeat 0 0;
+	 	background: url(../img/etc/triangle-gray.svg) no-repeat 0 0;
+	 	@media @mobile {
+	 		width: @screen--sm;
+	 		top: -32px;
+	 		height: 32px;
+	 		background-size: 320px 32px;
+	 	}
+	 	@media @tablet {
+	 		width: @screen--md;
+	 		top: -5px;
+	 		height: 55px;
+	 		background-size: 700px 55px;
+	 	}
 	}
 
 	&__h2{
-		font-size: @h2;
+		@media @mobile {
+			font-size: @h2;
+			line-height: 28px;
+		}
+		@media @tablet {
+			font-size: @h1-tabl;
+			line-height: 48px;
+		}
 		font-weight: 300;
-		line-height: 28px;
 		color: @blue--lighter;
 	}
 
 	&__h2:first-child {
 		margin-bottom: 40px;
+		@media @tablet {
+			margin-bottom: 0;
+		}
+	}
+
+	&__h2:last-child {
+		@media @tablet {
+			width: 500px;
+			margin: 0 auto;
+		}
+	}
+
+	&__tablet-img {
+		@media @mobile {
+			display: none;
+		}
+		@media @tablet {
+			position: relative;
+			bottom: 40px;
+			float: left;
+			margin-right: 40px;
+		}
 	}
 
 	&__h3{
-		margin-top: 40px;
-		margin-bottom: 20px;
-		font-size: @h3;
+		@media @mobile {
+			margin-top: 40px;
+			margin-bottom: 20px;
+			font-size: @h3;
+		}
+		@media @tablet {
+			margin-top: 30px;
+			margin-bottom: 15px;
+			font-size: @h3-tabl;
+		}
 		color: @blue--lighter;
+	}
+
+	&__h3:first-of-type {
+		@media @tablet {
+			padding-top: 30px;
+		}
 	}
 
 	&__caption {
@@ -46,34 +103,31 @@
 		color: @blue--lighter;
 	}
 
-	&__caption&__caption--lh-30 {
-		line-height: 30px;
+	&__caption:last-of-type {
+		@media @mobile {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__pres-wrapper {
+		@media @tablet {
+			position: relative;
+			left: -20px; //Компенсируем отступ слева в .info-container
+			box-sizing: border-box;
+			width: 700px;
+			padding: 0 40px 0 40px;
+			text-align: left;
+			background-color: @gray;
+		}
 	}
 
 	&__aux-bg {
-		height: 320px;
-		background: url('../img/bg/info-container__aux-bg.png') no-repeat 50% 38px;
-	}
-
-	&__pink-text {
-		margin-top: -15px;
-		margin-bottom: -5px;
-		font-size: @h2;
-		font-weight: 300;
-		text-decoration: none;
-		color: @pink;
-	}
-
-	&__pink-text:last-of-type {
-		padding-bottom: 40px;
-	}
-	&&--mask::after {
-		position: absolute;
-		bottom: 77px;
-		right: 0;
-		content: "";
-		width: 320px;
-		height: 123px;
-		background: url("../img/etc/triangle--map.png") no-repeat 0 0;
+		@media @mobile {
+			min-height: 278px;
+			background: url("../img/bg/screen-mobile-3.png") no-repeat 50% 0;
+		}
+		@media @tablet {
+			display: none;
+		}
 	}
 }

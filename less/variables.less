@@ -3,10 +3,13 @@
 @blue--darker: #1d2631;
 @blue--lighter: #283645;
 @gray: #f2f2f2;
+@gray--darker: #e5e5e5;
+@green: #2aab6d;
+@green--darker: #1c9b5e;
 @pink: #d22856;
 @white: #ffffff;
 
-/* Typography */
+/* Typography Mobile */
 @base-fs: 14px;
 @h1: @base-fs + 10px;
 @h1--large: (@base-fs * 2) + 10px;
@@ -15,6 +18,22 @@
 @larger: @base-fs + 2px;
 @smaller: @base-fs - 2px;
 
+/* Typography Tablet */
+@h1-tabl--big: 50px;
+@h1-tabl: 40px;
+@h3-tabl: 20px;
+@base-tabl: 18px;
+
 
 /* Sizes */
 @screen--sm: 320px;
+@screen--md: 700px;
+@screen--lg: 1200px;
+
+/* Viewports */
+@mobile: ~"only screen and (max-width: 699px)";
+@tablet: ~"only screen and (min-width: 700px)";
+@desktop: ~"only screen and (min-width: 960px)";
+
+/* etc */
+@over9000: -9999px;

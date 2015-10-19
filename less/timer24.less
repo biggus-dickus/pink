@@ -1,0 +1,39 @@
+.timer24 {
+	position: relative;
+	padding: 30px 0 90px 330px;
+	text-align: left;
+	background: url("../img/etc/timer.svg") no-repeat 20px 50%;
+	background-size: 262px 300px;
+
+	&__h3 {
+		@media @tablet {
+			width: 200px;
+			margin-bottom: 0;
+			padding-top: 20px;
+		}
+		font-size: 30px;
+		color: @black;
+	}
+
+	&__caption {
+		font-size: @base-fs;
+		line-height: @h2;
+		color: @blue--lighter;
+	}
+}
+
+.timer24::before {
+	content: "24";
+    position: absolute;
+    top: 115px;
+    left: 50px;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    font-size: 104px;
+    font-weight: bold;
+    line-height: 180px;
+    color: #d22856;
+    border: 10px solid #d22856;
+    border-radius: 50%;
+}

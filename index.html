@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PINK: взгляните на жизнь иначе!</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -9,151 +10,196 @@
 </head>
 
 <body>
+  <div class="viewport-wrapper">
+    <header class="top-header">
+      <div class="top-bar">
+          <a class="top-bar__logo-link" href="/">Pink</a>
+          <button class="top-bar__menu  toggle-menu" id="toggler">Меню</button>
+      </div>
 
-  <header class="top-header">
-    <div class="float-container">
-        <a class="float-container__logo-link" href="/">Pink</a>
-        <button class="float-container__menu  toggle-menu" id="toggler">
-        <!-- "Гамбургер" и крестик будут созданы через псевдоэлементы у спана, для крестика будет использоваться class="toggle-menu__toggler--close" -->
-          <span class="toggle-menu__toggler">Меню</span>
-        </button>
+      <nav class="hidden">
+        <ul class="main-menu">
+          <li>
+            <a class="main-menu__link" href="/">Информация</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="blog.html">Блог</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="post.html">Отзывы</a>
+          </li>
+          <li>
+            <a class="main-menu__link" href="form.html">Конкурс</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="top-header__cover">
+        <div class="top-header__wrapper clearfix">
+          <h1 class="top-header__caption top-header__caption--index">Взгляните на&nbsp;жизнь иначе!</h1>
+          <div class="top-header__aux-bg"></div>
+        </div>
+        <div class="download-pink">
+          <a class="download-btn" href="#">Скачать приложение</a>
+          <ul class="mobile-icons">
+            <li><a class="mobile-icons__apple" href="#" title="Скачать в App Store">Pink for Apple</a></li>
+            <li><a class="mobile-icons__android" href="#" title="Скачать в Google Play">Pink for Android</a></li>
+            <li><a class="mobile-icons__windows" href="#" title="Скачать в Microsoft Store">Pink for Windows Phone</a></li>
+          </ul>
+          <div class="download-pink__info">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <div class="relative-wrapper">
+      <section class="info-container  info-container--white">
+        <h2 class="info-container__h2">Устали от&nbsp;серости мегаполиса?</h2>
+        <h2 class="info-container__h2">Нам есть что вам предложить!</h2>
+      </section>
+
+
+      <section class="info-container  info-container--gray">
+        <div class="info-container__pres-wrapper clearfix-tabl-marg">
+          <img class="info-container__tablet-img" width="268" height="481" src="img/bg/iphone-screen-tablet-3@1x.png" alt="Всем привет!">
+          <h3 class="info-container__h3">Поднимает настроение</h3>
+          <p class="info-container__caption">
+              Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!
+          </p>
+          <h3 class="info-container__h3">Меняет мир вокруг</h3>
+          <p class="info-container__caption">
+              Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект.
+          </p>
+          <h3 class="info-container__h3">Заводит новых друзей</h3>
+          <p class="info-container__caption">
+            Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых.
+          </p>
+        </div>
+        <div class="info-container__aux-bg"></div>
+      </section>
+
+
+      <section class="info-container  info-container--white">
+        <div class="timer24 mob-hidden">
+          <h3 class="timer24__h3">Эффект на&nbsp;24&nbsp;часа!</h3>
+          <p class="timer24__caption">
+            Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!
+          </p>
+          <a class="pink-link" href="#">Узнать больше об&nbsp;исследовании</a>
+        </div>
+        <div class="testimonials">
+          <h3 class="testimonials__h3">Николай Петров</h3>
+          <p class="testimonials__caption  testimonials__caption--author">25 лет, водитель трамвая</p>
+          <p class="testimonials__caption">
+            &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
+          </p>
+        </div>
+        <div class="radio-slider">
+          <input name="testimonial-ID" id="testimonial1" type="radio" value="1" checked>
+          <label for="testimonial1">1</label>
+          <input name="testimonial-ID" id="testimonial2" type="radio" value="2">
+          <label for="testimonial2">2</label>
+          <input name="testimonial-ID" id="testimonial3" type="radio" value="3">
+          <label for="testimonial3">3</label>
+        </div>
+      </section>
+
+
+      <section class="pricing">
+        <table class="pricing__table">
+          <thead>
+            <tr>
+              <th class="col-1  mob-hidden">
+              </th>
+              <th class="col-2">
+                <h3>База</h3>
+                <p>1,99 USD</p>
+              </th>
+              <th class="pricing__hit  col-3">
+                <h3>Стандарт</h3>
+                <p>3,99 USD</p>
+                <span>Хит</span>
+              </th>
+              <th class="col-4">
+                <h3>Анлим</h3>
+                <p>9,99 USD</p>
+              </th>
+            </tr>
+          </thead>
+            <tbody>
+              <tr>
+                <td class="col-1">Розовый фильтр</td>
+                <td class="pricing__hint--yes  col-2">Да</td>
+                <td class="pricing__hint--yes  col-3">Да</td>
+                <td class="pricing__hint--yes  col-4">Да</td>
+              </tr>
+              <tr>
+                <td class="col-1">Смайлики</td>
+                <td class="pricing__hint--no  col-2">Нет</td>
+                <td class="pricing__hint--yes  col-3">Да</td>
+                <td class="pricing__hint--yes  col-4">Да</td>
+              </tr>
+              <tr>
+                <td class="col-1">Комментарии</td>
+                <td class="pricing__hint--no  col-2">Нет</td>
+                <td class="pricing__hint--no  col-3">Нет</td>
+                <td class="pricing__hint--yes  col-4">Да</td>
+              </tr>
+            </tbody>
+        </table>
+
+        <div class="radio-slider">
+          <input name="pricing-ID" id="package1" type="radio" value="1">
+          <label for="package1">1</label>
+          <input name="pricing-ID" id="package2" type="radio" value="2" checked>
+          <label for="package2">2</label>
+          <input name="pricing-ID" id="package3" type="radio" value="3">
+          <label for="package3">3</label>
+        </div>
+
+      </section>
+
+
+      <footer class="info-container info-container--white info-container--mask">
+        <h2 class="info-container__h2">
+          Остались вопросы?<br>
+          Свяжитесь с&nbsp;нами!
+        </h2>
+        <div class="contacts-wrapper">
+          <div class="contacts-wrapper__block">
+            <h3 class="contacts-wrapper__header">Звоните:</h3>
+            <p class="contacts-wrapper__text">+7&nbsp;(812)&nbsp;555-66-66</p>
+          </div>
+          <div class="contacts-wrapper__block">
+            <h3 class="contacts-wrapper__header">Пишите:</h3>
+            <p class="contacts-wrapper__text">
+              <a class="contacts-wrapper__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
+          </div>
+          <div class="contacts-wrapper__block">
+            <h3 class="contacts-wrapper__header">Приезжайте в&nbsp;гости:</h3>
+            <p class="contacts-wrapper__text  info-container__pink-text--mask">
+              ул.&nbsp;Большая<br>
+              Конюшенная, 19/8
+            </p>
+          </div>
+        </div>
+        <div class="footer-map"></div>
+        <section class="footer-bar-wrapper  footer-bar-wrapper--pos-rel-compensator  mob-hidden">
+        <div class="footer-bar-wrapper__item  pink-footer"><a href="/" title="На главную">Pink</a></div>
+          <div class="footer-bar-wrapper__item  footer-bar-wrapper__item--central  sn-container">
+            <a class="sn-container__twitter" href="#" title="Мы в Twitter">Мы в Твиттере</a>
+            <a class="sn-container__facebook" href="#" title="Мы на Facebook">Мы на Фейсбуке</a>
+            <a class="sn-container__youtube" href="#" title="Мы на Youtube">Мы на Ютубе</a>
+          </div>
+          <figure class="footer-bar-wrapper__item  powered-by"><span>Разработано</span>
+            <a class="powered-by__HTML-academy" href="//htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
+          </figure>
+        </section>
+      </footer>
     </div>
-
-
-    <nav class="hidden">
-      <ul class="main-menu">
-        <li>
-          <a class="main-menu__link" href="/">Информация</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="blog.html">Блог</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="post.html">Отзывы</a>
-        </li>
-        <li>
-          <a class="main-menu__link" href="form.html">Конкурс</a>
-        </li>
-      </ul>
-    </nav>
-
-
-    <!-- Базовая высота у фона будет задаваться по высоте/внутренним отступам <h1>, дополнительно элемент вытягивает вложенный див со своим фоном -->
-    <section class="top-header__cover">
-      <h1 class="top-header__caption">Взгляните на&nbsp;жизнь иначе!</h1>
-      <div class="top-header__aux-bg"></div>
-    </section>
-  </header>
-
-
-  <section class="download-pink">
-    <a class="download-btn" href="#">Скачать приложение</a>
-      <ul class="mobile-icons">
-        <li><a class="mobile-icons__apple" href="#" title="Скачать в App Store">Pink for Apple</a></li>
-        <li><a class="mobile-icons__android" href="#" title="Скачать в Google Play">Pink for Android</a></li>
-        <li><a class="mobile-icons__windows" href="#" title="Скачать в Microsoft Store">Pink for Windows Phone</a></li>
-      </ul>
-    <div class="download-pink__info">
-      Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-    </div>
-  </section>
-
-  <section class="info-container  info-container--white">
-    <h2 class="info-container__h2">Устали от&nbsp;серости мегаполиса?</h2>
-    <h2 class="info-container__h2">Нам есть что вам предложить!</h2>
-  </section>
-
-
-  <section class="info-container  info-container--gray">
-    <h3 class="info-container__h3">Поднимает настроение</h3>
-    <p class="info-container__caption">
-        Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!
-    </p>
-    <h3 class="info-container__h3">Меняет мир вокруг</h3>
-    <p class="info-container__caption">
-        Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-    </p>
-    <h3 class="info-container__h3">Заводит новых друзей</h3>
-    <p class="info-container__caption">
-      Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых
-    </p>
-    <div class="info-container__aux-bg"></div>
-  </section>
-
-
-  <section class="info-container  info-container--white testimonials">
-    <h3 class="info-container__h3">Николай Петров</h3>
-    <p class="info-container__caption  info-container__caption--lh-30">
-      &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
-    </p>
-    <div class="radio-slider">
-      <input name="testimonial-ID" id="testimonial1" type="radio" value="1" checked>
-      <label for="testimonial1">1</label>
-      <input name="testimonial-ID" id="testimonial2" type="radio" value="2">
-      <label for="testimonial2">2</label>
-      <input name="testimonial-ID" id="testimonial3" type="radio" value="3">
-      <label for="testimonial3">3</label>
-    </div>
-  </section>
-
-
-  <section class="pricing">
-    <table class="pricing__table">
-      <thead>
-        <tr>
-          <th colspan="2" class="pricing__hit">
-            <h3>Стандарт</h3>
-            <p>3,99 USD</p>
-            <span>Хит</span>
-          </th>
-        </tr>
-      </thead>
-        <tbody>
-          <tr>
-            <td>Розовый фильтр</td>
-            <td class="pricing__hint--yes">Да</td>
-          </tr>
-          <tr>
-            <td>Смайлики</td>
-            <td class="pricing__hint--yes">Да</td>
-          </tr>
-          <tr>
-            <td>Комментарии</td>
-            <td class="pricing__hint--no">Нет</td>
-          </tr>
-        </tbody>
-    </table>
-    <div class="radio-slider">
-      <input name="pricing-ID" id="package1" type="radio" value="1">
-      <label for="package1">1</label>
-      <input name="pricing-ID" id="package2" type="radio" value="2" checked>
-      <label for="package2">2</label>
-      <input name="pricing-ID" id="package3" type="radio" value="3">
-      <label for="package3">3</label>
-    </div>
-  </section>
-
-
-  <footer class="info-container info-container--white info-container--mask">
-    <h2 class="info-container__h2">
-      Остались вопросы?<br>
-      Свяжитесь с&nbsp;нами!
-    </h2>
-    <h3 class="info-container__h3">Звоните:</h3>
-    <p class="info-container__pink-text">+7&nbsp;(812)&nbsp;555-66-66</p>
-    <h3 class="info-container__h3">Пишите:</h3>
-    <p class="info-container__pink-text">
-      <a class="info-container__pink-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-    </p>
-    <h3 class="info-container__h3">Приезжайте в&nbsp;гости:</h3>
-    <p class="info-container__pink-text  info-container__pink-text--mask">
-      ул.&nbsp;Большая<br>
-      Конюшенная, 19/8
-    </p>
-    <div class="footer-map"></div>
-  </footer>
-
-
+  </div>
 <!--  <script src="js/script.js"></script> -->
 </body>
 </html>

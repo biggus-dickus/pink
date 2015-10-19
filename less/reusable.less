@@ -1,0 +1,52 @@
+.float-container {
+	&__float--left {
+		float: left;
+	}
+
+	&__float--right {
+		float: right;
+	}
+}
+
+.float-container::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear:both;
+}
+
+.clearfix-tabl-marg::after { //Этим классом компенсируем выступ вверх у мобильника в планшетной версии
+	@media @tablet {
+		content: "";
+		display: table;
+		clear:both;
+		margin-bottom: -40px;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.mob-hidden {
+	@media @mobile {
+		display: none;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}

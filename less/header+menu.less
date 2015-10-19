@@ -1,36 +1,109 @@
 .top-header {
 	position: relative;
+	box-sizing: border-box;
+	@media @mobile {
+		background-color: @blue--lighter;
+		background: url("../img/bg/background-mobile@1x.jpg") no-repeat 50% 0;
+	}
+	@media @tablet {
+		background: url("../img/bg/background-tablet@1x.jpg") no-repeat 50% 0;
+	}
 	min-height: 235px;
-	background: url('../img/bg/bg_main--photo.jpg') no-repeat 0 0;
+
+	&__wrapper {
+		@media @tablet {
+			padding-top: 70px;
+		}
+	}
 
 	&__caption {
 		text-align: center;
 		padding: 0 10px;
-		font-size: @h2;
-		line-height: 30px;
+		@media @mobile {
+			font-size: @h2;
+			line-height: 30px;
+		}
+		@media @tablet {
+			font-size: @h1-tabl--big;
+			line-height: 48px;
+		}
+
 		font-weight: 300;
 		color: @white;
 	}
 
+	&__caption--index {
+		@media @tablet {
+			float: left;
+			width: 305px;
+			font-size: @h1-tabl;
+		}
+	}
+
+	&__caption--rest {
+		@media @tablet {
+			padding: 50px 35px 70px;
+			line-height: 60px;
+		}
+	}
+
 	&__aux-bg {
-		height: 310px;
-		background: url('../img/bg/bg_main--hand.jpg') no-repeat 0 0;
+		@media @mobile {
+			height: 286px;
+			background: url("../img/bg/iphone-hand-mobile.png") no-repeat 0 100%;
+		}
+		@media @tablet {
+			height: 565px;
+			background: url("../img/bg/iphone-hand-tablet@1x.png") no-repeat 0 100%;
+		}
 	}
 }
 
-.float-container {
-	box-sizing: border-box;
-	width: @screen--sm;
-	padding: 30px 20px;
-	background-color: rgba(29,38,49, .7);
+.top-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 25px;
+
+	background-color: rgba(29, 38, 49, 0.7);
 
 	&__logo-link {
 		float: left;
-		font-size: 24px;
-		line-height: 0;
-		text-transform: uppercase;
-		text-decoration: none;
-		color: @white;
+		text-indent: @over9000;
+		@media @mobile {
+			width: 75px;
+			height: 25px;
+			background: url("../img/logo/mobile/logotype-white-mobile.svg") no-repeat 0 0;
+			background-size: 75px 25px;
+		}
+		@media @tablet {
+			width: 146px;
+			height: 44px;
+			background: url("../img/logo/tablet/logotype-white-tablet.svg") no-repeat 0 0;
+			background-size: 146px 44px;
+		}
+	}
+
+	&__logo-link:hover {
+		@media @mobile {
+			background: url("../img/logo/mobile/logotype-pink-mobile.svg") no-repeat 0 0;
+			background-size: 75px 25px;
+		}
+		@media @tablet {
+			background: url("../img/logo/tablet/logotype-pink-tablet.svg") no-repeat 0 0;
+			background-size: 146px 44px;
+		}
+	}
+
+	&__logo-link:active {
+		@media @mobile {
+			background: url("../img/logo/mobile/logotype-active-mobile.svg") no-repeat 0 0;
+			background-size: 75px 25px;
+		}
+		@media @tablet {
+			background: url("../img/logo/tablet/logotype-active-tablet.svg") no-repeat 0 0;
+			background-size: 146px 44px;
+		}
 	}
 
 	&__menu {
@@ -39,59 +112,55 @@
 }
 
 .toggle-menu {
-  	position: relative;
-  	bottom: 14px;
-  	display: block;
-  	width: 50px;
-  	height: 26px;
-  	font-size: 0;
-  	text-indent: -9000px;
+	position: relative;
+  	@media @mobile {
+  		bottom: 2px;
+  	}
+  	@media @tablet {
+  		bottom: 5px;
+  	}
+
+	width: 50px;
+  	height: 24px;
+  	text-indent: @over9000;
   	overflow: hidden;
   	background-color: transparent;
+  	background: url("../img/menu/menu-burger.svg") no-repeat 0 0;
+  	background-size: 50px 24px;
   	box-shadow: none;
   	border-radius: 0;
   	border: none;
   	cursor: pointer;
 
+  	&:hover {
+  		background: url("../img/menu/menu-burger--pink.svg") no-repeat 0 0;
+  		background-size: 50px 24px;
+  	}
+
+  	&:active {
+  		background: url("../img/menu/menu-burger--active.svg") no-repeat 0 0;
+  		background-size: 50px 24px;
+  	}
+
   	&:focus {
   		outline: none;
   	}
-
-  	&__toggler {
-		position: absolute;
-		display: block;
-		width: 100%;
-		top: 12px;
-		height: 4px;
-		background: white;
-	}
-
-	&__toggler::before,
-	&__toggler::after {
-  		position: absolute;
-  		left: 0;
-  		display: block;
-  		width: 100%;
-  		height: 4px;
-  		background-color: @white;
-  		content: "";
-	}
-
-	&__toggler::before {
-		top: -10px;
-	}
-
-	&__toggler::after {
-		bottom: -10px;
-	}
 }
 
 .main-menu {
 	position: absolute;
+	z-index: 1;
 	left: -40px;
-    top: 45px;
 	list-style: none;
-	width: @screen--sm;
+	@media @mobile {
+		width: @screen--sm;
+		top: 61px;
+	}
+	@media @tablet {
+		width: @screen--md;
+		top: 79px;
+	}
+
 
 	&__link {
 		display: block;
@@ -106,5 +175,99 @@
 		text-decoration: none;
 		background-color: @blue--lighter;
 		color: @white;
+		.trans-default();
+	}
+
+	&__link:hover {
+		color: @pink;
+	}
+
+	&__link:active {
+		color: fade(@pink, 30%);
+	}
+}
+
+.download-pink {
+	@media @mobile {
+		background-color: @blue--darker;
+	}
+	@media @tablet {
+		position: relative;
+		bottom: 385px;
+		width: 305px;
+		background-color: transparent;
+	}
+	color: @white;
+	padding: 30px 20px 35px 20px;
+
+	&__info {
+		text-align: center;
+		font-weight: 300;
+		@media @mobile {
+			font-size: @base-fs;
+		}
+		@media @tablet {
+			font-size: @base-tabl;
+		}
+		line-height: 24px;
+	}
+}
+
+.download-btn {
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 280px;
+	padding: 15px 25px;
+	font-weight: bold;
+	font-size: @h3;
+	color: @white;
+	border: 3px solid @white;
+	border-radius: 50px;
+	text-decoration: none;
+	.trans-default();
+
+	&:hover {
+		color: @pink;
+		background: @white;
+	}
+
+	&:active {
+		color: fade(@pink, 30%);
+	}
+}
+
+.mobile-icons {
+	list-style: none;
+	padding-left: 0;
+	text-align: center;
+
+	& li {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	& li a {
+		display: block;
+		height: 57px;
+		width: 46px;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		text-indent: @over9000;
+	}
+
+	&__apple {
+		margin-right: 35px;
+		background: url("../img/icons/apple-logo.svg") no-repeat;
+	}
+
+	&__android {
+		margin-right: 35px;
+		background: url("../img/icons/android-logo.svg") no-repeat 50% 100%;
+	}
+
+	&__windows {
+		background: url("../img/icons/microsoft-logo.svg") no-repeat 50% 100%;
 	}
 }

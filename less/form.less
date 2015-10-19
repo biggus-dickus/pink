@@ -1,0 +1,648 @@
+.pink-form {
+	@media @mobile {
+		margin-bottom: -15px;
+	}
+
+	form {
+		box-sizing: border-box;
+		@media @mobile {
+			width: @screen--sm;
+		}
+		@media @tablet {
+			width: @screen--md;
+			padding: 0 38px;
+		}
+	}
+
+	&__asterisk {
+		color: @pink;
+	}
+
+	&__pink-label {
+		display: block;
+		padding-top: 20px;
+		padding-bottom: 10px;
+		font-size: @base-fs;
+		color: @pink;
+		text-transform: uppercase;
+		text-indent: 20px;
+	}
+
+	&__pink-label--traveller-name {
+		@media @tablet {
+			padding-left: 25px;
+		}
+	}
+
+	&__input--default {
+		@media @mobile {
+			width: 236px;
+		}
+		@media @tablet {
+			width: 576px;
+		}
+		padding: 20px;
+		border: 2px solid #e5e5e5;
+		border-radius: 3px;
+	}
+
+	&__input--travel {
+		width: 180px;
+		padding: 20px;
+		border: 2px solid #e5e5e5;
+		border-radius: 3px;
+	}
+}
+
+.fieldset {
+	box-sizing: border-box;
+
+	@media @mobile {
+		width: @screen--sm;
+		border: 0;
+		padding: 35px 20px 0 20px;
+		margin-bottom: 35px;
+	}
+	@media @tablet {
+		padding: 5px 50px 30px 50px;
+		margin-bottom: 50px;
+		border: 2px solid @gray--darker;
+		border-radius: 3px;
+	}
+
+	&--white {
+		background-color: @white;
+
+		legend {
+			@media @mobile {
+				top: 25px;
+			}
+		}
+	}
+
+	&--no-border {
+		border: 0;
+	}
+
+	&--no-padding {
+		@media @tablet {
+			padding: 0;
+		}
+	}
+
+	&--gray {
+		@media @mobile {
+			background-color: @gray;
+		}
+		padding-bottom: 30px;
+
+		legend {
+			top: 45px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__wrapper {
+		margin-top: 25px;
+	}
+
+	&__wrapper-item {
+		@media @tablet {
+			.inline-block();
+			margin-right: 15px;
+		}
+	}
+
+	&__wrapper-item:last-child {
+		margin-right: 0;
+	}
+
+	hr {
+		margin: 35px 0 10px;
+		border: 1px solid @gray--darker;
+	}
+
+	.upload-hr {
+		@media @mobile {
+			margin: 35px 0 30px;
+		}
+		@media @tablet {
+			width: 504px;
+			margin: 35px auto 25px;
+			border: 1px solid @gray--darker;
+		}
+	}
+
+	legend {
+		text-align: center;
+		font-size: @base-fs;
+		text-transform: uppercase;
+		@media @mobile {
+			position: relative;
+			line-height: 18px;
+		}
+		@media @tablet {
+			padding: 0 15px;
+			line-height: 30px;
+		}
+		color: @pink;
+	}
+
+	p {
+		text-align: center;
+		@media @mobile {
+			margin: 0;
+			padding-bottom: 20px;
+			font-size: @base-fs;
+		}
+		@media @tablet {
+			padding: 20px 50px;
+			font-size: @base-tabl;
+		}
+		line-height: 30px;
+		color: @blue--lighter;
+	}
+
+	&__sub-label {
+		display: block;
+		padding: 15px 0 20px;
+		color: @pink;
+		font-size: @base-fs;
+		text-transform: uppercase;
+		@media @mobile {
+			text-align: center;
+		}
+		@media @tablet {
+			text-align: left;
+			text-indent: 20px;
+		}
+	}
+
+	input[disabled] {
+		width: 180px;
+	}
+
+	input[type="text"] {
+		.trans-default();
+	}
+
+	input[type="text"]:focus input[placeholder] {display: none;}
+
+	input[type="text"]:not(.controlled-value):hover {
+		border-color: @blue--lighter;
+	}
+
+	input[type="text"]:not(.controlled-value):focus {
+		border-color: @pink;
+		outline: none;
+	}
+
+	input[placeholder] {font-size: @h3;}
+
+	/* Задание цвета для placeholder-а */
+	input:-moz-placeholder {color: @blue--lighter;}
+    input::-moz-placeholder {color: @blue--lighter;}
+    input::-webkit-input-placeholder {color: @blue--lighter;}
+    input:-ms-input-placeholder {color: @blue--lighter;}
+
+    /* Плавное изменение прозрачности placeholder-а при фокусе */
+	input:not(.controlled-value)::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+	input:not(.controlled-value)::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+	input:not(.controlled-value):-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+	input:not(.controlled-value):-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+	input:not(.controlled-value):focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+	input:not(.controlled-value):focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+	input:not(.controlled-value):focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+	input:not(.controlled-value):focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+	input[type="radio"],
+	input[type="checkbox"],
+	input[type="file"] {display: none;}
+
+	input[type="radio"] ~ label,
+	input[type="checkbox"] ~ label {
+		.inline-block;
+		@media @tablet {
+			display: block;
+		}
+		padding: 20px 0 10px 10px;
+		font-size: @h3;
+		line-height: 30px;
+		color: @blue--lighter;
+		text-transform: none;
+		cursor: pointer;
+	}
+
+	input[type="radio"] ~ label::before,
+	input[type="checkbox"] ~ label::before {
+		content: "";
+		.inline-block;
+		margin-right: 20px;
+		box-sizing: border-box;
+		height: 35px;
+		width: 35px;
+		background-color: @white;
+		box-shadow: 0 0 0 2px @gray--darker;
+	}
+
+	.hover-label:hover::before {
+		box-shadow: 0 0 0 2px @blue--lighter;
+	}
+
+	.hover-label:active::before {
+		box-shadow: 0 0 0 2px @pink;
+	}
+
+	input[type="radio"] ~ label::before {
+		border: 10px solid @white;
+		border-radius: 50%;
+	}
+
+	input[type="radio"]:checked + label::before {
+		background-color: @pink;
+		box-shadow: 0 0 0 2px @pink;
+	}
+
+	input[type="checkbox"]:checked + label::before {
+		background: url(../img/etc/yes--pink.svg) no-repeat 50% 50%;
+		background-size: 22px 16px;
+		box-shadow: 0 0 0 2px @pink;
+	}
+
+	.minus,
+	.plus {
+		.inline-block();
+		width: 64px;
+		height: 64px;
+		border: 2px solid @gray--darker;
+		border-radius: 3px;
+		text-indent: @over9000;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+
+	.minus:hover,
+	.plus:hover {
+		border-color: @blue--lighter;
+	}
+
+	.minus:active,
+	.plus:active {
+		border-color: @blue--lighter;
+
+	}
+
+	.minus {
+		margin-right: -4px;
+		background: url("../img/etc/control--minus.png") no-repeat 50% 50%;
+	}
+
+	.plus {
+		margin-left: -6px;
+		background: url("../img/etc/control--plus.png") no-repeat 50% 50%;
+	}
+
+	.minus:active {
+		background: url("../img/etc/white-control--minus.png") no-repeat 50% 50%;
+		background-color: @blue--lighter;
+	}
+
+	.plus:active {
+		background: url("../img/etc/white-control--plus.png") no-repeat 50% 50%;
+		background-color: @blue--lighter;
+	}
+
+}
+
+.controlled-value {
+	.inline-block;
+	width: 80px;
+	padding: 20px;
+	border: 2px solid #e5e5e5;
+	border-left: 0;
+	text-align: center;
+
+	&--no-border {
+		@media @tablet {
+			border-top: 0;
+			border-bottom: 0;
+			border-right: 0;
+		}
+	}
+}
+
+.thumb-container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.thumb-container {
+	@media @mobile {
+		margin-bottom: -10px; /* Чтобы было как в макете:); */
+	}
+	@media @tablet {
+		margin-bottom: 10px;
+	}
+
+	&__thumb {
+		position: relative;
+		float: left;
+		@media @mobile {
+			margin: 0 35px 18px 0;
+		}
+		@media @tablet {
+			margin: 45px 70px 5px 5px;
+		}
+	}
+
+	&__thumb:nth-child(3n) {
+		margin-right: 0;
+	}
+
+	&__img {
+		@media @mobile {
+			width: 68px;
+			height: 68px;
+		}
+		@media @tablet {
+			width: 120px;
+			height: 120px;
+		}
+	}
+
+	&__thumb-remove {
+		position: absolute;
+		display: block;
+		@media @mobile {
+			top: -15px;
+	    	left: 55px;
+	    	width: 25px;
+	    	height: 25px;
+	    	text-align: center;
+	    	font-size: 21px;
+	    	line-height: 25px;
+	    }
+	    @media @tablet {
+			top: -25px;
+	    	right: -25px;
+	    	width: 46px;
+	    	height: 46px;
+	    	text-align: center;
+	    	font-size: 33px;
+	    	line-height: 46px;
+	    }
+    	border: 2px solid @gray--darker;
+    	color: #c2c2c2;
+    	background-color: @white;
+    	border-radius: 50%;
+    	cursor: pointer;
+	}
+
+	&__thumb-remove:hover {
+		color: @blue--lighter;
+		border-color: @blue--lighter;
+	}
+
+	&__thumb-remove:active {
+		color: @white;
+		border-color: @blue--lighter;
+		background-color: @blue--lighter;
+	}
+
+	&__thumb-name {
+		@media @mobile {
+			width: 70px;
+			font-size: @smaller;
+		}
+		@media @tablet {
+			width: 120px;
+			font-size: @base-fs;
+			padding-top: 8px;
+		}
+		text-transform: uppercase;
+		color: @blue--lighter;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+}
+
+
+.travellers {
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+
+	&__number {
+		padding-top: 12px;
+		text-align: center;
+		font-size: @base-fs;
+		color: @pink;
+	}
+
+	&__empty-cell {
+		width: 65px;
+	}
+
+	&__ordinal-number {
+		.inline-block;
+		width: 64px;
+    	height: 64px;
+    	line-height: 64px;
+		text-align: center;
+		@media @mobile {
+			margin-right: -6px;
+		}
+		@media @tablet {
+			margin-right: 18px;
+		}
+		font-size: @h3;
+		color: @blue--lighter;
+		background-color: @gray;
+		border: 2px solid @gray--darker;
+	}
+
+	&__input-field {
+		.inline-block();
+		@media @mobile {
+			width: 169px;
+		}
+		@media @tablet {
+			width: 275px;
+		}
+		padding: 20px;
+		border: 2px solid #e5e5e5;
+	}
+
+	&__name-container {
+		@media @tablet {
+			width: 70%;
+		}
+	}
+
+	&__nickname-container {
+		@media @tablet {
+			padding-left: 40px;
+		}
+	}
+
+	&__delete {
+		padding-left: 40px;
+		font-size: @base-fs;
+		text-transform: uppercase;
+		color: @blue--lighter;
+		cursor: pointer;
+	}
+
+	&__delete:hover {
+		color: @pink;
+		text-decoration: underline;
+	}
+
+	&__delete:active {
+		color: fade(@pink, 30%);
+	}
+}
+
+.button {
+	display: block;
+	text-align: center;
+	font-size: @h3;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-indent: 0;
+	padding: 20px 0;
+	overflow: hidden;
+	cursor: pointer;
+	.trans-default();
+
+	&--ghost {
+		@media @mobile {
+			width: 276px;
+		}
+		@media @tablet {
+			width: 500px;
+			margin: 5px auto 0;
+		}
+		margin-top: 20px;
+		background-color: @white;
+		border: 2px solid @gray--darker;
+		border-radius: 3px;
+		color: @blue--lighter;
+		overflow: hidden;
+	}
+
+	&--ghost:hover {
+		border-color: @blue--lighter;
+	}
+
+	&--ghost:active {
+		border-color: @blue--lighter;
+		background-color: @blue--lighter;
+		color: @white;
+	}
+
+	&--default {
+		@media @mobile {
+			width: 276px;
+		}
+		@media @tablet {
+			width: 296px;
+		}
+		margin-bottom: 35px;
+		margin-left: auto;
+		margin-right: auto;
+		border: 0;
+		background-color: @green;
+		color: @white;
+		border-radius: 3px;
+		overflow: hidden;
+	}
+
+	&--default:hover {
+		background-color: @green--darker;
+	}
+	&--default:active {
+		background-color: @green--darker;
+		color: fade(@green, 70%);
+	}
+}
+
+.gray {
+	padding: 45px 20px 10px;
+	background-color: @gray;
+}
+
+.submit-section {
+	@media @mobile {
+		padding-bottom: 45px;
+	}
+	@media @tablet {
+		padding-bottom: 100px;
+	}
+	text-align: center;
+
+	&__input {
+		@media @tablet {
+			float: left;
+		}
+	}
+
+	&__note {
+		@media @tablet {
+			float: right;
+		}
+	}
+}
+
+.modal-wrapper {
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	*/
+	@media @mobile {
+		width: @screen--sm;
+	}
+	@media @tablet {
+		width: 460px;
+	}
+	margin: 30px auto;
+	text-align: center;
+	box-sizing: border-box;
+	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+	&--failure {
+		padding-bottom: 15px;
+	}
+
+	&__header {
+		@media @mobile {
+			padding: 40px 40px 0;
+			margin-bottom: 0;
+			font-size: @base-tabl;
+			line-height: 24px;
+		}
+		@media @tablet {
+			padding: 40px 70px 0;
+			margin-bottom: 0;
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+
+	&__caption {
+		@media @mobile {
+			padding: 0 20px;
+			font-size: @base-fs;
+			line-height: 24px;
+		}
+		@media @tablet {
+			padding: 0 70px;
+			font-size: @base-tabl;
+			line-height: 24px;
+
+		}
+		color: @blue--lighter;
+		margin-bottom: 35px;
+	}
+}

@@ -1,0 +1,28 @@
+.inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.trans-default {
+	transition: all .2s linear;
+}
+
+.pink-link {
+	display: block;
+	@media @tablet {
+		font-size: @base-fs;
+	}
+	/* @media @desktop {
+		font-size: @base-tabl;
+	} */
+	color: @pink;
+	text-decoration: underline;
+}
+
+.pink-link:hover {
+	color: @blue--lighter;
+}
+
+.pink-link:active {
+	color: fade(@blue--lighter, 30%);
+}
