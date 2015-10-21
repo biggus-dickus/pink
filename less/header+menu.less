@@ -1,6 +1,7 @@
 .top-header {
 	position: relative;
 	box-sizing: border-box;
+	min-height: 235px;
 	@media @mobile {
 		background-color: @blue--lighter;
 		background: url("../img/bg/background-mobile@1x.jpg") no-repeat 50% 0;
@@ -8,11 +9,25 @@
 	@media @tablet {
 		background: url("../img/bg/background-tablet@1x.jpg") no-repeat 50% 0;
 	}
-	min-height: 235px;
+	@media @desktop {
+		background: url("../img/bg/background-fullsize.jpg") no-repeat 50% 0;
+	}
 
 	&__wrapper {
 		@media @tablet {
 			padding-top: 70px;
+		}
+	}
+
+	&--bg-contain {
+		@media @desktop {
+			background-size: contain;
+		}
+	}
+
+	&--bg-cover {
+		@media @desktop {
+			background-size: cover;
 		}
 	}
 
@@ -27,6 +42,10 @@
 			font-size: @h1-tabl--big;
 			line-height: 48px;
 		}
+		@media @desktop {
+			font-size: @h1-desk;
+			line-height: 60px;
+		}
 
 		font-weight: 300;
 		color: @white;
@@ -38,12 +57,21 @@
 			width: 305px;
 			font-size: @h1-tabl;
 		}
+		@media @desktop {
+			position: relative;
+			left: 115px;
+			bottom: 25px;
+			font-size: @h1-desk;
+		}
 	}
 
 	&__caption--rest {
 		@media @tablet {
 			padding: 50px 35px 70px;
 			line-height: 60px;
+		}
+		@media @desktop {
+			padding: 20px 130px 90px;
 		}
 	}
 
@@ -56,19 +84,33 @@
 			height: 565px;
 			background: url("../img/bg/iphone-hand-tablet@1x.png") no-repeat 0 100%;
 		}
+		@media @desktop {
+			height: 645px;
+			background: url("../img/bg/iphone-hand-desktop@1x.png") no-repeat 120px 100%;
+		}
 	}
 }
 
 .top-bar {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	padding: 25px;
-
-	background-color: rgba(29, 38, 49, 0.7);
+	background-color: rgba(0, 0, 0, 0.3);
+	@media @mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 25px;
+	}
+	@media @tablet {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 25px;
+	}
+	@media @desktop {
+		display: block;
+		padding: 53px 25px;
+	}
 
 	&__logo-link {
-		float: left;
 		text-indent: @over9000;
 		@media @mobile {
 			width: 75px;
@@ -82,6 +124,17 @@
 			background: url("../img/logo/tablet/logotype-white-tablet.svg") no-repeat 0 0;
 			background-size: 146px 44px;
 		}
+		@media @desktop {
+			position: relative;
+			bottom: 27px;
+			left: 100px;
+			display: block;
+			float: left;
+			width: 146px;
+			height: 41px;
+			background: url("../img/logo/desktop/logotype-white-desktop.svg") no-repeat 0 0;
+			background-size: 146px 41px;
+		}
 	}
 
 	&__logo-link:hover {
@@ -92,6 +145,10 @@
 		@media @tablet {
 			background: url("../img/logo/tablet/logotype-pink-tablet.svg") no-repeat 0 0;
 			background-size: 146px 44px;
+		}
+		@media @desktop {
+			background: url("../img/logo/desktop/logotype-pink-desktop.svg") no-repeat 0 0;
+			background-size: 146px 41px;
 		}
 	}
 
@@ -104,10 +161,50 @@
 			background: url("../img/logo/tablet/logotype-active-tablet.svg") no-repeat 0 0;
 			background-size: 146px 44px;
 		}
+		@media @desktop {
+			background: url("../img/logo/desktop/logotype-active-desktop.svg") no-repeat 0 0;
+			background-size: 146px 41px;
+		}
 	}
 
-	&__menu {
-		float: right;
+	&__desktop-menu {
+		@media @mobile {
+			display: none;
+		}
+		@media @tablet {
+			display: none;
+		}
+		@media @desktop {
+			display: block;
+			float: right;
+			position: relative;
+			right: 70px;
+			line-height: 0;
+			white-space: nowrap;
+		}
+
+		a {
+			display: inline-block;
+			vertical-align: baseline;
+			margin-right: 65px;
+			padding-bottom: 18px;
+			font-size: @base-tabl;
+			color: @white;
+			text-decoration: none;
+		}
+
+		a:last-child {
+			margin-right: 0;
+		}
+
+		a:hover {
+			border-bottom: 2px solid @white;
+		}
+
+		a:active {
+			color: fade(@white, 30%);
+			border-bottom: none;
+		}
 	}
 }
 
@@ -118,6 +215,10 @@
   	}
   	@media @tablet {
   		bottom: 5px;
+  	}
+
+  	@media @desktop {
+  		display: none;
   	}
 
 	width: 50px;
@@ -197,8 +298,20 @@
 		width: 305px;
 		background-color: transparent;
 	}
+	@media @desktop {
+		position: relative;
+		bottom: 415px;
+		left: 102px;
+		width: 305px;
+		background-color: transparent;
+	}
 	color: @white;
 	padding: 30px 20px 35px 20px;
+
+	@media @desktop {
+		padding: 10px 20px 35px 20px;
+	}
+
 
 	&__info {
 		text-align: center;
@@ -228,6 +341,11 @@
 	text-decoration: none;
 	.trans-default();
 
+	@media @desktop {
+		width: 295px;
+		font-size: 21px;
+	}
+
 	&:hover {
 		color: @pink;
 		background: @white;
@@ -242,6 +360,11 @@
 	list-style: none;
 	padding-left: 0;
 	text-align: center;
+
+	@media @desktop {
+		margin-top: 35px;
+		margin-bottom: 28px;
+	}
 
 	& li {
 		display: inline-block;

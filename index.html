@@ -11,10 +11,16 @@
 
 <body>
   <div class="viewport-wrapper">
-    <header class="top-header">
+    <header class="top-header  top-header--bg-contain">
       <div class="top-bar">
           <a class="top-bar__logo-link" href="/">Pink</a>
-          <button class="top-bar__menu  toggle-menu" id="toggler">Меню</button>
+          <nav class="top-bar__desktop-menu">
+            <a href="/">Информация</a>
+            <a href="blog.html">Блог</a>
+            <a href="post.html">Отзывы</a>
+            <a href="form.html">Конкурс</a>
+          </nav>
+          <button class="toggle-menu" id="toggler">Меню</button>
       </div>
 
       <nav class="hidden">
@@ -63,30 +69,42 @@
       <section class="info-container  info-container--gray">
         <div class="info-container__pres-wrapper clearfix-tabl-marg">
           <img class="info-container__tablet-img" width="268" height="481" src="img/bg/iphone-screen-tablet-3@1x.png" alt="Всем привет!">
-          <h3 class="info-container__h3">Поднимает настроение</h3>
-          <p class="info-container__caption">
-              Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!
-          </p>
-          <h3 class="info-container__h3">Меняет мир вокруг</h3>
-          <p class="info-container__caption">
-              Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект.
-          </p>
-          <h3 class="info-container__h3">Заводит новых друзей</h3>
-          <p class="info-container__caption">
-            Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых.
-          </p>
+          <div class="info-container__item">
+            <img class="info-container__desktop-img" width="292" height="302" src="img/bg/iphone-screen-desktop-1@1x.png" alt="Тоска и уныние">
+            <h3 class="info-container__h3  info-container__h3--padded">Поднимает настроение</h3>
+            <p class="info-container__caption">
+                Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!
+            </p>
+          </div>
+          <div class="info-container__item">
+            <img class="info-container__desktop-img" width="292" height="302" src="img/bg/iphone-screen-desktop-2@1x.png" alt="Жизнь в розовом цвете">
+            <h3 class="info-container__h3">Меняет мир вокруг</h3>
+            <p class="info-container__caption">
+                Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+          </div>
+          <div class="info-container__item">
+            <img class="info-container__desktop-img" width="292" height="302" src="img/bg/iphone-screen-desktop-3@1x.png" alt="Всем привет!">
+            <h3 class="info-container__h3">Заводит новых друзей</h3>
+            <p class="info-container__caption">
+              Ставьте лайки, комментируйте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых
+            </p>
+          </div>
         </div>
         <div class="info-container__aux-bg"></div>
       </section>
 
 
       <section class="info-container  info-container--white">
-        <div class="timer24 mob-hidden">
-          <h3 class="timer24__h3">Эффект на&nbsp;24&nbsp;часа!</h3>
-          <p class="timer24__caption">
-            Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!
-          </p>
-          <a class="pink-link" href="#">Узнать больше об&nbsp;исследовании</a>
+        <div class="timer24">
+          <div class="timer24__pic"><span>24</span></div>
+          <div class="timer24__text">
+            <h3 class="timer24__h3">Эффект на&nbsp;24&nbsp;часа!</h3>
+            <p class="timer24__caption">
+              Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!
+            </p>
+            <a class="pink-link" href="#">Узнать больше об&nbsp;исследовании</a>
+          </div>
         </div>
         <div class="testimonials">
           <h3 class="testimonials__h3">Николай Петров</h3>
@@ -94,6 +112,8 @@
           <p class="testimonials__caption">
             &laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
           </p>
+          <a class="testimonials__arrow  testimonials__arrow--prev" title="Предыдущий отзыв">Предыдущий отзыв</a>
+          <a class="testimonials__arrow  testimonials__arrow--next" title="Следующий отзыв">Следующий отзыв</a>
         </div>
         <div class="radio-slider">
           <input name="testimonial-ID" id="testimonial1" type="radio" value="1" checked>
@@ -109,20 +129,20 @@
       <section class="pricing">
         <table class="pricing__table">
           <thead>
-            <tr>
+            <tr class="pricing__mob-flex">
               <th class="col-1  mob-hidden">
               </th>
               <th class="col-2">
-                <h3>База</h3>
+                <p class="pricing__package">База</p>
                 <p>1,99 USD</p>
               </th>
-              <th class="pricing__hit  col-3">
-                <h3>Стандарт</h3>
+              <th class="pricing__hit  col-3  pricing__mob-width">
+                <p class="pricing__package">Стандарт</p>
                 <p>3,99 USD</p>
                 <span>Хит</span>
               </th>
               <th class="col-4">
-                <h3>Анлим</h3>
+                <p class="pricing__package">Анлим</p>
                 <p>9,99 USD</p>
               </th>
             </tr>
@@ -167,17 +187,17 @@
           Свяжитесь с&nbsp;нами!
         </h2>
         <div class="contacts-wrapper">
-          <div class="contacts-wrapper__block">
+          <div class="contacts-wrapper__item">
             <h3 class="contacts-wrapper__header">Звоните:</h3>
             <p class="contacts-wrapper__text">+7&nbsp;(812)&nbsp;555-66-66</p>
           </div>
-          <div class="contacts-wrapper__block">
+          <div class="contacts-wrapper__item  contacts-wrapper__item--last">
             <h3 class="contacts-wrapper__header">Пишите:</h3>
             <p class="contacts-wrapper__text">
-              <a class="contacts-wrapper__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </p>
           </div>
-          <div class="contacts-wrapper__block">
+          <div class="contacts-wrapper__item">
             <h3 class="contacts-wrapper__header">Приезжайте в&nbsp;гости:</h3>
             <p class="contacts-wrapper__text  info-container__pink-text--mask">
               ул.&nbsp;Большая<br>

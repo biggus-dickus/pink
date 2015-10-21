@@ -1,4 +1,7 @@
 .radio-slider {
+	@media @desktop {
+		display: none;
+	}
 	margin: 20px 0 10px;
 	text-align: center;
 
@@ -12,7 +15,7 @@
 		vertical-align: middle;
 		width: 5px;
 		height: 5px;
-		background-color: #b5b9be;
+		background-color: #bec2c7;
 		border-radius: 50%;
 		text-indent: @over9000;
 		cursor: pointer;
@@ -20,6 +23,14 @@
 
 	& label:last-child {
 		margin-right: 0;
+	}
+
+	& label:hover {
+		background-color: #7e868f;
+	}
+
+	& label:active {
+		background-color: #e9ebec;
 	}
 
 	& input[type="radio"]:checked + label {

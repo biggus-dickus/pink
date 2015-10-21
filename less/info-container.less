@@ -6,16 +6,24 @@
 	&&--white {
 		@media @mobile {
 			padding-bottom: 40px;
+			background-color: @white;
 		}
 		@media @tablet {
 			padding-bottom: 80px;
+			background-color: @white;
 		}
-		background-color: @white;
+
 	}
 
 	&&--gray {
 		@media @mobile {
 			background-color: @gray;
+		}
+	}
+
+	&&--padbot0 {
+		@media @tablet {
+			padding-bottom: 0;
 		}
 	}
 
@@ -36,6 +44,12 @@
 	 		height: 55px;
 	 		background-size: 700px 55px;
 	 	}
+	 	@media @desktop {
+	 		width: @screen--lg;
+	 		top: -70px;
+	 		height: 90px;
+	 		background-size: 1200px 90px;
+	 	}
 	}
 
 	&__h2{
@@ -46,6 +60,10 @@
 		@media @tablet {
 			font-size: @h1-tabl;
 			line-height: 48px;
+		}
+		@media @desktop {
+			font-size: @h1-desk;
+			line-height: 60px;
 		}
 		font-weight: 300;
 		color: @blue--lighter;
@@ -63,6 +81,9 @@
 			width: 500px;
 			margin: 0 auto;
 		}
+		@media @desktop {
+			padding-bottom: 70px;
+		}
 	}
 
 	&__tablet-img {
@@ -74,6 +95,22 @@
 			bottom: 40px;
 			float: left;
 			margin-right: 40px;
+		}
+		@media @desktop {
+			display: none;
+		}
+	}
+
+	&__desktop-img {
+		@media @mobile {
+			display: none;
+		}
+		@media @tablet {
+			display: none;
+		}
+		@media @desktop {
+			display: block;
+			margin-bottom: 50px;
 		}
 	}
 
@@ -88,12 +125,21 @@
 			margin-bottom: 15px;
 			font-size: @h3-tabl;
 		}
+		@media @desktop {
+			margin-top: 30px;
+			margin-bottom: 25px;
+			font-size: @h3-desk;
+			line-height: @h3-desk;
+		}
 		color: @blue--lighter;
 	}
 
-	&__h3:first-of-type {
+	&__h3--padded {
 		@media @tablet {
 			padding-top: 30px;
+		}
+		@media @desktop {
+			padding-top: 0;
 		}
 	}
 
@@ -101,6 +147,10 @@
 		font-size: @base-fs;
 		line-height: 24px;
 		color: @blue--lighter;
+		@media @desktop {
+			font-size: @base-tabl;
+			line-height: @h3-desk;
+		}
 	}
 
 	&__caption:last-of-type {
@@ -118,6 +168,27 @@
 			padding: 0 40px 0 40px;
 			text-align: left;
 			background-color: @gray;
+		}
+		@media @desktop {
+			width: @screen--lg;
+			text-align: center;
+		}
+	}
+
+	&__item {
+		@media @desktop {
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+    		bottom: 90px;
+			width: 275px;
+			margin-right: 60px;
+		}
+	}
+
+	&__item:last-child {
+		@media @desktop {
+			margin-right: 0;
 		}
 	}
 

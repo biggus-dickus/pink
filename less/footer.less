@@ -2,15 +2,20 @@
 	position: relative; /* Это чтобы  фон влез полностью на 320 пикселей :) */
 	left: -20px;
 	@media @mobile {
-		width: 320px;
+		width: @screen--sm;
 		height: 200px;
 		margin-bottom: -40px; 	/* Это чтобы скомпенсировать padding-bottom в .info-container--white */
 		background: url("../img/bg/footer-map.jpg") no-repeat 0 -445px;
 	}
 	@media @tablet {
-		width: 700px;
+		width: @screen--md;
 		height: 375px;
 		background: url("../img/bg/footer-map--tablet.jpg") no-repeat 0 -345px;
+	}
+	@media @desktop {
+		width: @screen--lg;
+		height: 520px;
+		background: url("../img/bg/footer-map--desktop.jpg") no-repeat 0 -260px;
 	}
 }
 
@@ -20,46 +25,70 @@
 	bottom: 77px;
 	right: 0;
 	@media @mobile {
-		width: 320px;
+		width: @screen--sm;
 		height: 123px;
 		background: url("../img/etc/map-marker.svg") no-repeat 50% 88px,
 					url("../img/etc/triangle-white-footer.svg") no-repeat 0 0;
-		background-size: 35px 35px, 320px 35px;
+		background-size: 35px 35px, @screen--sm 35px;
 	}
 	@media @tablet {
-		width: 700px;
+		width: @screen--md;
 		height: 298px;
 		background: url("../img/etc/map-marker.svg") no-repeat 50% 195px,
 					url("../img/etc/triangle-white-footer.svg") no-repeat 0 0;
-					background-size: 35px 35px, 700px 70px;
+					background-size: 35px 35px, @screen--md 70px;
+	}
+	@media @desktop {
+		width: @screen--lg;
+		height: 443px;
+		background: url("../img/etc/map-marker.svg") no-repeat 50% 280px,
+					url("../img/etc/triangle-white-footer.svg") no-repeat 0 0;
+					background-size: 35px 35px, @screen--lg 123px;
 	}
 }
 
 .contacts-wrapper {
 	text-align: center;
+	@media @desktop {
+		display: flex;
+    	align-items: baseline;
+    	justify-content: space-around;
+    	margin-bottom: -25px; //равняемся под макет:)
+	}
 
-	&__block {
+	&__item {
 		@media @tablet {
 			.inline-block();
 			margin: 40px 40px 0;
 		}
+
+		@media @desktop {
+			display: block;
+			margin-top: 40px;
+		}
 	}
 
-	&__block:last-child {
+	&__item:last-child {
 		@media @mobile {
 			margin-bottom: 40px;
 		}
 	}
 
-	&__block:first-child &__header {
+	&__item:first-child &__header {
 		@media @mobile {
 			padding-top: 0;
 		}
 	}
 
-	&__block:last-child &__header {
+	&__item:last-child &__header {
 		@media @tablet {
 			margin-top: 0;
+		}
+	}
+
+	&__item--last {
+		@media @desktop {
+			order: 1;
 		}
 	}
 
@@ -79,12 +108,17 @@
 		color: @pink;
 	}
 
-	a&__text:hover {
+	a {
+		color: @pink;
+		text-decoration: none;
+	}
+
+	a:hover {
 		color: @blue--lighter;
 		text-decoration: underline;
 	}
 
-	a&__text:active {
+	a:active {
 		color: fade(@blue--lighter, 30%);
 		text-decoration: none;
 	}
@@ -95,6 +129,9 @@
 	@media @tablet {
 		padding: 35px 30px 0;
 	}
+	@media @desktop {
+		padding: 60px 30px 20px;
+	}
 
 	&__item {
 		@media @tablet {
@@ -102,11 +139,13 @@
 			vertical-align: top;
 			margin-right: 64px;
 		}
+		@media @desktop {
+			margin-right: 230px;
+		}
 	}
 
 	&__item:last-child {
 		@media @tablet {
-			.inline-block();
 			margin-right: 0;
 		}
 	}
@@ -119,13 +158,44 @@
 .pink-footer a {
 	@media @mobile {
 		margin: 0 auto 35px;
+		background: url("../img/logo/tablet/logotype-footer-tablet.svg") no-repeat 0 0;
+	}
+	@media @tablet {
+		background: url("../img/logo/tablet/logotype-footer-tablet.svg") no-repeat 0 0;
+	}
+	@media @desktop {
+		background: url("../img/logo/desktop/logotype-footer-desktop.svg") no-repeat 0 0;
 	}
 	display:block;
 	width: 145px;
 	height: 45px;
 	text-indent: @over9000;
-	background: url("../img/logo/tablet/logotype-pink-tablet.svg") no-repeat 0 0;
 	background-size: 145px 45px;
+	.trans-default();
+}
+
+.pink-footer a:hover {
+	@media @mobile {
+		background: url("../img/logo/tablet/logotype-pink-tablet.svg") no-repeat 0 0;
+	}
+	@media @tablet {
+		background: url("../img/logo/tablet/logotype-pink-tablet.svg") no-repeat 0 0;
+	}
+	@media @desktop {
+		background: url("../img/logo/desktop/logotype-pink-desktop.svg") no-repeat 0 0;
+	}
+}
+
+.pink-footer a:active {
+	@media @mobile {
+		background: url("../img/logo/tablet/logotype-footer-tablet--active.svg") no-repeat 0 0;
+	}
+	@media @tablet {
+		background: url("../img/logo/tablet/logotype-footer-tablet--active.svg") no-repeat 0 0;
+	}
+	@media @desktop {
+		background: url("../img/logo/desktop/logotype-footer-desktop--active.svg") no-repeat 0 0;
+	}
 }
 
 .sn-container {
@@ -153,7 +223,8 @@
 	}
 
 	a:active {
-		border-color: #e9ebec;
+		border-color: #b5b5b5;
+		opacity: 0.3;
 	}
 
 	&__twitter {background: url("../img/icons/twitter.svg") no-repeat 50% 50%;}
@@ -169,7 +240,15 @@
 	span {
 		.inline-block();
 		margin-right: 10px;
-		font-size: @base-fs;
+		@media @mobile {
+			font-size: @base-fs;
+		}
+		@media @tablet {
+			font-size: @base-fs;
+		}
+		@media @desktop {
+			font-size: @base-tabl;
+		}
 		color: @blue--lighter;
 	}
 

@@ -25,6 +25,12 @@
 	 		height: 55px;
 	 		background-size: 700px 55px;
 	 	}
+	 	@media @desktop {
+	 		width: @screen--lg;
+	 		top: -90px;
+	 		height: 90px;
+	 		background-size: 1200px 90px;
+	 	}
 	}
 
 	&__table {
@@ -58,10 +64,10 @@
 			}
 		}
 
-		& thead {
+		thead {
 			color: @white;
 
-			& th {
+			th {
 				position: relative;
 				@media @mobile {
 					padding: 20px;
@@ -74,18 +80,18 @@
 				border: 2px solid @gray--darker;
 			}
 
-			& th:first-child {
+			th:first-child {
 				@media @tablet {
 					background-color: transparent;
 					border: none;
 				}
 			}
 
-			& h3, p, span {
+			.pricing__package, p, span {
 				line-height: 0;
 			}
 
-			& h3 {
+			.pricing__package {
 				padding-bottom: 10px;
 				font-weight: bold;
 				text-transform: uppercase;
@@ -95,9 +101,12 @@
 				@media @tablet {
 					font-size: @larger;
 				}
+				@media @desktop {
+					font-size: @base-tabl;
+				}
 			}
 
-			& p {
+			p {
 				font-weight: 300;
 				text-transform: uppercase;
 				@media @mobile {
@@ -106,9 +115,12 @@
 				@media @tablet {
 					font-size: @base-tabl;
 				}
+				@media @desktop {
+					font-size: @h2;
+				}
 			}
 
-			& span {
+			span {
 				position: absolute;
 				text-indent: @over9000;
 				top: 0;
@@ -122,10 +134,14 @@
 					left: 0;
 					background: url("../img/etc/hit--tablet.png") no-repeat;
 				}
+				@media @desktop {
+					left: 0;
+					background: url("../img/etc/hit--mobile.png") no-repeat;
+				}
 			}
 		}
 
-		& td {
+		td {
 			@media @mobile {
 				padding: 20px;
 				font-size: @base-fs;
@@ -135,6 +151,12 @@
 				padding: 15px;
 				font-size: @base-fs;
 				text-transform: none;
+			}
+			@media @desktop {
+				width: 208px;
+				font-size: @base-tabl;
+				overflow: hidden;
+				white-space: nowrap;
 			}
 			border: 2px solid @gray--darker;
 			color: @blue--lighter;
@@ -165,6 +187,19 @@
 		}
 		@media @desktop {
 			display: none;
+		}
+	}
+
+	&__mob-flex {
+		@media @mobile {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__mob-width {
+		@media @mobile {
+			width: 115%;
 		}
 	}
 }

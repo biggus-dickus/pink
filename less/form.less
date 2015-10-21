@@ -12,6 +12,10 @@
 			width: @screen--md;
 			padding: 0 38px;
 		}
+		@media @desktop {
+			width: @screen--lg;
+			padding: 0 130px;
+		}
 	}
 
 	&__asterisk {
@@ -28,12 +32,6 @@
 		text-indent: 20px;
 	}
 
-	&__pink-label--traveller-name {
-		@media @tablet {
-			padding-left: 25px;
-		}
-	}
-
 	&__input--default {
 		@media @mobile {
 			width: 236px;
@@ -41,13 +39,24 @@
 		@media @tablet {
 			width: 576px;
 		}
+		@media @desktop {
+			width: 250px;
+		}
 		padding: 20px;
 		border: 2px solid #e5e5e5;
 		border-radius: 3px;
 	}
 
 	&__input--travel {
-		width: 180px;
+		@media @mobile {
+			width: 236px;
+		}
+		@media @tablet {
+			width: 180px;
+		}
+		@media @desktop {
+			width: 196px;
+		}
 		padding: 20px;
 		border: 2px solid #e5e5e5;
 		border-radius: 3px;
@@ -69,6 +78,9 @@
 		border: 2px solid @gray--darker;
 		border-radius: 3px;
 	}
+	@media @desktop {
+		margin-bottom: 55px;
+	}
 
 	&--white {
 		background-color: @white;
@@ -87,6 +99,12 @@
 	&--no-padding {
 		@media @tablet {
 			padding: 0;
+		}
+	}
+
+	&--pad-right0 {
+		@media @desktop {
+			padding-right: 0;
 		}
 	}
 
@@ -111,6 +129,9 @@
 			.inline-block();
 			margin-right: 15px;
 		}
+		@media @desktop {
+			margin-right: 39px;
+		}
 	}
 
 	&__wrapper-item:last-child {
@@ -129,8 +150,12 @@
 		@media @tablet {
 			width: 504px;
 			margin: 35px auto 25px;
-			border: 1px solid @gray--darker;
 		}
+		@media @desktop {
+			width: 820px;
+			margin: 40px auto 20px;
+		}
+		border: 1px solid @gray--darker;
 	}
 
 	legend {
@@ -159,6 +184,9 @@
 			padding: 20px 50px;
 			font-size: @base-tabl;
 		}
+		@media @desktop {
+			padding: 30px 70px;
+		}
 		line-height: 30px;
 		color: @blue--lighter;
 	}
@@ -179,7 +207,19 @@
 	}
 
 	input[disabled] {
-		width: 180px;
+		@media @mobile {
+			width: 234px;
+		}
+		@media @tablet {
+			width: 180px;
+		}
+		@media @desktop {
+			width: 196px;
+		}
+	}
+
+	input[disabled]:hover {
+		border-color: transparent !important; //нет смысла подсвечивать отключенное поле
 	}
 
 	input[type="text"] {
@@ -311,12 +351,73 @@
 		background: url("../img/etc/white-control--plus.png") no-repeat 50% 50%;
 		background-color: @blue--lighter;
 	}
+}
 
+.inp-fields-wrapper {
+
+	@media @desktop {
+		&__item {
+			.inline-block();
+			margin-right: 22px;
+		}
+
+		&__item:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.inline-block-desktop {
+	@media @desktop {
+		.inline-block();
+	}
+}
+
+.inline-block-desktop--radio {
+	@media @desktop {
+		margin-right: 127px;
+	}
+}
+
+.inline-block-desktop--radio:last-of-type {
+	@media @desktop {
+		margin-right: 0;
+	}
+}
+
+.checkbox-flex {
+	@media @desktop {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	input[type="checkbox"] + label {
+		@media @desktop {
+			width: 284px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__order-0 {order: 0;}
+	&__order-1 {order: 1;}
+	&__order-2 {order: 2;}
+	&__order-3 {order: 3;}
+	&__order-4 {order: 4;}
+	&__order-5 {order: 5;}
 }
 
 .controlled-value {
 	.inline-block;
-	width: 80px;
+	@media @mobile {
+		width: 102px;
+	}
+	@media @tablet {
+		width: 80px;
+	}
+	@media @desktop {
+		width: 88px;
+	}
 	padding: 20px;
 	border: 2px solid #e5e5e5;
 	border-left: 0;
@@ -354,10 +455,29 @@
 		@media @tablet {
 			margin: 45px 70px 5px 5px;
 		}
+		@media @desktop {
+			margin: 45px 51px 5px 5px;
+		}
 	}
 
 	&__thumb:nth-child(3n) {
-		margin-right: 0;
+		@media @mobile {
+			margin-right: 0;
+		}
+
+		@media @tablet {
+			margin-right: 0;
+		}
+
+		@media @desktop {
+			margin-right: 51px;
+		}
+	}
+
+	&__thumb:nth-child(5n) {
+		@media @desktop {
+			margin-right: 0;
+		}
 	}
 
 	&__img {
@@ -434,10 +554,25 @@
 	border-collapse: collapse;
 
 	&__number {
+		@media @desktop {
+			width: 70px;
+		}
 		padding-top: 12px;
-		text-align: center;
+		padding-left: 25px;
 		font-size: @base-fs;
 		color: @pink;
+	}
+
+	&__name {
+		@media @desktop {
+			width: 320px;
+		}
+	}
+
+	&__nickname {
+		@media @desktop {
+			width: 320px;
+		}
 	}
 
 	&__empty-cell {
@@ -456,6 +591,9 @@
 		@media @tablet {
 			margin-right: 18px;
 		}
+		@media @tablet {
+			margin-right: 0;
+		}
 		font-size: @h3;
 		color: @blue--lighter;
 		background-color: @gray;
@@ -470,24 +608,19 @@
 		@media @tablet {
 			width: 275px;
 		}
+		@media @tablet {
+			width: 251px;
+		}
 		padding: 20px;
 		border: 2px solid #e5e5e5;
 	}
 
-	&__name-container {
-		@media @tablet {
-			width: 70%;
-		}
-	}
-
-	&__nickname-container {
-		@media @tablet {
-			padding-left: 40px;
-		}
-	}
-
 	&__delete {
 		padding-left: 40px;
+		@media @desktop {
+			padding-left: 0;
+			text-align: right;
+		}
 		font-size: @base-fs;
 		text-transform: uppercase;
 		color: @blue--lighter;
@@ -501,6 +634,7 @@
 
 	&__delete:active {
 		color: fade(@pink, 30%);
+		text-decoration: none;
 	}
 }
 
@@ -519,21 +653,32 @@
 	&--ghost {
 		@media @mobile {
 			width: 276px;
+			color: @blue--lighter;
+			background-color: @white;
 		}
 		@media @tablet {
 			width: 500px;
 			margin: 5px auto 0;
+			color: @blue--lighter;
+			background-color: @white;
+		}
+		@media @desktop {
+			width: 820px;
+			color: @white;
+			background-color: @pink;
 		}
 		margin-top: 20px;
-		background-color: @white;
 		border: 2px solid @gray--darker;
 		border-radius: 3px;
-		color: @blue--lighter;
 		overflow: hidden;
 	}
 
 	&--ghost:hover {
 		border-color: @blue--lighter;
+		@media @desktop {
+			border-color: transparent;
+			background-color: darken(@pink, 5%); //своевольничаем:)
+		}
 	}
 
 	&--ghost:active {
@@ -547,7 +692,7 @@
 			width: 276px;
 		}
 		@media @tablet {
-			width: 296px;
+			width: 300px;
 		}
 		margin-bottom: 35px;
 		margin-left: auto;
@@ -565,6 +710,12 @@
 	&--default:active {
 		background-color: @green--darker;
 		color: fade(@green, 70%);
+	}
+
+	&--desktop {
+		@media @desktop {
+			width: 460px;
+		}
 	}
 }
 
@@ -589,6 +740,7 @@
 	}
 
 	&__note {
+		font-size: @base-fs;
 		@media @tablet {
 			float: right;
 		}
@@ -610,6 +762,12 @@
 	text-align: center;
 	box-sizing: border-box;
 	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+	&&--success {
+		@media @desktop {
+			width: 780px;
+		}
+	}
 
 	&--failure {
 		padding-bottom: 15px;
@@ -644,5 +802,11 @@
 		}
 		color: @blue--lighter;
 		margin-bottom: 35px;
+	}
+
+	&__caption&__caption--desktop {
+		@media @desktop {
+			padding: 0 190px;
+		}
 	}
 }
