@@ -11,10 +11,16 @@
 
 <body>
   <div class="viewport-wrapper">
-    <header class="top-header">
+    <header class="top-header  top-header--bg-cover">
       <div class="top-bar">
           <a class="top-bar__logo-link" href="/">Pink</a>
-          <button class="top-bar__menu  toggle-menu" id="toggler">Меню</button>
+          <nav class="top-bar__desktop-menu">
+            <a href="/">Информация</a>
+            <a href="blog.html">Блог</a>
+            <a href="post.html">Отзывы</a>
+            <a href="form.html">Конкурс</a>
+          </nav>
+          <button class="toggle-menu" id="toggler">Меню</button>
       </div>
 
 
@@ -81,7 +87,7 @@
     </section>
 
     <section class="pagination">
-      <span class="pagination__number  pagination__number--current" href="#1">1</span>
+      <a class="pagination__number  pagination__number--current">1</a>
       <a class="pagination__number" href="#2">2</a>
       <a class="pagination__number" href="#3">3</a>
       <a class="pagination__number" href="#4">4</a>

@@ -1,5 +1,6 @@
 {
   "name": "107049-pink",
+  "private": "true",
   "version": "0.1.0",
   "description": "Обучающий проект «pink» от HTML Academy",
   "main": "gulpfile.js",

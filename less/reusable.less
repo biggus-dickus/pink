@@ -24,8 +24,12 @@
 	@media @tablet {
 		content: "";
 		display: table;
-		clear:both;
+		clear: both;
 		margin-bottom: -40px;
+	}
+
+	@media @desktop {
+		margin-bottom: 0;
 	}
 }
 
@@ -36,6 +40,49 @@
 .mob-hidden {
 	@media @mobile {
 		display: none;
+	}
+}
+
+.tablet-hidden {
+	@media @tablet {
+		display: none;
+	}
+}
+
+.desktop-hidden {
+	@media @desktop {
+		display: none;
+	}
+}
+
+.desktop-shown {
+	@media @desktop {
+		display: block;
+	}
+}
+
+.block {
+	display: block;
+}
+
+.tablet-block {
+	@media @tablet {
+		display: block;
+	}
+	@media @desktop {
+		display: inline;
+	}
+}
+
+.desktop-only {
+	@media @mobile {
+		display: none;
+	}
+	@media @tablet {
+		display: none;
+	}
+	@media @desktop {
+		display: inline;
 	}
 }
 

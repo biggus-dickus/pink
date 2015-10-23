@@ -1,39 +1,97 @@
 .timer24 {
+	@media @mobile {
+		display: none;
+	}
 	position: relative;
-	padding: 30px 0 90px 330px;
 	text-align: left;
-	background: url("../img/etc/timer.svg") no-repeat 20px 50%;
-	background-size: 262px 300px;
+	@media @tablet {
+		padding: 35px 20px 60px;
+	}
+	@media @desktop {
+		top: -80px;
+		left: -20px;
+		width: 100%;
+		padding: 20px 0 65px 40px;
+		margin-bottom: 48px;
+		background-color: @gray;
+	}
+
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	&__pic {
+		float: left;
+		@media @tablet {
+			width: 262px;
+			height: 302px;
+			margin-right: 40px;
+			background: url("../img/etc/timer.svg") no-repeat 0 0;
+			background-size: 262px 302px;
+		}
+		@media @desktop {
+			width: 300px;
+			height: 345px;
+			margin-right: 63px;
+			margin-left: 75px;
+			background: url("../img/etc/timer--desktop.svg") no-repeat 0 0;
+		}
+
+		span {
+			position: relative;
+			display: block;
+			@media @tablet {
+				top: 65px;
+    			left: 25px;
+				width: 190px;
+				height: 190px;
+				line-height: 190px;
+				font-size: 105px;
+			}
+			@media @desktop {
+				top: 76px;
+				left: 29px;
+				width: 220px;
+				height: 220px;
+				line-height: 220px;
+				font-size: 120px;
+			}
+			text-align: center;
+    		font-weight: bold;
+    		color: #d22856;
+    		border: 10px solid #d22856;
+    		border-radius: 50%;
+		}
+	}
 
 	&__h3 {
 		@media @tablet {
-			width: 200px;
 			margin-bottom: 0;
-			padding-top: 20px;
+			padding-top: 5px;
+			padding-right: 80px;
 		}
-		font-size: 30px;
+		@media @desktop {
+			width: auto;
+			padding-top: 60px;
+		}
+		font-size: @h3-desk;
 		color: @black;
 	}
 
 	&__caption {
-		font-size: @base-fs;
-		line-height: @h2;
+		@media @tablet {
+			font-size: @base-fs;
+			line-height: @h2;
+			padding-right: 20px;
+		}
+		@media @desktop {
+			font-size: @base-tabl;
+			line-height: @h3-desk;
+			padding-right: 200px;
+			margin-bottom: 30px;
+		}
 		color: @blue--lighter;
 	}
-}
-
-.timer24::before {
-	content: "24";
-    position: absolute;
-    top: 115px;
-    left: 50px;
-    width: 180px;
-    height: 180px;
-    text-align: center;
-    font-size: 104px;
-    font-weight: bold;
-    line-height: 180px;
-    color: #d22856;
-    border: 10px solid #d22856;
-    border-radius: 50%;
 }
