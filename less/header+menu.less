@@ -6,18 +6,15 @@
 		background: @blue--lighter url("../img/bg/background-mobile@1x.jpg") no-repeat 50% 0;
 		@media @retina2x {
 			background: @blue--lighter url("../img/bg/background-mobile@2x.jpg") no-repeat 50% 0;
-			background-size: contain;
 		}
 		@media @retina3x {
 			background: @blue--lighter url("../img/bg/background-mobile@3x.jpg") no-repeat 50% 0;
-			background-size: contain;
 		}
 	}
 	@media @tablet {
 		background: url("../img/bg/background-tablet@1x.jpg") no-repeat 50% 0;
 		@media @retina2x {
 			background: url("../img/bg/background-tablet@2x.jpg") no-repeat 50% 0;
-			background-size: contain;
 		}
 	}
 	@media @desktop {
@@ -119,6 +116,10 @@
 }
 
 .top-bar {
+	&&--menu-open {
+		background-color: @blue--lighter;
+	}
+
 	background-color: rgba(0, 0, 0, 0.3);
 	@media @mobile {
 		display: flex;
@@ -273,20 +274,44 @@
   	&:focus {
   		outline: none;
   	}
+
+  	&&--close {
+  		width: 24px;
+  		height: 24px;
+  		background: url("../img/menu/menu-cross.svg") no-repeat 0 0;
+  		background-size: 24px 24px;
+  		@media @tablet {
+  			bottom: 0;
+  		}
+  		@media @tablet {
+  			right: 10px;
+  			bottom: 7px;
+  		}
+  	}
+
+  	&&--close:hover {
+  		background: url("../img/menu/menu-cross--pink.svg") no-repeat 0 0;
+  		background-size: 24px 24px;
+  	}
+
+  	&&--close:active {
+  		background: url("../img/menu/menu-cross--active.svg") no-repeat 0 0;
+  		background-size: 24px 24px;
+  	}
 }
 
-.main-menu {
+.mobile-menu {
 	position: absolute;
 	z-index: 1;
 	left: -40px;
 	list-style: none;
 	@media @mobile {
 		width: @screen--sm;
-		top: 61px;
+		top: 59px;
 	}
 	@media @tablet {
 		width: @screen--md;
-		top: 79px;
+		top: 78px;
 	}
 
 
