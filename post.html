@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Я немного своевольничаю и беру title с h1 заголовка в article, т.к. если открыты обе вкладки блога и поста блога, пользователю будет трудно отличить одно от другого. При подключении шаблона к CMS это создаст некоторые неудобства (возможно, придется вручную менять скрипт). -->
   <title>Антон и Надя в Таиланде</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -21,22 +20,22 @@
             <a href="post.html">Отзывы</a>
             <a href="form.html">Конкурс</a>
           </nav>
-          <button class="toggle-menu" id="toggler">Меню</button>
+          <button class="toggle-menu">Меню</button>
       </div>
 
-      <nav class="hidden">
-        <ul class="main-menu">
+      <nav id="mob-nav" class="hidden">
+        <ul class="mobile-menu">
           <li>
-            <a class="main-menu__link" href="/">Информация</a>
+            <a class="mobile-menu__link" href="/">Информация</a>
           </li>
           <li>
-            <a class="main-menu__link" href="blog.html">Блог</a>
+            <a class="mobile-menu__link" href="blog.html">Блог</a>
           </li>
           <li>
-            <a class="main-menu__link" href="post.html">Отзывы</a>
+            <a class="mobile-menu__link" href="post.html">Отзывы</a>
           </li>
           <li>
-            <a class="main-menu__link" href="form.html">Конкурс</a>
+            <a class="mobile-menu__link" href="form.html">Конкурс</a>
           </li>
         </ul>
       </nav>
@@ -93,6 +92,6 @@
       </section>
     </footer>
   </div>
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
 </body>
 </html>
