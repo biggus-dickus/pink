@@ -1,5 +1,20 @@
 console.log("If you're happy and you know it - syntax error!");
 
+//Гамбургер
+(function() {
+	var topBar = document.querySelector(".top-bar");
+	var toggleMenu = document.querySelector(".toggle-menu");
+	var mobNav = document.querySelector("#mob-nav");
+
+	toggleMenu.addEventListener("click", function(event) {
+		event.preventDefault;
+		topBar.classList.toggle("top-bar--menu-open");
+		toggleMenu.classList.toggle("toggle-menu--close");
+		mobNav.classList.toggle("hidden");
+	});
+})();
+
+
 var form = document.querySelector(".pink-form form");
 
 //Контрол для даты
