@@ -1,6 +1,6 @@
 console.log("If you're happy and you know it - syntax error!");
 
-//Гамбургер
+//Hamburger menu
 (function() {
 	var topBar = document.querySelector(".top-bar");
 	var toggleMenu = document.querySelector(".toggle-menu");
@@ -15,9 +15,7 @@ console.log("If you're happy and you know it - syntax error!");
 })();
 
 
-var form = document.querySelector(".pink-form form");
-
-//Контрол для даты
+//Date field controls
 (function() {
 	var moar = document.querySelector("#more-days");
 	var less = document.querySelector("#less-days");
@@ -69,7 +67,7 @@ var form = document.querySelector(".pink-form form");
 })();
 
 
-//Контрол для путешественников
+//Travellers field controls
 (function() {
 	var moarCompanions = document.querySelector("#more-companions");
 	var lessCompanions = document.querySelector("#less-companions");
@@ -86,6 +84,17 @@ var form = document.querySelector(".pink-form form");
 				confirm("Вы чо, реально кочевали цыганским табором?:) Мы можем зарегистрировать не более 10 лиц, уж простите.");
 			}
 			companions.value = companionsCount + " " + humans;
+
+			var travellersTable = document.querySelector("#travellers-table").innerHTML;
+			var tableHolder = document.querySelector("#table-holder");
+			tableHolder.innerHTML += travellersTable;
+			var number = document.querySelectorAll(".travellers__ordinal-number");
+			var ordinal = 1;
+			for(i = 0; i < number.length; i++) {
+				number[i].innerHTML = ordinal++;
+			}
+
+
 		});
 	}
 
@@ -98,23 +107,42 @@ var form = document.querySelector(".pink-form form");
 				companionsCount = 0;
 			}
 			companions.value = companionsCount + " " + humans;
+
+			var travellersTable = document.querySelector("#travellers-table").innerHTML;
+			var tableHolder = document.querySelector("#table-holder");
+			var lastTable = document.querySelector(".travellers:last-of-type");
+			if (lastTable) {
+				tableHolder.removeChild(lastTable);
+			}
+		});
+	}
+
+	var deleteTable = document.querySelector(".travellers__delete");
+	if (deleteTable) {
+		deleteTable.addEventListener("click", function(event) {
+			event.preventDefault;
+			var table = document.querySelector(".travellers");
+			deleteTable.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(table);
 		});
 	}
 })();
 
 
-//Загрузка и превью фотографий
+//Photos uploading and thumbnails generation
 (function() {
-	if ("FileReader" in window) {
-		var upload = form.querySelector("#upload-photos");
-		upload.addEventListener("change", function() {
-			var files = this.files;
-			for (var i = 0; i < files.length; i++) {
-				preview(files[i]);
-			}
-		});
+	var upload = document.querySelector("#upload-photos");
+	if (upload) {
+		if ("FileReader" in window) {
+			upload.addEventListener("change", function() {
+				var files = this.files;
+				for (var i = 0; i < files.length; i++) {
+					preview(files[i]);
+				}
+			});
+	}
 
 		function preview(file) {
+			var form = document.querySelector(".pink-form form");
 			var thumbContainer = form.querySelector(".thumb-container");
 			if (file.type.match(/image.*/)) {
 			var reader = new FileReader();
@@ -139,8 +167,6 @@ var form = document.querySelector(".pink-form form");
 				figure.appendChild(img);
 				figure.appendChild(a);
 				figure.appendChild(figcaption);
-
-				// console.log(event.target.result);
 				});
 			reader.readAsDataURL(file);
 			}
@@ -149,27 +175,69 @@ var form = document.querySelector(".pink-form form");
 })();
 
 
-//Отправка формы
+//Submitting form via xhr
 (function() {
 	if (!("FormData" in window)) {
 	return;
 	}
+	var form = document.querySelector(".pink-form form");
+	if (form) {
 
-	form.addEventListener("submit", function(event) {
-		event.preventDefault();
-		var data = new FormData(form);
-		var xhr = new XMLHttpRequest();
-		var time = (new Date()).getTime();
-		var success = document.querySelector("div.modal-wrapper--success");
-		xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
+		function validateForm() {
+			var failure = document.querySelector("div.modal-wrapper--failure");
+			var required = document.querySelector("input[required]");
+			valid = true;
 
-		xhr.addEventListener("readystatechange", function() {
-			if (xhr.readyState == 4) {
-				console.log(xhr.responseText);
-				success.classList.remove("hidden");
+			if (required.value == "") {
+				failure.classList.remove("hidden");
+				alert ("Пожалуйста заполните обязательные поля");
+				valid = false;
 			}
-		});
 
-		xhr.send(data);
-	});
+			return valid;
+		}
+
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			var data = new FormData(form);
+			var xhr = new XMLHttpRequest();
+			var time = (new Date()).getTime();
+			var success = document.querySelector("div.modal-wrapper--success");
+
+			xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
+			xhr.addEventListener("readystatechange", function() {
+				if (xhr.readyState == 4) {
+					console.log(xhr.responseText);
+					success.classList.remove("hidden");
+					}
+				});
+			xhr.send(data);
+		});
+	}
+})();
+
+
+//Closing modal windows
+(function() {
+	var closeModal = document.querySelector(".close-modal");
+	var modalWindow = document.querySelector("div.modal-wrapper");
+
+	if (closeModal) {
+		closeModal.addEventListener("click", function(event) {
+			event.preventDefault();
+			closeModal.parentNode.parentNode.parentNode.removeChild(modalWindow);
+		});
+	}
+})();
+
+(function() {
+	var closeFailure = document.querySelector("#close-failure");
+	var submitFailure = document.querySelector("#submit-failure");
+
+	if (closeFailure) {
+		closeFailure.addEventListener("click", function(event) {
+			event.preventDefault();
+			closeFailure.parentNode.parentNode.removeChild(submitFailure);
+		});
+	}
 })();
