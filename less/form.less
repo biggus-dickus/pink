@@ -218,21 +218,17 @@
 		}
 	}
 
-	input[disabled]:hover {
-		border-color: transparent !important; //нет смысла подсвечивать отключенное поле
-	}
-
 	input[type="text"] {
 		.trans-default();
 	}
 
 	input[type="text"]:focus input[placeholder] {display: none;}
 
-	input[type="text"]:not(.controlled-value):hover {
+	input[type="text"]:not(.controlled-value):not([disabled]):hover {
 		border-color: @blue--lighter;
 	}
 
-	input[type="text"]:not(.controlled-value):focus {
+	input[type="text"]:not([readonly]):focus {
 		border-color: @pink;
 		outline: none;
 	}
@@ -246,14 +242,14 @@
     input:-ms-input-placeholder {color: @blue--lighter;}
 
     /* Плавное изменение прозрачности placeholder-а при фокусе */
-	input:not(.controlled-value)::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-	input:not(.controlled-value)::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-	input:not(.controlled-value):-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-	input:not(.controlled-value):-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-	input:not(.controlled-value):focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-	input:not(.controlled-value):focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-	input:not(.controlled-value):focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-	input:not(.controlled-value):focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+	input:not(.controlled-value--no-border)::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+	input:not(.controlled-value--no-border)::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+	input:not(.controlled-value--no-border):-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+	input:not(.controlled-value--no-border):-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+	input:not(.controlled-value--no-border):focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+	input:not(.controlled-value--no-border):focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+	input:not(.controlled-value--no-border):focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+	input:not(.controlled-value--no-border):focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
 	input[type="radio"],
 	input[type="checkbox"],
@@ -418,7 +414,7 @@
 	@media @desktop {
 		width: 88px;
 	}
-	padding: 20px;
+	padding: 21px 20px;
 	border: 2px solid #e5e5e5;
 	border-left: 0;
 	text-align: center;
@@ -589,10 +585,10 @@
 			margin-right: -6px;
 		}
 		@media @tablet {
-			margin-right: 18px;
+			margin-right: -2px;
 		}
-		@media @tablet {
-			margin-right: 0;
+		@media @desktop {
+			margin-right: 18px;
 		}
 		font-size: @h3;
 		color: @blue--lighter;
@@ -616,11 +612,6 @@
 	}
 
 	&__delete {
-		padding-left: 40px;
-		@media @desktop {
-			padding-left: 0;
-			text-align: right;
-		}
 		font-size: @base-fs;
 		text-transform: uppercase;
 		color: @blue--lighter;
