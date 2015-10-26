@@ -113,6 +113,8 @@
             <input class="controlled-value  controlled-value--no-border" required name="travellers-number" type="text" value="0 чел." readonly>
             <span id="more-companions" class="plus" title="Больше">+</span>
             <hr>
+            <div id="table-holder"></div>
+            <!--
             <table class="travellers">
               <tr>
                 <td class="travellers__number">№</td>
@@ -178,6 +180,7 @@
                 <td></td>
               </tr>
             </table>
+            -->
           </div>
         </fieldset>
 
@@ -228,26 +231,60 @@
           </figure>
       </section>
     </footer>
+  </div>
 
-    <!-- Модальные окна - успех/неудача -->
-    <div class="modal-wrapper  modal-wrapper--success  hidden" id="submit-success">
-      <h3 class="modal-wrapper__header">Ваша заявка отправлена</h3>
-      <p class="modal-wrapper__caption  modal-wrapper__caption--desktop">
-        Спасибо за&nbsp;участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.
-      </p>
-      <div class="gray">
-        <button class="button  button--default  button--desktop">Закрыть окно</button>
-      </div>
-    </div>
-
-    <div class="modal-wrapper  modal-wrapper--failure  hidden" id="submit-failure">
-      <h3 class="modal-wrapper__header">Что-то пошло не&nbsp;так!</h3>
-      <p class="modal-wrapper__caption">
-        Проверьте поля, выделенные красным. Скорее всего, вы&nbsp;забыли их&nbsp;заполнить.
-      </p>
-      <button class="button  button--default">OK</button>
+  <!-- Модальные окна - успех/неудача -->
+  <div class="modal-wrapper  modal-wrapper--success  hidden" id="submit-success">
+    <h3 class="modal-wrapper__header">Ваша заявка отправлена</h3>
+    <p class="modal-wrapper__caption  modal-wrapper__caption--desktop">
+      Спасибо за&nbsp;участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.
+    </p>
+    <div class="gray">
+      <button class="close-modal  button  button--default  button--desktop">Закрыть окно</button>
     </div>
   </div>
+
+  <div class="modal-wrapper  modal-wrapper--failure  hidden" id="submit-failure">
+    <h3 class="modal-wrapper__header">Что-то пошло не&nbsp;так!</h3>
+    <p class="modal-wrapper__caption">
+      Проверьте поля, выделенные красным. Скорее всего, вы&nbsp;забыли их&nbsp;заполнить.
+    </p>
+    <button id="close-failure" class="button  button--default">OK</button>
+  </div>
+    <script id="travellers-table" type="text/html">
+    <table class="travellers">
+      <tr>
+        <td class="travellers__number">№</td>
+        <td class="travellers__name">
+          <label class="pink-form__pink-label" for="traveller1-name">Имя: *</label>
+        </td>
+        <td class="mob-hidden  tablet-hidden  desktop-shown  travellers__nickname">
+          <label class="pink-form__pink-label" for="traveller1-nickname">Прозвище:</label>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <span class="travellers__ordinal-number">1</span>
+        </td>
+        <td>
+          <input class="travellers__input-field" id="traveller1-name" type="text" name="traveller1-name" required placeholder="Введите имя попутчика"></td>
+        <td class="mob-hidden  tablet-hidden  desktop-shown">
+          <input class="travellers__input-field" id="traveller1-nickname" type="text" name="traveller1-nickname" placeholder="Ну, как же без этого!"></td>
+        <td class="mob-hidden">
+          <a class="travellers__delete">Удалить</a>
+        </td>
+      </tr>
+      <tr class="desktop-hidden">
+        <td class="travellers__empty-cell"></td>
+        <td>
+          <label class="pink-form__pink-label" for="traveller1-nickname__desktop">Прозвище:</label>
+          <input class="travellers__input-field" id="traveller1-nickname__desktop" type="text" name="traveller1-nickname" placeholder="Ну, как же без этого!"></td>
+        <td></td>
+      </tr>
+    </table>
+  </script>
+
   <script src="js/script.js"></script>
 </body>
 </html>

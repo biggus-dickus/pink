@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
+var cmq = require('gulp-combine-media-queries');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
