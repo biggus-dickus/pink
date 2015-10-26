@@ -1,6 +1,6 @@
 console.log("If you're happy and you know it - syntax error!");
 
-//Гамбургер
+//Hamburger menu
 (function() {
 	var topBar = document.querySelector(".top-bar");
 	var toggleMenu = document.querySelector(".toggle-menu");
@@ -15,7 +15,7 @@ console.log("If you're happy and you know it - syntax error!");
 })();
 
 
-//Контрол для даты
+//Date field controls
 (function() {
 	var moar = document.querySelector("#more-days");
 	var less = document.querySelector("#less-days");
@@ -67,7 +67,7 @@ console.log("If you're happy and you know it - syntax error!");
 })();
 
 
-//Контрол для путешественников
+//Travellers field controls
 (function() {
 	var moarCompanions = document.querySelector("#more-companions");
 	var lessCompanions = document.querySelector("#less-companions");
@@ -128,7 +128,7 @@ console.log("If you're happy and you know it - syntax error!");
 })();
 
 
-//Загрузка и превью фотографий
+//Photos uploading and thumbnails generation
 (function() {
 	var upload = document.querySelector("#upload-photos");
 	if (upload) {
@@ -175,7 +175,7 @@ console.log("If you're happy and you know it - syntax error!");
 })();
 
 
-//Отправка формы
+//Submitting form via xhr
 (function() {
 	if (!("FormData" in window)) {
 	return;
@@ -217,7 +217,7 @@ console.log("If you're happy and you know it - syntax error!");
 })();
 
 
-//Закрытие модальных окон
+//Closing modal windows
 (function() {
 	var closeModal = document.querySelector(".close-modal");
 	var modalWindow = document.querySelector("div.modal-wrapper");
@@ -225,7 +225,6 @@ console.log("If you're happy and you know it - syntax error!");
 	if (closeModal) {
 		closeModal.addEventListener("click", function(event) {
 			event.preventDefault();
-			//modalWindow.classList.add("hidden");
 			closeModal.parentNode.parentNode.parentNode.removeChild(modalWindow);
 		});
 	}

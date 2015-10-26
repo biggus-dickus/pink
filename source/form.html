@@ -6,7 +6,7 @@
   <title>Конкурс на самое безбашенное путешествие с Пинк</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -114,73 +114,6 @@
             <span id="more-companions" class="plus" title="Больше">+</span>
             <hr>
             <div id="table-holder"></div>
-            <!--
-            <table class="travellers">
-              <tr>
-                <td class="travellers__number">№</td>
-                <td class="travellers__name">
-                  <label class="pink-form__pink-label" for="traveller1-name">Имя: *</label>
-                </td>
-                <td class="mob-hidden  tablet-hidden  desktop-shown  travellers__nickname">
-                  <label class="pink-form__pink-label" for="traveller1-nickname">Прозвище:</label>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <span class="travellers__ordinal-number">1</span>
-                </td>
-                <td>
-                  <input class="travellers__input-field" id="traveller1-name" type="text" name="traveller1-name" required placeholder="Введите имя попутчика">
-                </td>
-                <td class="mob-hidden  tablet-hidden  desktop-shown">
-                  <input class="travellers__input-field" id="traveller1-nickname" type="text" name="traveller1-nickname" placeholder="Ну, как же без этого!">
-                </td>
-                <td class="mob-hidden"><a class="travellers__delete">Удалить</a></td>
-              </tr>
-              <tr class="desktop-hidden">
-                <td class="travellers__empty-cell"></td>
-                <td>
-                  <label class="pink-form__pink-label" for="traveller1-nickname__desktop">Прозвище:</label>
-                  <input class="travellers__input-field" id="traveller1-nickname__desktop" type="text" name="traveller1-nickname" placeholder="Ну, как же без этого!">
-                </td>
-                <td></td>
-              </tr>
-            </table>
-
-            <table class="travellers">
-              <tr>
-                <td class="travellers__number">№</td>
-                <td class="travellers__name">
-                  <label class="pink-form__pink-label" for="traveller2-name">Имя: *</label>
-                </td>
-                <td class="mob-hidden  tablet-hidden  desktop-shown  travellers__nickname">
-                  <label class="pink-form__pink-label" for="traveller2-nickname">Прозвище:</label>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <span class="travellers__ordinal-number">2</span>
-                </td>
-                <td>
-                  <input class="travellers__input-field" id="traveller2-name" type="text" name="traveller2-name" required placeholder="Введите имя попутчика">
-                </td>
-                <td class="mob-hidden  tablet-hidden  desktop-shown">
-                  <input class="travellers__input-field" id="traveller2-nickname" type="text" name="traveller2-nickname" placeholder="Ну, как же без этого!">
-                </td>
-                <td class="mob-hidden"><a class="travellers__delete">Удалить</a></td>
-              </tr>
-              <tr class="desktop-hidden">
-                <td class="travellers__empty-cell"></td>
-                <td>
-                  <label class="pink-form__pink-label" for="traveller2-nickname__desktop">Прозвище:</label>
-                  <input class="travellers__input-field" id="traveller2-nickname__desktop" type="text" name="traveller2-nickname" placeholder="Ну, как же без этого!">
-                </td>
-                <td></td>
-              </tr>
-            </table>
-            -->
           </div>
         </fieldset>
 
@@ -251,6 +184,8 @@
     </p>
     <button id="close-failure" class="button  button--default">OK</button>
   </div>
+
+  <!-- Шаблон для таблицы путешественников -->
     <script id="travellers-table" type="text/html">
     <table class="travellers">
       <tr>
@@ -285,6 +220,6 @@
     </table>
   </script>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
