@@ -14,13 +14,13 @@ var uglify = require('gulp-uglify');
 gulp.task('less', function() {
     gulp.src('source/less/style.less')
         .pipe(less())
-        .pipe(cmq())
+        //.pipe(cmq())
         .pipe(autoprefixer())
-        .pipe(csscomb())
-        .pipe(gulp.dest('build/css'))
-        .pipe(minify())
-        .pipe(rename('style.min.css'))
-        .pipe(gulp.dest('build/css'))
+        //.pipe(csscomb())
+        .pipe(gulp.dest('source/css'))
+        //.pipe(minify())
+        //.pipe(rename('style.min.css'))
+        //.pipe(gulp.dest('build/css'))
         .pipe(reload({
             stream: true
         }));
@@ -48,14 +48,15 @@ gulp.task('imagemin', function () {
         .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('serve', ['less', 'compress'], function() {
+gulp.task('serve', ['less'], function() {
     browserSync.init({
-        server: '.'
+        server: 'source/'
     });
 
-    gulp.watch("source/less/**/*.less", ['less']);
-    gulp.watch("source/js/**/*.js", ['compress']);
-    gulp.watch("*.html").on('change', reload);
+    gulp.watch("less/**/*.less", ['less']);
+    //gulp.watch("js/**/*.js", ['compress']);
+    gulp.watch("source/js/*.js").on('change', reload);
+    gulp.watch("source/*.html").on('change', reload);
 });
 
-gulp.task('default', ['less', 'compress', 'serve']);
+gulp.task('default', ['less', 'serve']);
