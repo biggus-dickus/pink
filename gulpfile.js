@@ -53,7 +53,7 @@ gulp.task('serve', ['less'], function() {
         server: 'source/'
     });
 
-    gulp.watch("less/**/*.less", ['less']);
+    gulp.watch("source/less/**/*.less", ['less']);
     //gulp.watch("js/**/*.js", ['compress']);
     gulp.watch("source/js/*.js").on('change', reload);
     gulp.watch("source/*.html").on('change', reload);

@@ -23,7 +23,7 @@
 
 	&__wrapper {
 		@media @tablet {
-			padding-top: 70px;
+			padding-top: 100px;
 		}
 	}
 
@@ -43,6 +43,7 @@
 		text-align: center;
 		padding: 0 10px;
 		@media @mobile {
+			padding-top: 10px;
 			font-size: @h2;
 			line-height: 30px;
 		}
@@ -86,29 +87,32 @@
 	&__aux-bg {
 		@media @mobile {
 			height: 286px;
-			background: url("../img/bg/iphone-hand-mobile.png") no-repeat 0 100%;
+			padding-bottom: 12px;
+			background: url("../img/bg/iphone-hand-mobile.png") no-repeat 0 12px;
 			@media @retina2x {
-				background: url("../img/bg/iphone-hand-mobile@2x.png") no-repeat 0 100%;
+				background: url("../img/bg/iphone-hand-mobile@2x.png") no-repeat 0 12px;
 				background-size: contain;
 			}
 			@media @retina3x {
-				background: url("../img/bg/iphone-hand-mobile@3x.png") no-repeat 0 100%;
+				background: url("../img/bg/iphone-hand-mobile@3x.png") no-repeat 0 12px;
 				background-size: contain;
 			}
 		}
 		@media @tablet {
 			height: 565px;
-			background: url("../img/bg/iphone-hand-tablet@1x.png") no-repeat 0 100%;
+			padding-bottom: 25px;
+			background: url("../img/bg/iphone-hand-tablet@1x.png") no-repeat 0 0;
 			@media @retina2x {
-				background: url("../img/bg/iphone-hand-tablet@2x.png") no-repeat 0 100%;
+				background: url("../img/bg/iphone-hand-tablet@2x.png") no-repeat 0 0;
 				background-size: contain;
 			}
 		}
 		@media @desktop {
 			height: 645px;
-			background: url("../img/bg/iphone-hand-desktop@1x.png") no-repeat 120px 100%;
+			background: url("../img/bg/iphone-hand-desktop@1x.png") no-repeat 145px 0;
+			padding-bottom: 30px;
 			@media @retina2x {
-				background: url("../img/bg/iphone-hand-desktop@2x.png") no-repeat 120px 100%;
+				background: url("../img/bg/iphone-hand-desktop@2x.png") no-repeat 145px 0;
 				background-size: contain;
 			}
 		}
@@ -121,42 +125,42 @@
 	}
 
 	background-color: rgba(0, 0, 0, 0.3);
-	@media @mobile {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		padding: 25px;
-	}
-	@media @tablet {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		padding: 25px;
-	}
-	@media @desktop {
-		display: block;
-		padding: 53px 25px;
-	}
+		@media @desktop {
+			display: block;
+			padding: 53px 27px;
+		}
 
-	&__logo-link {
-		text-indent: @over9000;
+	&__mobile-navbar {
 		@media @mobile {
-			width: 75px;
-			height: 25px;
-			background: url("../img/logo/mobile/logotype-white-mobile.svg") no-repeat 0 0;
-			background-size: 75px 25px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			padding: 31px;
 		}
 		@media @tablet {
-			width: 146px;
-			height: 44px;
-			background: url("../img/logo/tablet/logotype-white-tablet.svg") no-repeat 0 0;
-			background-size: 146px 44px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			padding: 31px;
 		}
 		@media @desktop {
+			display: none;
+		}
+	}
+
+	&__logo-desktop {
+		text-indent: @over9000;
+		@media @mobile {
+			display: none;
+		}
+		@media @tablet {
+			display: none;
+		}
+		@media @desktop {
+			display: block;
 			position: relative;
 			bottom: 27px;
-			left: 100px;
-			display: block;
+			left: 125px;
 			float: left;
 			width: 146px;
 			height: 41px;
@@ -165,7 +169,28 @@
 		}
 	}
 
-	&__logo-link:hover {
+	&__logo-mobile {
+			text-indent: @over9000;
+		@media @mobile {
+			width: 75px;
+			height: 25px;
+			background: url("../img/logo/mobile/logotype-white-mobile.svg") no-repeat 0 0;
+			background-size: 75px 25px;
+		}
+		@media @tablet {
+			position: relative;
+			bottom: 6px;
+			width: 146px;
+			height: 44px;
+			background: url("../img/logo/tablet/logotype-white-tablet.svg") no-repeat 0 0;
+			background-size: 146px 44px;
+		}
+		@media @desktop {
+			display: none;
+		}
+	}
+
+	&__logo-mobile:hover {
 		@media @mobile {
 			background: url("../img/logo/mobile/logotype-pink-mobile.svg") no-repeat 0 0;
 			background-size: 75px 25px;
@@ -174,13 +199,9 @@
 			background: url("../img/logo/tablet/logotype-pink-tablet.svg") no-repeat 0 0;
 			background-size: 146px 44px;
 		}
-		@media @desktop {
-			background: url("../img/logo/desktop/logotype-pink-desktop.svg") no-repeat 0 0;
-			background-size: 146px 41px;
-		}
 	}
 
-	&__logo-link:active {
+	&__logo-mobile:active {
 		@media @mobile {
 			background: url("../img/logo/mobile/logotype-active-mobile.svg") no-repeat 0 0;
 			background-size: 75px 25px;
@@ -189,6 +210,16 @@
 			background: url("../img/logo/tablet/logotype-active-tablet.svg") no-repeat 0 0;
 			background-size: 146px 44px;
 		}
+	}
+
+	&__logo-desktop:hover {
+		@media @desktop {
+			background: url("../img/logo/desktop/logotype-pink-desktop.svg") no-repeat 0 0;
+			background-size: 146px 41px;
+		}
+	}
+
+	&__logo-desktop:active {
 		@media @desktop {
 			background: url("../img/logo/desktop/logotype-active-desktop.svg") no-repeat 0 0;
 			background-size: 146px 41px;
@@ -206,7 +237,7 @@
 			display: block;
 			float: right;
 			position: relative;
-			right: 70px;
+			right: 125px;
 			line-height: 0;
 			white-space: nowrap;
 		}
@@ -237,12 +268,9 @@
 }
 
 .toggle-menu {
-	position: relative;
-  	@media @mobile {
-  		bottom: 2px;
-  	}
   	@media @tablet {
-  		bottom: 5px;
+  		position: relative;
+  		bottom: 10px;
   	}
 
   	@media @desktop {
@@ -304,14 +332,13 @@
 	position: absolute;
 	z-index: 1;
 	left: -40px;
+	width: 100%;
 	list-style: none;
 	@media @mobile {
-		width: @screen--sm;
-		top: 59px;
+		top: 70px;
 	}
 	@media @tablet {
-		width: @screen--md;
-		top: 78px;
+		top: 90px;
 	}
 
 
@@ -346,13 +373,13 @@
 	}
 	@media @tablet {
 		position: relative;
-		bottom: 385px;
+		bottom: 405px;
 		width: 305px;
 		background-color: transparent;
 	}
 	@media @desktop {
 		position: relative;
-		bottom: 415px;
+		bottom: 430px;
 		left: 102px;
 		width: 305px;
 		background-color: transparent;
@@ -379,23 +406,25 @@
 }
 
 .download-btn {
-	box-sizing: border-box;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
-	width: 280px;
-	padding: 15px 25px;
+	padding: 10px 0;
 	font-weight: bold;
-	font-size: @h3;
 	color: @white;
 	border: 3px solid @white;
 	border-radius: 50px;
 	text-decoration: none;
 	.trans-default();
 
+	@media @tablet {
+		font-size: @base-tabl;
+		width: 272px;
+	}
+
 	@media @desktop {
-		width: 295px;
 		font-size: 21px;
+		width: 290px;
 	}
 
 	&:hover {

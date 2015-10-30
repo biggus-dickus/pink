@@ -10,43 +10,50 @@
 </head>
 
 <body>
-  <div class="viewport-wrapper">
-    <header class="top-header  top-header--bg-cover">
-      <div class="top-bar">
-          <a class="top-bar__logo-link" href="/">Pink</a>
-          <nav class="top-bar__desktop-menu">
-            <a href="/">Информация</a>
-            <a href="blog.html">Блог</a>
-            <a href="post.html">Отзывы</a>
-            <a href="form.html">Конкурс</a>
-          </nav>
-          <button class="toggle-menu">Меню</button>
+  <header class="top-header  top-header--bg-cover">
+    <div class="top-bar">
+      <div class="viewport-wrapper">
+        <a class="top-bar__logo-desktop" href="/">Pink</a>
+        <nav class="top-bar__desktop-menu">
+          <a href="index.html">Информация</a>
+          <a href="blog.html">Блог</a>
+          <a href="post.html">Отзывы</a>
+          <a href="form.html">Конкурс</a>
+        </nav>
       </div>
 
+      <div class="top-bar__mobile-navbar">
+        <a class="top-bar__logo-mobile" href="/">Pink</a>
+        <nav id="mob-nav" class="hidden">
+          <ul class="mobile-menu">
+            <li>
+              <a class="mobile-menu__link" href="index.html">Информация</a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="blog.html">Блог</a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="post.html">Отзывы</a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="form.html">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="toggle-menu">Меню</button>
+      </div>
+    </div>
 
-      <nav id="mob-nav" class="hidden">
-        <ul class="mobile-menu">
-          <li>
-            <a class="mobile-menu__link" href="/">Информация</a>
-          </li>
-          <li>
-            <a class="mobile-menu__link" href="blog.html">Блог</a>
-          </li>
-          <li>
-            <a class="mobile-menu__link" href="post.html">Отзывы</a>
-          </li>
-          <li>
-            <a class="mobile-menu__link" href="form.html">Конкурс</a>
-          </li>
-        </ul>
-      </nav>
-
-
+    <div class="viewport-wrapper">
       <section class="top-header__cover">
-        <h1 class="top-header__caption  top-header__caption--rest">Блог путешественников, пользователей Пинк</h1>
+        <div class="top-header__wrapper clearfix">
+          <h1 class="top-header__caption top-header__caption--rest">Блог путешественников, пользователей Пинк</h1>
+        </div>
       </section>
-    </header>
+    </div>
+  </header>
 
+  <div class="viewport-wrapper">
     <section class="info-container  info-container--white">
       <article class="blog-entry">
         <header class="blog-entry__header">

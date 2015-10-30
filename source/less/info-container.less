@@ -16,9 +16,7 @@
 	}
 
 	&&--gray {
-		@media @mobile {
-			background-color: @gray;
-		}
+		background-color: @gray;
 	}
 
 	&&--padbot0 {
@@ -31,24 +29,22 @@
 	 	content: "";
 	 	position: absolute;
 	 	left: 0;
+	 	width: 100%;
 	 	background: @white url(../img/etc/triangle-gray.svg) no-repeat 0 0;
 	 	@media @mobile {
-	 		width: @screen--sm;
 	 		top: -32px;
 	 		height: 32px;
-	 		background-size: 320px 32px;
+	 		background-size: 100% 32px;
 	 	}
 	 	@media @tablet {
-	 		width: @screen--md;
-	 		top: -5px;
+	 		top: 0;
 	 		height: 55px;
-	 		background-size: 700px 55px;
+	 		background-size: 100% 55px;
 	 	}
 	 	@media @desktop {
-	 		width: @screen--lg;
 	 		top: -70px;
 	 		height: 90px;
-	 		background-size: 1200px 90px;
+	 		background-size: 100% 90px;
 	 	}
 	}
 
@@ -161,8 +157,6 @@
 
 	&__pres-wrapper {
 		@media @tablet {
-			position: relative;
-			left: -20px; //Компенсируем отступ слева в .info-container
 			box-sizing: border-box;
 			width: 700px;
 			padding: 0 40px 0 40px;
@@ -180,9 +174,9 @@
 			display: inline-block;
 			vertical-align: top;
 			position: relative;
-    		bottom: 90px;
+    		bottom: 95px;
 			width: 275px;
-			margin-right: 60px;
+			margin-right: 40px;
 		}
 	}
 
@@ -192,7 +186,7 @@
 		}
 	}
 
-	&__aux-bg {
+	&__mobile-bg {
 		@media @mobile {
 			min-height: 278px;
 			background: url("../img/bg/screen-mobile-3.png") no-repeat 50% 0;

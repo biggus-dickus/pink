@@ -12,24 +12,22 @@
 		content: "";
 	 	position: absolute;
 	 	left: 0;
+	 	width: 100%;
 	 	background: url(../img/etc/triangle-gray.svg) no-repeat 0 0;
 	 	@media @mobile {
-	 		width: @screen--sm;
 	 		top: -32px;
 	 		height: 32px;
-	 		background-size: 320px 32px;
+	 		background-size: 100% 32px;
 	 	}
 	 	@media @tablet {
-	 		width: @screen--md;
 	 		top: -55px;
 	 		height: 55px;
-	 		background-size: 700px 55px;
+	 		background-size: 100% 55px;
 	 	}
 	 	@media @desktop {
-	 		width: @screen--lg;
 	 		top: -90px;
 	 		height: 90px;
-	 		background-size: 1200px 90px;
+	 		background-size: 100% 90px;
 	 	}
 	}
 
