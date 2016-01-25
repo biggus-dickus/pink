@@ -6,41 +6,45 @@
   <title>PINK: взгляните на жизнь иначе!</title>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+  <link rel="stylesheet" href="css/style.css"></head>
 
 <body>
-  <div class="viewport-wrapper">
-    <header class="top-header  top-header--bg-contain">
-      <div class="top-bar">
-          <a class="top-bar__logo-link" href="/">Pink</a>
-          <nav class="top-bar__desktop-menu">
-            <a href="/">Информация</a>
-            <a href="blog.html">Блог</a>
-            <a href="post.html">Отзывы</a>
-            <a href="form.html">Конкурс</a>
-          </nav>
-          <button class="toggle-menu">Меню</button>
+  <header class="top-header  top-header--bg-cover">
+    <div class="top-bar">
+      <div class="viewport-wrapper">
+        <a class="top-bar__logo-desktop" href="/">Pink</a>
+        <nav class="top-bar__desktop-menu">
+          <a href="index.html">Информация</a>
+          <a href="blog.html">Блог</a>
+          <a href="post.html">Отзывы</a>
+          <a href="form.html">Конкурс</a>
+        </nav>
       </div>
 
-      <nav id="mob-nav" class="hidden">
-        <ul class="mobile-menu">
-          <li>
-            <a class="mobile-menu__link" href="/">Информация</a>
-          </li>
-          <li>
-            <a class="mobile-menu__link" href="blog.html">Блог</a>
-          </li>
-          <li>
-            <a class="mobile-menu__link" href="post.html">Отзывы</a>
-          </li>
-          <li>
-            <a class="mobile-menu__link" href="form.html">Конкурс</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="top-bar__mobile-navbar">
+        <a class="top-bar__logo-mobile" href="/">Pink</a>
+        <nav id="mob-nav" class="hidden">
+          <ul class="mobile-menu">
+            <li>
+              <a class="mobile-menu__link" href="index.html">Информация</a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="blog.html">Блог</a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="post.html">Отзывы</a>
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="form.html">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="toggle-menu">Меню</button>
+      </div>
+    </div>
 
-      <section class="top-header__cover">
+    <section class="top-header__cover">
+      <div class="viewport-wrapper">
         <div class="top-header__wrapper clearfix">
           <h1 class="top-header__caption top-header__caption--index">Взгляните на&nbsp;жизнь иначе!</h1>
           <div class="top-header__aux-bg"></div>
@@ -48,30 +52,36 @@
         <div class="download-pink">
           <a class="download-btn" href="#">Скачать приложение</a>
           <ul class="mobile-icons">
-            <li><a class="mobile-icons__apple" href="#" title="Скачать в App Store">Pink for Apple</a></li>
-            <li><a class="mobile-icons__android" href="#" title="Скачать в Google Play">Pink for Android</a></li>
-            <li><a class="mobile-icons__windows" href="#" title="Скачать в Microsoft Store">Pink for Windows Phone</a></li>
+            <li>
+              <a class="mobile-icons__apple" href="#" title="Скачать в App Store">Pink for Apple</a>
+            </li>
+            <li>
+              <a class="mobile-icons__android" href="#" title="Скачать в Google Play">Pink for Android</a>
+            </li>
+            <li>
+              <a class="mobile-icons__windows" href="#" title="Скачать в Microsoft Store">Pink for Windows Phone</a>
+            </li>
           </ul>
           <div class="download-pink__info">
             Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
           </div>
         </div>
-      </section>
-    </header>
+      </div>
+    </section>
+  </header>
 
-    <div class="relative-wrapper">
-      <section class="info-container  info-container--white">
+  <div class="relative-wrapper">
+    <section class="info-container  info-container--white">
+      <div class="viewport-wrapper">
         <h2 class="info-container__h2">Устали от&nbsp;серости мегаполиса?</h2>
         <h2 class="info-container__h2">Нам есть что вам предложить!</h2>
-      </section>
+      </div>
+    </section>
 
-
-      <section class="info-container  info-container--gray">
-        <div class="info-container__pres-wrapper clearfix-tabl-marg">
-          <img class="info-container__tablet-img" width="268" height="481"
-            srcset="img/bg/iphone-screen-tablet-3@2x.png 2x"
-            src="img/bg/iphone-screen-tablet-3@1x.png"
-            alt="Всем привет!">
+    <section class="info-container  info-container--gray  info-container--tablet-height">
+      <div class="viewport-wrapper">
+        <div class="info-container__tablet-bg"></div>
+        <div class="info-container__pres-wrapper">
           <div class="info-container__item">
             <img class="info-container__desktop-img" width="292" height="302"
               srcset="img/bg/iphone-screen-desktop-1@2x.png 2x"
@@ -79,7 +89,7 @@
               alt="Тоска и уныние">
             <h3 class="info-container__h3  info-container__h3--padded">Поднимает настроение</h3>
             <p class="info-container__caption">
-                Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!
+              Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!
             </p>
           </div>
           <div class="info-container__item">
@@ -89,7 +99,7 @@
             alt="Жизнь в розовом цвете">
             <h3 class="info-container__h3">Меняет мир вокруг</h3>
             <p class="info-container__caption">
-                Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+              Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект
             </p>
           </div>
           <div class="info-container__item">
@@ -103,13 +113,16 @@
             </p>
           </div>
         </div>
-        <div class="info-container__aux-bg"></div>
-      </section>
+      </div>
+      <div class="info-container__mobile-bg"></div>
+    </section>
 
-
-      <section class="info-container  info-container--white">
-        <div class="timer24">
-          <div class="timer24__pic"><span>24</span></div>
+    <div class="timer24">
+      <div class="viewport-wrapper">
+        <div class="timer24__tablet-wrapper">
+          <div class="timer24__pic">
+            <span>24</span>
+          </div>
           <div class="timer24__text">
             <h3 class="timer24__h3">Эффект на&nbsp;24&nbsp;часа!</h3>
             <p class="timer24__caption">
@@ -118,6 +131,11 @@
             <a class="pink-link" href="#">Узнать больше об&nbsp;исследовании</a>
           </div>
         </div>
+      </div>
+    </div>
+
+    <section class="info-container  info-container--white">
+      <div class="viewport-wrapper">
         <div class="testimonials">
           <h3 class="testimonials__h3">Николай Петров</h3>
           <p class="testimonials__caption  testimonials__caption--author">25 лет, водитель трамвая</p>
@@ -135,15 +153,14 @@
           <input name="testimonial-ID" id="testimonial3" type="radio" value="3">
           <label for="testimonial3">3</label>
         </div>
-      </section>
-
+      </div>
+    </section>
 
       <section class="pricing">
         <table class="pricing__table">
           <thead>
             <tr class="pricing__mob-flex">
-              <th class="col-1  mob-hidden">
-              </th>
+              <th class="col-1  mob-hidden"></th>
               <th class="col-2">
                 <p class="pricing__package">База</p>
                 <p>1,99 USD</p>
@@ -159,26 +176,26 @@
               </th>
             </tr>
           </thead>
-            <tbody>
-              <tr>
-                <td class="col-1">Розовый фильтр</td>
-                <td class="pricing__hint--yes  col-2">Да</td>
-                <td class="pricing__hint--yes  col-3">Да</td>
-                <td class="pricing__hint--yes  col-4">Да</td>
-              </tr>
-              <tr>
-                <td class="col-1">Смайлики</td>
-                <td class="pricing__hint--no  col-2">Нет</td>
-                <td class="pricing__hint--yes  col-3">Да</td>
-                <td class="pricing__hint--yes  col-4">Да</td>
-              </tr>
-              <tr>
-                <td class="col-1">Комментарии</td>
-                <td class="pricing__hint--no  col-2">Нет</td>
-                <td class="pricing__hint--no  col-3">Нет</td>
-                <td class="pricing__hint--yes  col-4">Да</td>
-              </tr>
-            </tbody>
+          <tbody>
+            <tr>
+              <td class="col-1">Розовый фильтр</td>
+              <td class="pricing__hint--yes  col-2">Да</td>
+              <td class="pricing__hint--yes  col-3">Да</td>
+              <td class="pricing__hint--yes  col-4">Да</td>
+            </tr>
+            <tr>
+              <td class="col-1">Смайлики</td>
+              <td class="pricing__hint--no  col-2">Нет</td>
+              <td class="pricing__hint--yes  col-3">Да</td>
+              <td class="pricing__hint--yes  col-4">Да</td>
+            </tr>
+            <tr>
+              <td class="col-1">Комментарии</td>
+              <td class="pricing__hint--no  col-2">Нет</td>
+              <td class="pricing__hint--no  col-3">Нет</td>
+              <td class="pricing__hint--yes  col-4">Да</td>
+            </tr>
+          </tbody>
         </table>
 
         <div class="radio-slider">
@@ -192,46 +209,51 @@
 
       </section>
 
-
-      <footer class="info-container info-container--white info-container--mask">
-        <h2 class="info-container__h2">
-          Остались вопросы?<br>
-          Свяжитесь с&nbsp;нами!
-        </h2>
-        <div class="contacts-wrapper">
-          <div class="contacts-wrapper__item">
-            <h3 class="contacts-wrapper__header">Звоните:</h3>
-            <p class="contacts-wrapper__text">+7&nbsp;(812)&nbsp;555-66-66</p>
-          </div>
-          <div class="contacts-wrapper__item  contacts-wrapper__item--last">
-            <h3 class="contacts-wrapper__header">Пишите:</h3>
-            <p class="contacts-wrapper__text">
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </p>
-          </div>
-          <div class="contacts-wrapper__item">
-            <h3 class="contacts-wrapper__header">Приезжайте в&nbsp;гости:</h3>
-            <p class="contacts-wrapper__text  info-container__pink-text--mask">
-              ул.&nbsp;Большая<br>
-              Конюшенная, 19/8
-            </p>
+      <div class="info-container info-container--white info-container--mask">
+          <h2 class="info-container__h2">
+            Остались вопросы?<br>
+            Свяжитесь с&nbsp;нами!</h2>
+        <div class="viewport-wrapper">
+          <div class="contacts-wrapper">
+            <div class="contacts-wrapper__item">
+              <h3 class="contacts-wrapper__header">Звоните:</h3>
+              <p class="contacts-wrapper__text">+7&nbsp;(812)&nbsp;555-66-66</p>
+            </div>
+            <div class="contacts-wrapper__item  contacts-wrapper__item--last">
+              <h3 class="contacts-wrapper__header">Пишите:</h3>
+              <p class="contacts-wrapper__text">
+                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </p>
+            </div>
+            <div class="contacts-wrapper__item">
+              <h3 class="contacts-wrapper__header">Приезжайте в&nbsp;гости:</h3>
+              <p class="contacts-wrapper__text  info-container__pink-text--mask">
+                ул.&nbsp;Большая
+                <br>Конюшенная, 19/8</p>
+            </div>
           </div>
         </div>
-        <div class="footer-map"></div>
+      </div>
+      <div class="footer-map" id="googlemap"></div>
+      <footer>
         <section class="footer-bar-wrapper  footer-bar-wrapper--pos-rel-compensator  mob-hidden">
-        <div class="footer-bar-wrapper__item  pink-footer"><a href="/" title="На главную">Pink</a></div>
+          <div class="footer-bar-wrapper__item  pink-footer">
+            <a href="/" title="На главную">Pink</a>
+          </div>
           <div class="footer-bar-wrapper__item  footer-bar-wrapper__item--central  sn-container">
             <a class="sn-container__twitter" href="#" title="Мы в Twitter">Мы в Твиттере</a>
             <a class="sn-container__facebook" href="#" title="Мы на Facebook">Мы на Фейсбуке</a>
             <a class="sn-container__youtube" href="#" title="Мы на Youtube">Мы на Ютубе</a>
           </div>
-          <figure class="footer-bar-wrapper__item  powered-by"><span>Разработано</span>
+          <figure class="footer-bar-wrapper__item  powered-by">
+            <span>Разработано</span>
             <a class="powered-by__HTML-academy" href="//htmlacademy.ru" target="_blank" title="HTML Academy">HTML Academy</a>
           </figure>
         </section>
       </footer>
     </div>
-  </div>
-  <script src="js/script.min.js"></script>
+    <div class="compensate-bottom">Компенсатор ;-)</div>
+  <script src="js/script.js"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2SkXfoWpY_SHQh4avyt0gFAIOF3Np7Aw&callback=initMap"></script> -->
 </body>
 </html>

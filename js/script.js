@@ -1,4 +1,4 @@
-console.log("If you're happy and you know it - syntax error!");
+console.log("If you're happy and you know it - syntax error");
 
 //Hamburger menu
 (function() {
@@ -14,6 +14,17 @@ console.log("If you're happy and you know it - syntax error!");
 	});
 })();
 
+
+//Google map
+(function() {
+	var map;
+	function initMap() {
+  		map = new google.maps.Map(document.getElementById('googlemap'), {
+    	center: {lat: -34.397, lng: 150.644},
+    	zoom: 8
+  });
+}
+})();
 
 //Date field controls
 (function() {
@@ -74,6 +85,17 @@ console.log("If you're happy and you know it - syntax error!");
 	var companions = document.querySelector("input[name='travellers-number']");
 	var humans = "чел.";
 
+	function deleteTable(deleteEl, table) {
+		var deleteBtn = document.querySelector(deleteEl);
+		var table = document.querySelector(table);
+		if (deleteBtn) {
+			deleteBtn.addEventListener("click", function(event) {
+				event.preventDefault;
+				this.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(table);
+			});
+		}
+	}
+
 	if (moarCompanions) {
 		moarCompanions.addEventListener("click", function(event) {
 			event.preventDefault;
@@ -88,13 +110,12 @@ console.log("If you're happy and you know it - syntax error!");
 			var travellersTable = document.querySelector("#travellers-table").innerHTML;
 			var tableHolder = document.querySelector("#table-holder");
 			tableHolder.innerHTML += travellersTable;
+			deleteTable(".travellers__delete", ".travellers");
 			var number = document.querySelectorAll(".travellers__ordinal-number");
 			var ordinal = 1;
 			for(i = 0; i < number.length; i++) {
 				number[i].innerHTML = ordinal++;
 			}
-
-
 		});
 	}
 
@@ -114,15 +135,6 @@ console.log("If you're happy and you know it - syntax error!");
 			if (lastTable) {
 				tableHolder.removeChild(lastTable);
 			}
-		});
-	}
-
-	var deleteTable = document.querySelector(".travellers__delete");
-	if (deleteTable) {
-		deleteTable.addEventListener("click", function(event) {
-			event.preventDefault;
-			var table = document.querySelector(".travellers");
-			deleteTable.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(table);
 		});
 	}
 })();
